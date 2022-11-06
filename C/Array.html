@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Array.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Array</a>
+    <a href="Operators.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Operators</a>
+    <a href="Datatypes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Datatypes</a>
+    <a href="Decision%20Making.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Decision Making</a>
+    <a href="loops.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Loops</a>
+    <a href="Pointer.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pointer</a>
+    <a href="Variable%20&%20Constant.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Variable & Constant</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">C Programming</h1>
+  <p class="w3-xlarge">Array</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong></strong> </h1>
+      <h5 class="w3-padding-32">Arrays a kind of data structure that can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</br></br>
+
+Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</br></br>
+
+All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.</br></br>
+<center><img src="https://www.tutorialspoint.com/cprogramming/images/arrays.jpg" width="750" height="500"></center></br></br>
+<strong><font size="+2">Declaring Arrays</font></Strong></br></br>
+To declare an array in C, a programmer specifies the type of the elements and the number of elements required by an array as follows -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+type arrayName [ arraySize ];
+</div>
+</h5>
+<h5 class="w3-padding-32">This is called a single-dimensional array. The arraySize must be an integer constant greater than zero and type can be any valid C data type. For example, to declare a 10-element array called balance of type double, use this statement -
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+double balance[10];
+</div>
+</h5>
+<h5 class="w3-padding-32">Here balance is a variable array which is sufficient to hold up to 10 double numbers.</br></br>
+<strong><font size="+2">Initializing Arrays:-</font></Strong></br>
+You can initialize an array in C either one by one or using a single statement as follows -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+</div>
+</h5>
+<h5 class="w3-padding-32"The number of values between braces { } cannot be larger than the number of elements that we declare for the array between square brackets [ ].</br></br>
+
+If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0};  
+</div>
+</h5>
+<h5 class="w3-padding-32">You will create exactly the same array as you did in the previous example. Following is an example to assign a single element of the array -</br>
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+balance[4] = 50.0; 
+
+</div>
+</h5>
+<h5 class="w3-padding-32">The above statement assigns the 5th element in the array with a value of 50.0. All arrays have 0 as the index of their first element which is also called the base index and the last index of an array will be total size of the array minus 1. Shown below is the pictorial representation of the array we discussed above -</br>
+<center><img src="https://www.tutorialspoint.com/cprogramming/images/array_presentation.jpg" width="750" height="500"></center></br></br>
+In C programming language, array can be divided into following types:</br></br>
+
+1.One Dimensional Array</br>
+2.Multi Dimensional Array</br></br>
+<strong><font size="+2">1.One Dimensional Array</font></Strong></br></br>
+An array where data is arranged in a single dimension is called one dimensional array.</br></br>
+<strong>Syntax:-</strong>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+datatype array_name[size];
+</div>
+</h5>
+<h5 class="w3-padding-32">Here, array_name is an array of type datatype and size is the number of elements in that array.</br></br>
+<strong><font size="+1">Example</font></Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+   <!--<div class="w3-third w3-center">-->
+#include<stdio.h></br></br>
+int main()</br>
+{</br>
+    int i,a[10];</br>
+    printf("Enter 5 numbersn");</br>
+    for(i=0;i<5;i++)</br>
+    {</br>
+        scanf("%d",&a[i]);</br>
+    }</br>
+    printf("Reverse ordern");</br>
+    for(i=4;i>=0;i--)</br>
+    {</br>
+        printf("%dn",a[i]);</br>
+    }</br>
+    return 0;</br>
+}
+
+</div>
+</h5>
+<h5 class="w3-padding-32">In this program, a one dimensional integer array with 5 elements is declared where these values are entered by the user. These values are then stored in respective index of array a using a for loop. Then, these values are printed in reverse order, i.e. the value with higher index is printed at first, by traversing through the array.</br></br>
+<strong><font size="+1">Output:-</font></Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Enter 5 numbers</br>
+11</br>
+34</br>
+-21</br>
+6</br>
+90</br>
+Reverse order</br>
+90</br>
+6</br>
+-21</br>
+34</br>
+11
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">2. Multi-Dimensional Array:-</font></strong></br></br>
+An array where data are arranged in multiple dimensions is called multi-dimensional array. In other words, a multi-dimensional array is an array of another array with one dimension less i.e. a two dimensional array is an array of one dimensional array, a three dimensional array is an array of two dimensional array and so on. An array can have as many dimensions as required. However, two dimensional and three dimensional array are commonly used.</br></br>
+<strong>Syntax</strong>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+datatype array_name[d1][d2]...[dn];
+</div>
+</h5>
+<h5 class="w3-padding-32">Here, array_name is an array of type datatype and it has n dimensions.</br></br>
+
+The number of elements in a multi dimensional array is equal to the product of size of all dimensions i.e. total number of elements in array array_name is d1*d2* … dn.</br></br>
+
+<strong><font size="+2">a).Two Dimensional Array :-</font></strong></br></br>
+An array where data is arranged in two dimensions is called two dimensional array.</br></br>
+<strong>Syntax</strong>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+datatype array_name[d1][d2];
+</div>
+</h5>
+<h5 class="w3-padding-32">Here, array_name is an array of type datatype and it has 2 dimensions. The number of elements in array_name is equal to d1*d2.</br></br>
+
+<strong><font size="+2">Example:-</font></strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include<stdio.h></br></br>
+int main()</br>
+{</br>
+    int i,j,a[2][3],sum=0;</br>
+    printf("Enter elements of matrixn");</br>
+    for(i=0;i<2;i++)</br>
+    {</br>
+        for(j=0;j<3;j++)</br>
+        {</br>
+            printf("a[%d][%d] = ",i+1,j+1);</br>
+            scanf("%d",&a[i][j]);</br>
+            sum = sum + a[i][j];</br>
+        }</br>
+    }</br>
+    printf("Sum = %d",sum);</br>
+    return 0;</br>
+}
+
+</div>
+</h5>
+<h5 class="w3-padding-32">In this program, a 2 x 3 matrix is represented by a two dimensional array a[2][3]. The elements of matrix are entered by user. A variable sum is declared and initialized to zero that holds the sum. A nested for loop is used to enter the elements of matrix and to add them with sum. Finally, the sum is printed after the loop is terminated.</br></br>
+
+<strong><font size="+1">Output:-</font></strong></br>
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+<!--<div class="w3-third w3-center">-->
+Enter elements of matrix</br>
+a[1][1] = 10</br>
+a[1][2] = 4</br>
+a[1][3] = 21</br>
+a[2][1] = 7</br>
+a[2][2] = 19</br>
+a[2][3] = 0</br>
+Sum = 61
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">b).Three Dimensional Array:-</font></strong></br>
+An array where data is arranged in three dimensions is called three dimensional array.</br></br>
+<strong>Syntax</strong>
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+<!--<div class="w3-third w3-center">-->
+datatype array_name[d1][d2][d3];
+</div>
+</h5>
+<h5 class="w3-padding-32">Here, array_name is an array of type datatype and it has 3 dimensions. The number of elements in array_name is equal to d1*d2*d3.</br></br>
+<strong><font size="+1">Example:-</font></strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+<!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+int main()</br>
+{</br>
+    int a[10][10][10],d1,d2,d3,i,j,k;</br>
+    printf("Enter size of three dimensions: ");</br>
+    scanf("%d%d%d",&d1,&d2,&d3);</br>
+    printf("Enter elements of arrayn");</br>
+    for(i=0;i<d1;i++)</br>
+    {</br>
+        for(j=0;j<d2;j++)</br>
+        {</br>
+            for(k=0;k<d3;k++)</br>
+            {</br>
+                printf("a[%d][%d][%d] = ",i,j,k);</br>
+                scanf("%d",&a[i][j][k]);</br>
+            }</br>
+        }</br>
+    }</br>
+    printf("Displaying elements of arrayn");</br>
+    for(i=0;i<d1;i++)</br>
+        for(j=0;j<d2;j++)</br>
+            for(k=0;k<d3;k++)</br>
+                printf("a[%d][%d][%d] = %dn",i,j,k,a[i][j][k]);</br>
+    getch();</br>
+    return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">This example show how data is stored and accessed from a three dimensional array. The values of size of three dimensions: d1, d2 and d3 are entered by user. According to these values, a nested loop is created to enter the value of elements of array and display them. The outermost loop runs d1 times, middle loop runs d2 times and the innermost loop runs d3 times printing the values of the array a as they go accessed by their index.</br></br>
+<strong><font size="+1">Output:-</font></strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+Enter size of three dimensions: 2 2 2</br>
+Enter elements of array</br>
+a[0][0][0] = 5</br>
+a[0][0][1] = 9</br>
+a[0][1][0] = -11</br>
+a[0][1][1] = 23</br>
+a[1][0][0] = 45</br>
+a[1][0][1] = -111</br>
+a[1][1][0] = 2</br>
+a[1][1][1] = 0</br>
+Displaying elements of array</br>
+a[0][0][0] = 5</br>
+a[0][0][1] = 9</br>
+a[0][1][0] = -11</br>
+a[0][1][1] = 23</br>
+a[1][0][0] = 45</br>
+a[1][0][1] = -111</br>
+a[1][1][0] = 2</br>
+a[1][1][1] = 0
+<!--<div class="w3-third w3-center">-->
+</div>
+</h5>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+<!-- Footer -->
+<!--<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>-->
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Array.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Array</a>
+    <a href="Operators.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Operators</a>
+    <a href="Datatypes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Datatypes</a>
+    <a href="Decision%20Making.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Decision Making</a>
+    <a href="loops.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Loops</a>
+    <a href="Pointer.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pointer</a>
+    <a href="Variable%20&%20Constant.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Variable & Constant</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">C Programming</h1>
+  <p class="w3-xlarge">Datatype</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Datatypes</strong> </h1>
+      <h5 class="w3-padding-32">Data types in c refer to an extensive system used for declaring variables or functions of different types. The type of a variable determines how much space it occupies in storage and how the bit pattern stored is interpreted.</br></br>
+
+The types in C can be classified as follows -</br></br>
+1).<strong>Basic Types</strong> - They are arithmetic types and are further classified into: (a) integer types and (b) floating-point types.</br>
+2).<strong>Enumerated types</strong> - They are again arithmetic types and they are used to define variables that can only assign certain discrete integer values throughout the program.</br>
+3).<strong>The type void</strong> - The type specifier void indicates that no value is available.</br>
+4).<strong>Derived types</strong> - They include (a) Pointer types, (b) Array types, (c) Structure types, (d) Union types and (e) Function types.</br></br>
+The array types and structure types are referred collectively as the aggregate types. The type of a function specifies the type of the function's return value. We will see the basic types in the following section, where as other types will be covered in the upcoming chapters.</br></br>
+<strong><font size="+2">Integer Types</font></strong></br></br>
+The following table provides the details of standard integer types with their storage sizes and value ranges -</br></br>
+<center><img src="https://cdn.techbeamers.com/wp-content/uploads/2019/01/C-Datatypes-Range-and-Sizes.png" width="500" height="550"></center></br>
+To get the exact size of a type or a variable on a particular platform, you can use the sizeof operator. The expressions sizeof(type) yields the storage size of the object or type in bytes. Given below is an example to get the size of various type on a machine using different constant defined in limits.h header file -</br></br>
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include &ltstdio.h&gt</br>
+#include &ltstdlib.h&gt</br>
+#include &ltlimits.h&gt</br>
+#include &ltfloat.h&gt</br></br>
+
+int main(int argc, char** argv) {</br>
+
+    printf("CHAR_BIT    :   %d\n", CHAR_BIT);</br>
+    printf("CHAR_MAX    :   %d\n", CHAR_MAX);</br>
+    printf("CHAR_MIN    :   %d\n", CHAR_MIN);</br>
+    printf("INT_MAX     :   %d\n", INT_MAX);</br>
+    printf("INT_MIN     :   %d\n", INT_MIN);</br>
+    printf("LONG_MAX    :   %ld\n", (long) LONG_MAX);</br>
+    printf("LONG_MIN    :   %ld\n", (long) LONG_MIN);</br>
+    printf("SCHAR_MAX   :   %d\n", SCHAR_MAX);</br>
+    printf("SCHAR_MIN   :   %d\n", SCHAR_MIN);</br>
+    printf("SHRT_MAX    :   %d\n", SHRT_MAX);</br>
+    printf("SHRT_MIN    :   %d\n", SHRT_MIN);</br>
+    printf("UCHAR_MAX   :   %d\n", UCHAR_MAX);</br>
+    printf("UINT_MAX    :   %u\n", (unsigned int) UINT_MAX);</br>
+    printf("ULONG_MAX   :   %lu\n", (unsigned long) ULONG_MAX);</br>
+    printf("USHRT_MAX   :   %d\n", (unsigned short) USHRT_MAX);</br>
+
+    return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">When you compile and execute the above program, it produces the following result on Linux -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+CHAR_BIT    :   8</br>
+CHAR_MAX    :   127</br>
+CHAR_MIN    :   -128</br>
+INT_MAX     :   2147483647</br>
+INT_MIN     :   -2147483648</br>
+LONG_MAX    :   9223372036854775807</br>
+LONG_MIN    :   -9223372036854775808</br>
+SCHAR_MAX   :   127</br>
+SCHAR_MIN   :   -128</br>
+SHRT_MAX    :   32767</br>
+SHRT_MIN    :   -32768</br>
+UCHAR_MAX   :   255</br>
+UINT_MAX    :   4294967295</br>
+ULONG_MAX   :   18446744073709551615</br>
+USHRT_MAX   :   65535
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+3">Floating-Point Types</font></strong></br></br>
+The following table provide the details of standard floating-point types with storage sizes and value ranges and their precision -</br></br>
+<center><img src="https://ecomputernotes.com/images/Floating-Point-Data-Types.jpg" width="500" height="250"></center></br>
+The header file float.h defines macros that allow you to use these values and other details about the binary representation of real numbers in your programs. The following example prints the storage space taken by a float type and its range values -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include &ltstdio.h&gt</br>
+#include &ltstdlib.h&gt</br>
+#include &ltlimits.h&gt</br>
+#include &ltfloat.h&gt</br></br>
+
+int main(int argc, char** argv) {</br>
+
+    printf("Storage size for float : %d \n", sizeof(float));</br>
+    printf("FLT_MAX     :   %g\n", (float) FLT_MAX);</br>
+    printf("FLT_MIN     :   %g\n", (float) FLT_MIN);</br>
+    printf("-FLT_MAX    :   %g\n", (float) -FLT_MAX);</br>
+    printf("-FLT_MIN    :   %g\n", (float) -FLT_MIN);</br>
+    printf("DBL_MAX     :   %g\n", (double) DBL_MAX);</br>
+    printf("DBL_MIN     :   %g\n", (double) DBL_MIN);</br>
+    printf("-DBL_MAX     :  %g\n", (double) -DBL_MAX);</br>
+    printf("Precision value: %d\n", FLT_DIG );</br>
+
+    return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">When you compile and execute the above program, it produces the following result on Linux -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Storage size for float : 4 </br>
+FLT_MAX      :   3.40282e+38</br>
+FLT_MIN      :   1.17549e-38</br>
+-FLT_MAX     :   -3.40282e+38</br>
+-FLT_MIN     :   -1.17549e-38</br>
+DBL_MAX      :   1.79769e+308</br>
+DBL_MIN      :   2.22507e-308</br>
+-DBL_MAX     :  -1.79769e+308</br>
+Precision value: 6
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+3">Void Types</font></strong></br></br>
+The void type specifies that no value is available. It is used in three kinds of situations -</br></br>
+1).<strong>Function returns as void</strong> - There are various functions in C which do not return any value or you can say they return void. A function with no return value has the return type as void. For example, void exit (int status);</br>
+2).<strong>Function arguments as void</strong> - There are various functions in C which do not accept any parameter. A function with no parameter can accept a void. For example, int rand(void);</br>
+3).<strong>Pointers to void</strong> - A pointer of type void * represents the address of an object, but not its type. For example, a memory allocation function void *malloc( size_t size ); returns a pointer to void which can be casted to any data type.</br>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+<!-- Footer -->
+<!--<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>-->
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Array.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Array</a>
+    <a href="Operators.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Operators</a>
+    <a href="Datatypes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Datatypes</a>
+    <a href="Decision%20Making.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Decision Making</a>
+    <a href="loops.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Loops</a>
+    <a href="Pointer.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pointer</a>
+    <a href="Variable%20&%20Constant.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Variable & Constant</a>
+    <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">C Programming</h1>
+  <p class="w3-xlarge">Pointer</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong></strong> </h1>
+      <h5 class="w3-padding-32">Pointers in C are easy and fun to learn. Some C programming tasks are performed more easily with pointers, and other tasks, such as dynamic memory allocation, cannot be performed without using pointers. So it becomes necessary to learn pointers to become a perfect C programmer. Let's start learning them in simple and easy steps.</br></br>
+
+As you know, every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&) operator, which denotes an address in memory. Consider the following example, which prints the address of the variables defined -</br></br>
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+
+int main () {</br>
+
+   int  var1;</br>
+   char var2[10];</br>
+
+   printf("Address of var1 variable: %x\n", &var1  );</br>
+   printf("Address of var2 variable: %x\n", &var2  );</br>
+
+   return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">When the above code is compiled and executed, it produces the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Address of var1 variable: bff5a400
+Address of var2 variable: bff5a3f
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">What are Pointers?</font></Strong></br></br>
+A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location. Like any variable or constant, you must declare a pointer before using it to store any variable address. The general form of a pointer variable declaration is -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+type *var-name;
+</div>
+</h5>
+<h5 class="w3-padding-32">Here, type is the pointer's base type; it must be a valid C data type and var-name is the name of the pointer variable. The asterisk * used to declare a pointer is the same asterisk used for multiplication. However, in this statement the asterisk is being used to designate a variable as a pointer. Take a look at some of the valid pointer declarations -</br></br>
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+int    *ip;    /* pointer to an integer */</br>
+double *dp;    /* pointer to a double */</br>
+float  *fp;    /* pointer to a float */</br>
+char   *ch     /* pointer to a character */
+</div>
+</h5>
+<h5 class="w3-padding-32">The actual data type of the value of all pointers, whether integer, float, character, or otherwise, is the same, a long hexadecimal number that represents a memory address. The only difference between pointers of different data types is the data type of the variable or constant that the pointer points to.</br></br>
+<strong><font size="+2">How to Use Pointers?</font></Strong></br></br>
+There are a few important operations, which we will do with the help of pointers very frequently. (a) We define a pointer variable, (b) assign the address of a variable to a pointer and (c) finally access the value at the address available in the pointer variable. This is done by using unary operator * that returns the value of the variable located at the address specified by its operand. The following example makes use of these operations -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+#include <stdio.h></br></br>
+
+int main () {</br>
+
+   int  var = 20;   /* actual variable declaration */</br>
+   int  *ip;        /* pointer variable declaration */</br>
+
+   ip = &var;  /* store address of var in pointer variable*/</br>
+
+   printf("Address of var variable: %x\n", &var  );</br>
+
+   /* address stored in pointer variable */</br>
+   printf("Address stored in ip variable: %x\n", ip );</br>
+
+   /* access the value using the pointer */</br>
+   printf("Value of *ip variable: %d\n", *ip );</br>
+
+   return 0;</br>
+}
+
+</div>
+</h5>
+<h5 class="w3-padding-32">When the above code is compiled and executed, it produces the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Address of var variable: bffd8b3c</br>
+Address stored in ip variable: bffd8b3c</br>
+Value of *ip variable: 20
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">NULL Pointers</font></Strong></br></br>
+It is always a good practice to assign a NULL value to a pointer variable in case you do not have an exact address to be assigned. This is done at the time of variable declaration. A pointer that is assigned NULL is called a null pointer.</br></br>
+The NULL pointer is a constant with a value of zero defined in several standard libraries. Consider the following program -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+   <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+
+int main () {</br>
+
+   int  *ptr = NULL;</br>
+
+   printf("The value of ptr is : %x\n", ptr  );</br>
+ 
+   return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">When the above code is compiled and executed, it produces the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+The value of ptr is 0
+</div>
+</h5>
+<h5 class="w3-padding-32">In most of the operating systems, programs are not permitted to access memory at address 0 because that memory is reserved by the operating system. However, the memory address 0 has special significance; it signals that the pointer is not intended to point to an accessible memory location. But by convention, if a pointer contains the null (zero) value, it is assumed to point to nothing.</br></br>
+To check for a null pointer, you can use an 'if' statement as follows -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+if(ptr)     /* succeeds if p is not null */</br>
+if(!ptr)    /* succeeds if p is null */
+</div>
+</h5>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

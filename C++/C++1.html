@@ -1,0 +1,912 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+            <a href="C++1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basics of C++ (Part 1)</a>
+            <a href="C++2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basics of C++ (Part 2)</a>
+            <a href="C++3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">C++</h1>
+        <p class="w3-xlarge">
+            OOP Concepts
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>C++ Classses and Objects</strong> </h3>
+            <h5 class="w3-padding-32">
+                The main purpose of C++ programming is to add object orientation to the C programming language and classes are the central feature of C++ that supports object-oriented programming and are often called user-defined types.</br>
+                A class is used to specify the form of an object and it combines data representation and methods for manipulating that data into one neat package. The data and functions within a class are called members of the class.</br></br>
+                
+                <strong>C++ Class Definitions</strong></br>
+                When you define a class, you define a blueprint for a data type. This doesn't actually define any data, but it does define what the class name means, that is, what an object of the class will consist of and what operations can be performed on such an object.</br>
+                A class definition starts with the keyword class followed by the class name; and the class body, enclosed by a pair of curly braces. A class definition must be followed either by a semicolon or a list of declarations.</br>
+                </br>
+                Example:</br>
+                class Box {</br>
+                public:</br>
+                double length;   // Length of a box</br>
+                double breadth;  // Breadth of a box</br>
+                double height;   // Height of a box</br>
+                };</br>
+                </br>
+                The keyword public determines the access attributes of the members of the class that follows it. A public member can be accessed from outside the class anywhere within the scope of the class object.</br>
+                You can also specify the members of a class as private or protected which we will discuss in a sub-section.</br>
+            </h5>
+
+            <h3><strong>Define C++ Objects</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                A class provides the blueprints for objects, so basically an object is created from a class. We declare objects of a class with exactly the same sort of declaration that we declare variables of basic types. Following statements declare two objects of class Box:</br>
+                Box Box1;          // Declare Box1 of type Box</br>
+                Box Box2;          // Declare Box2 of type Box</br>
+                Both of the objects Box1 and Box2 will have their own copy of data members.</br>
+                </br>
+                <strong>Accessing the Data Members</strong></br>
+                The public data members of objects of a class can be accessed using the direct member access operator (.). Let us try the following example to make the things clear.</br>
+                When this code is compiled and executed, it produces the following result-</br>
+                Volume of Box1 : 210</br>
+                Volume of Box2 : 1560</br>
+                It is important to note that private and protected members can not be accessed directly using direct member access operator (.). We will learn how private and protected members can be accessed.
+                </br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        class Box {</br>
+                        public:</br>
+                        double length;   // Length of a box</br>
+                        double breadth;  // Breadth of a box</br>
+                        double height;   // Height of a box</br>
+                        };</br>
+
+                        int main() {</br>
+                        Box Box1;        // Declare Box1 of type Box</br>
+                        Box Box2;        // Declare Box2 of type Box</br>
+                        double volume = 0.0;     // Store the volume of a box here</br>
+
+                        // box 1 specification</br>
+                        Box1.height = 5.0;</br>
+                        Box1.length = 6.0;</br>
+                        Box1.breadth = 7.0;</br>
+
+                        // box 2 specification</br>
+                        Box2.height = 10.0;</br>
+                        Box2.length = 12.0;</br>
+                        Box2.breadth = 13.0;</br>
+
+                        // volume of box 1</br>
+                        volume = Box1.height * Box1.length * Box1.breadth;</br>
+                        cout << "Volume of Box1 : " << volume << endl; //volume of box 2</br>
+                        volume=Box2.height * Box2.length * Box2.breadth;</br>
+                        cout << "Volume of Box2 : " << volume << endl;</br>
+                        return 0;</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Classes and Objects in Detail</strong> </h3>
+            <h5 class="w3-padding-32">
+                
+                So far, you have got very basic idea about C++ Classes and Objects. There are further interesting concepts related to C++ Classes and Objects which we will discuss in various sub-sections listed below:
+                </br>
+                1.	Class Member Functions</br>
+                A member function of a class is a function that has its definition or its prototype within the class definition like any other variable.</br>
+                </br>
+                2.	Class Access Modifiers</br>
+                A class member can be defined as public, private or protected. By default members would be assumed as private.</br>
+                </br>
+                3.	Constructor & Destructor</br>
+                A class constructor is a special function in a class that is called when a new object of the class is created. A destructor is also a special function which is called when created object is deleted.</br>
+                </br>
+                4.	Copy Constructor</br>
+                The copy constructor is a constructor which creates an object by initializing it with an object of the same class, which has been created previously.</br>
+                </br>
+                5.	Friend Functions</br>
+                A friend function is permitted full access to private and protected members of a class.</br>
+                </br>
+                6.	Inline Functions
+                With an inline function, the compiler tries to expand the code in the body of the function in place of a call to the function.</br>
+                </br>
+                7.	this Pointer
+                Every object has a special pointer this which points to the object itself.</br>
+                </br>
+                8.	Pointer to C++ Classes</br>
+                A pointer to a class is done exactly the same way a pointer to a structure is. In fact a class is really just a structure with functions in it.</br>
+                </br>
+                9.	Static Members of a Class</br>
+            </h5>
+
+            <h3><strong>C++ Inheritance</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                One of the most important concepts in object-oriented programming is that of inheritance. Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application. This also provides an opportunity to reuse the code functionality and fast implementation time.</br>
+                When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the base class, and the new class is referred to as the derived class.</br>
+                The idea of inheritance implements the is a relationship. For example, mammal IS-A animal, dog IS-A mammal hence dog IS-A animal as well and so on.</br>
+                </br>
+                <strong>Base and Derived Classes</strong></br>
+                A class can be derived from more than one classes, which means it can inherit data and functions from multiple base classes. To define a derived class, we use a class derivation list to specify the base class(es). A class derivation list names one or more base classes and has the form:</br>
+                class derived-class: access-specifier base-class</br>
+                Where access-specifier is one of public, protected, or private, and base-class is the name of a previously defined class. If the access-specifier is not used, then it is private by default.</br>
+                </br>
+
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+
+                        using namespace std;</br>
+
+                        // Base class</br>
+                        class Shape {</br>
+                        public:</br>
+                        void setWidth(int w) {</br>
+                        width = w;</br>
+                        }</br>
+                        void setHeight(int h) {</br>
+                        height = h;</br>
+                        }</br>
+
+                        protected:</br>
+                        int width;</br>
+                        int height;</br>
+                        };</br>
+
+                        // Derived class</br>
+                        class Rectangle: public Shape {</br>
+                        public:</br>
+                        int getArea() {</br>
+                        return (width * height);</br>
+                        }</br>
+                        };</br>
+
+                        int main(void) {</br>
+                        Rectangle Rect;</br>
+
+                        Rect.setWidth(5);</br>
+                        Rect.setHeight(7);</br>
+
+                        // Print the area of the object.</br>
+                        cout << "Total area: " << Rect.getArea() << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                <strong>Access Control and Inheritance</strong></br>
+                A derived class can access all the non-private members of its base class. Thus base-class members that should not be accessible to the member functions of derived classes should be declared private in the base class.</br>
+                We can summarize the different access types according to - who can access them in the following way:</br>
+                Same class -- public	protected	private</br>
+                Derived classes --	public	protected</br>
+                Outside classes --	public</br>
+                </br>
+                A derived class inherits all base class methods with the following exceptions−</br>
+                •	Constructors, destructors and copy constructors of the base class.</br>
+                •	Overloaded operators of the base class.</br>
+                •	The friend functions of the base class.</br>
+
+            </h5>
+
+            <h3><strong>Type of Inheritance</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                When deriving a class from a base class, the base class may be inherited through public, protected or private inheritance. The type of inheritance is specified by the access-specifier as explained above.</br>
+                We hardly use protected or private inheritance, but public inheritance is commonly used. While using different type of inheritance, following rules are applied-</br>
+                </br>•	Public Inheritance − When deriving a class from a public base class, public members of the base class become public members of the derived class and protected members of the base class become protected members of the derived class. A base class's private members are never accessible directly from a derived class, but can be accessed through calls to the public and protected members of the base class.</br>
+                </br>•	Protected Inheritance − When deriving from a protected base class, public and protected members of the base class become protected members of the derived class.</br>
+                </br>•	Private Inheritance − When deriving from a private base class, public and protected members of the base class become private members of the derived class.</br>
+
+            </h5>
+
+            <h3><strong>Multiple Inheritance</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                A C++ class can inherit members from more than one class and here is the extended syntax:</br>
+                class derived-class: access baseA, access baseB....
+                </br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+
+                        using namespace std;</br>
+
+                        // Base class Shape</br>
+                        class Shape {</br>
+                        public:</br>
+                        void setWidth(int w) {</br>
+                        width = w;</br>
+                        }</br>
+                        void setHeight(int h) {</br>
+                        height = h;</br>
+                        }</br>
+
+                        protected:</br>
+                        int width;</br>
+                        int height;</br>
+                        };</br>
+
+                        // Base class PaintCost</br>
+                        class PaintCost {</br>
+                        public:</br>
+                        int getCost(int area) {</br>
+                        return area * 70;</br>
+                        }</br>
+                        };</br>
+
+                        // Derived class</br>
+                        class Rectangle: public Shape, public PaintCost {</br>
+                        public:</br>
+                        int getArea() {</br>
+                        return (width * height);</br>
+                        }</br>
+                        };</br>
+
+                        int main(void) {</br>
+                        Rectangle Rect;</br>
+                        int area;</br>
+
+                        Rect.setWidth(5);</br>
+                        Rect.setHeight(7);</br>
+
+                        area = Rect.getArea();</br>
+
+                        // Print the area of the object.</br>
+                        cout << "Total area: " << Rect.getArea() << endl;</br>
+
+                        // Print the total cost of painting</br>
+                        cout << "Total paint cost: $" << Rect.getCost(area) << endl;</br>
+
+                        return 0;
+
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>C++ Overloading(Operator and Function)</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                C++ allows you to specify more than one definition for a function name or an operator in the same scope, which is called function overloading and operator overloading respectively.</br>
+                An overloaded declaration is a declaration that is declared with the same name as a previously declared declaration in the same scope, except that both declarations have different arguments and obviously different definition (implementation).</br>
+                When you call an overloaded function or operator, the compiler determines the most appropriate definition to use, by comparing the argument types you have used to call the function or operator with the parameter types specified in the definitions. </br>
+                The process of selecting the most appropriate overloaded function or operator is called overload resolution.</br>
+                </br>
+                <strong>Function Overloading in C++</strong></br>
+                You can have multiple definitions for the same function name in the same scope. The definition of the function must differ from each other by the types and/or the number of arguments in the argument list. You cannot overload function declarations that differ only by return type.</br>
+                Following is the example where same function print() is being used to print different data types:
+                </br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        class printData {</br>
+                        public:</br>
+                        void print(int i) {</br>
+                        cout << "Printing int: " << i << endl;</br>
+                        }</br>
+                        void print(double  f) {</br>
+                        cout << "Printing float: " << f << endl;</br>
+                        }</br>
+                        void print(char* c) {</br>
+                        cout << "Printing character: " << c << endl;</br>
+                        }</br>
+                        };</br>
+
+                        int main(void) {</br>
+                        printData pd;</br>
+
+                        // Call print to print integer</br>
+                        pd.print(5);</br>
+
+                        // Call print to print float</br>
+                        pd.print(500.263);</br>
+
+                        // Call print to print character</br>
+                        pd.print("Hello C++");</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                <strong>Operators Overloading in C++</strong>
+                </br>
+                You can redefine or overload most of the built-in operators available in C++. Thus, a programmer can use operators with user-defined types as well.</br>
+                Overloaded operators are functions with special names: the keyword "operator" followed by the symbol for the operator being defined. Like any other function, an overloaded operator has a return type and a parameter list.</br>
+                Box operator+(const Box&);</br>
+                declares the addition operator that can be used to add two Box objects and returns final Box object. Most overloaded operators may be defined as ordinary non-member functions or as class member functions. </br>
+                In case we define above function as non-member function of a class then we would have to pass two arguments for each operand as follows:</br>
+                Box operator+(const Box&, const Box&);</br></br>
+
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        class Box {</br>
+                        public:</br>
+                        double getVolume(void) {</br>
+                        return length * breadth * height;</br>
+                        }</br>
+                        void setLength( double len ) {</br>
+                        length = len;</br>
+                        }</br>
+                        void setBreadth( double bre ) {</br>
+                        breadth = bre;</br>
+                        }</br>
+                        void setHeight( double hei ) {</br>
+                        height = hei;</br>
+                        }</br>
+
+                        // Overload + operator to add two Box objects.</br>
+                        Box operator+(const Box& b) {</br>
+                        Box box;</br>
+                        box.length = this->length + b.length;</br>
+                        box.breadth = this->breadth + b.breadth;</br>
+                        box.height = this->height + b.height;</br>
+                        return box;</br>
+                        }</br>
+
+                        private:</br>
+                        double length;      // Length of a box</br>
+                        double breadth;     // Breadth of a box</br>
+                        double height;      // Height of a box</br>
+                        };</br>
+
+                        // Main function for the program</br>
+                        int main() {</br>
+                        Box Box1;                // Declare Box1 of type Box</br>
+                        Box Box2;                // Declare Box2 of type Box</br>
+                        Box Box3;                // Declare Box3 of type Box</br>
+                        double volume = 0.0;     // Store the volume of a box here</br>
+
+                        // box 1 specification</br>
+                        Box1.setLength(6.0);</br>
+                        Box1.setBreadth(7.0);</br>
+                        Box1.setHeight(5.0);</br>
+
+                        // box 2 specification</br>
+                        Box2.setLength(12.0);</br>
+                        Box2.setBreadth(13.0);</br>
+                        Box2.setHeight(10.0);</br>
+
+                        // volume of box 1</br>
+                        volume = Box1.getVolume();</br>
+                        cout << "Volume of Box1 : " << volume << endl; //volume of box 2</br>
+                        volume=Box2.getVolume();</br>
+                        cout << "Volume of Box2 : " << volume << endl;</br>
+
+                        //Add two object as follows:</br>
+                        Box3 = Box1 + Box2;</br>
+
+                        //volume of box 3</br>
+                        volume = Box3.getVolume();</br>
+                        cout << "Volume of Box3 : " << volume << endl;</br>
+
+                        return 0;</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Buffered Classes</strong> </h3>
+            <h5 class="w3-padding-32">
+                <strong>Overloadable/Non-overloadable Operators</strong></br>
+                Following is the list of operators which can be overloaded:</br>
+                +	-	*	/	%	^</br>
+                &	|	~	!	,	=</br>
+                <	>	<=	>=	++	--</br>
+                <<	>>	==	!=	&&	||</br>
+                +=	-=	/=	%=	^=	&=</br>
+                |=	*=	<<=	>>=	[]	()</br>
+                ->	->*	new	new []	delete	delete []</br>
+                </br>
+                Following is the list of operators, which can not be overloaded:</br>
+                ::	.*	.	?:</br>
+                </br>
+                <strong>Operator Overloading Examples</strong></br>
+                Here are various operator overloading examples to help you in understanding the concept.</br>
+                </br>
+                1.	Unary Operators Overloading
+                </br>
+                2.	Binary Operators Overloading
+                </br>
+                3.	Relational Operators Overloading
+                </br>
+                4.	Input/Output Operators Overloading
+                </br>
+                5.	++ and -- Operators Overloading
+                </br>
+                6.	Assignment Operators Overloading
+                </br>
+                7.	Function call () Operator Overloading
+                </br>
+                8.	Subscripting [] Operator Overloading
+                </br>
+                9.	Class Member Access Operator -> Overloading
+
+            </h5>
+
+            <h3><strong>C++ Polymorphism</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                The word polymorphism means having many forms. Typically, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance.</br>
+                C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.
+
+                </br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        class Shape {</br>
+                        protected:</br>
+                        int width, height;</br>
+
+                        public:</br>
+                        Shape( int a = 0, int b = 0){</br>
+                        width = a;</br>
+                        height = b;</br>
+                        }</br>
+                        int area() {</br>
+                        cout << "Parent class area :" << endl;</br>
+                        return 0;</br>
+                        }</br>
+                        };</br>
+                        class Rectangle: public Shape {</br>
+                        public:</br>
+                        Rectangle( int a = 0, int b = 0):Shape(a, b) { }</br>
+
+                        int area () {</br>
+                        cout << "Rectangle class area :" << endl;</br>
+                        return (width * height);</br>
+                        }</br>
+                        };</br>
+
+                        class Triangle: public Shape {</br>
+                        public:</br>
+                        Triangle( int a = 0, int b = 0):Shape(a, b) { }</br>
+
+                        int area () {</br>
+                        cout << "Triangle class area :" << endl;</br>
+                        return (width * height / 2);</br>
+                        }</br>
+                        };</br>
+
+                        // Main function for the program</br>
+                        int main() {</br>
+                        Shape *shape;</br>
+                        Rectangle rec(10,7);</br>
+                        Triangle  tri(10,5);</br>
+
+                        // store the address of Rectangle</br>
+                        shape = &rec;</br>
+
+                        // call rectangle area.</br>
+                        shape->area();</br>
+
+                        // store the address of Triangle</br>
+                        shape = &tri;</br>
+
+                        // call triangle area.</br>
+                        shape->area();</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                When the above code is compiled and executed, it produces the following result-</br>
+                Parent class area :</br>
+                Parent class area :</br>
+                </br>
+                The reason for the incorrect output is that the call of the function area() is being set once by the compiler as the version defined in the base class. This is called static resolution of the function call, or static linkage - the function call is fixed before the program is executed. </br>
+                This is also sometimes called early binding because the area() function is set during the compilation of the program.</br>
+                But now, let's make a slight modification in our program and precede the declaration of area() in the Shape class with the keyword virtual so that it looks like this:</br></br>
+                class Shape {</br>
+                protected:</br>
+                int width, height;</br>
+
+                public:</br>
+                Shape( int a = 0, int b = 0) {</br>
+                width = a;</br>
+                height = b;</br>
+                }</br>
+                virtual int area() {</br>
+                cout << "Parent class area :" << endl;</br>
+                return 0;</br>
+                }</br>
+                };</br></br>
+                After this slight modification, when the previous example code is compiled and executed, it produces the following result:</br></br>
+                Rectangle class area</br>
+                Triangle class area</br>
+                </br>
+                This time, the compiler looks at the contents of the pointer instead of it's type. Hence, since addresses of objects of tri and rec classes are stored in *shape the respective area() function is called.</br>
+                As you can see, each of the child classes has a separate implementation for the function area(). This is how polymorphism is generally used. You have different classes with a function of the same name, and even the same parameters, but with different implementations.
+
+            </h5>
+
+            <h3><strong>StrVirtual Functioneams</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                A virtual function is a function in a base class that is declared using the keyword virtual. Defining in a base class a virtual function, with another version in a derived class, signals to the compiler that we don't want static linkage for this function.</br>
+                What we do want is the selection of the function to be called at any given point in the program to be based on the kind of object for which it is called. This sort of operation is referred to as dynamic linkage, or late binding.
+                </br></br>
+                <strong>Pure Virtual Functions</strong></br>
+                It is possible that you want to include a virtual function in a base class so that it may be redefined in a derived class to suit the objects of that class, but that there is no meaningful definition you could give for the function in the base class.</br>
+                We can change the virtual function area() in the base class to the following:</br>
+                class Shape {</br>
+                protected:</br>
+                int width, height;</br>
+
+                public:</br>
+                Shape(int a = 0, int b = 0) {</br>
+                width = a;</br>
+                height = b;</br>
+                }</br>
+
+                // pure virtual function</br>
+                virtual int area() = 0;</br>
+                };</br>
+                The = 0 tells the compiler that the function has no body and above virtual function will be called pure virtual function.
+
+            </h5>
+
+            <h3><strong>Data Abstraction in C++</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                Data abstraction refers to providing only essential information to the outside world and hiding their background details, i.e., to represent the needed information in program without presenting the details.</br>
+                Data abstraction is a programming (and design) technique that relies on the separation of interface and implementation.</br>
+                Let's take one real life example of a TV, which you can turn on and off, change the channel, adjust the volume, and add external components such as speakers, VCRs, and DVD players, BUT you do not know its internal details, that is, you do not know how it receives signals over the air or through a cable, how it translates them, and finally displays them on the screen.</br>
+                Thus, we can say a television clearly separates its internal implementation from its external interface and you can play with its interfaces like the power button, channel changer, and volume control without having any knowledge of its internals.</br>
+                In C++, classes provides great level of data abstraction. They provide sufficient public methods to the outside world to play with the functionality of the object and to manipulate object data, i.e., state without actually knowing how class has been implemented internally.</br>
+                </br>
+                For example, your program can make a call to the sort() function without knowing what algorithm the function actually uses to sort the given values. In fact, the underlying implementation of the sorting functionality could change between releases of the library, and as long as the interface stays the same, your function call will still work.</br>
+                In C++, we use classes to define our own abstract data types (ADT). You can use the cout object of class ostream to stream data to standard output like this:</br>
+                </br>
+                #include < iostream ></br>
+                using namespace std;</br>
+
+                int main() {</br>
+                cout << "Hello C++" << endl;</br>
+                return 0;</br>
+                }</br></br>
+                Here, you don't need to understand how cout displays the text on the user's screen. You need to only know the public interface and the underlying implementation of ‘cout’ is free to change.</br>
+                </br>
+
+                <strong>Access Labels Enforce Abstraction</strong></br>
+                In C++, we use access labels to define the abstract interface to the class. A class may contain zero or more access labels:</br>
+                •	Members defined with a public label are accessible to all parts of the program. The data-abstraction view of a type is defined by its public members.</br>
+                •	Members defined with a private label are not accessible to code that uses the class. The private sections hide the implementation from code that uses the type.</br>
+                There are no restrictions on how often an access label may appear. Each access label specifies the access level of the succeeding member definitions. The specified access level remains in effect until the next access label is encountered or the closing right brace of the class body is seen.</br>
+                </br>
+                Data abstraction provides two important advantages −</br>
+                •	Class internals are protected from inadvertent user-level errors, which might corrupt the state of the object.</br>
+                •	The class implementation may evolve over time in response to changing requirements or bug reports without requiring change in user-level code.</br>
+                By defining data members only in the private section of the class, the class author is free to make changes in the data. If the implementation changes, only the class code needs to be examined to see what affect the change may have. If data is public, then any function that directly access the data members of the old representation might be broken.
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream></br>
+                        using namespace std;</br>
+
+                        class Adder {</br>
+                        public:</br>
+                        // constructor</br>
+                        Adder(int i = 0) {</br>
+                        total = i;</br>
+                        }</br>
+
+                        // interface to outside world</br>
+                        void addNum(int number) {</br>
+                        total += number;</br>
+                        }</br>
+
+                        // interface to outside world</br>
+                        int getTotal() {</br>
+                        return total;</br>
+                        };</br>
+
+                        private:</br>
+                        // hidden data from outside world</br>
+                        int total;</br>
+                        };</br>
+
+                        int main() {</br>
+                        Adder a;</br>
+
+                        a.addNum(10);</br>
+                        a.addNum(20);</br>
+                        a.addNum(30);</br>
+
+                        cout << "Total " << a.getTotal() << endl;</br>
+                        return 0;</br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                Designing Strategy</br>
+                Abstraction separates code into interface and implementation. So while designing your component, you must keep interface independent of the implementation so that if you change underlying implementation then interface would remain intact.</br>
+                In this case whatever programs are using these interfaces, they would not be impacted and would just need a recompilation with the latest implementation.</br>
+
+            </h5>
+
+
+            <h3><strong>Data Encapsulation in C++</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                All C++ programs are composed of the following two fundamental elements:</br>
+                •	Program statements (code) − This is the part of a program that performs actions and they are called functions.</br>
+                •	Program data − The data is the information of the program which gets affected by the program functions.</br>
+                Encapsulation is an Object Oriented Programming concept that binds together the data and functions that manipulate the data, and that keeps both safe from outside interference and misuse. Data encapsulation led to the important OOP concept of data hiding.</br>
+                Data encapsulation is a mechanism of bundling the data, and the functions that use them and data abstraction is a mechanism of exposing only the interfaces and hiding the implementation details from the user.</br>
+                C++ supports the properties of encapsulation and data hiding through the creation of user-defined types, called classes. We already have studied that a class can contain private, protected and public members. By default, all items defined in a class are private. </br>
+                For example:</br></br>
+                class Box {</br>
+                public:</br>
+                double getVolume(void) {</br>
+                return length * breadth * height;</br>
+                }</br>
+
+                private:</br>
+                double length;      // Length of a box</br>
+                double breadth;     // Breadth of a box</br>
+                double height;      // Height of a box</br>
+                };</br></br>
+                The variables length, breadth, and height are private. This means that they can be accessed only by other members of the Box class, and not by any other part of your program. This is one way encapsulation is achieved.</br>
+                To make parts of a class public (i.e., accessible to other parts of your program), you must declare them after the public keyword. All variables or functions defined after the public specifier are accessible by all other functions in your program.</br>
+                Making one class a friend of another exposes the implementation details and reduces encapsulation. The ideal is to keep as many of the details of each class hidden from all other classes as possible.
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        class Adder {</br>
+                        public:</br>
+                        // constructor</br>
+                        Adder(int i = 0) {</br>
+                        total = i;</br>
+                        }</br>
+
+                        // interface to outside world</br>
+                        void addNum(int number) {</br>
+                        total += number;</br>
+                        }</br>
+
+                        // interface to outside world</br>
+                        int getTotal() {</br>
+                        return total;</br>
+                        };</br>
+
+                        private:</br>
+                        // hidden data from outside world</br>
+                        int total;</br>
+                        };</br>
+
+                        int main() {</br>
+                        Adder a;</br>
+
+                        a.addNum(10);</br>
+                        a.addNum(20);</br>
+                        a.addNum(30);</br>
+
+                        cout << "Total " << a.getTotal() << endl;</br>
+                        return 0;</br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                When the above code is compiled and executed, it produces the following result:</br>
+                Total 60</br>
+                Above class adds numbers together, and returns the sum. The public members addNum and getTotal are the interfaces to the outside world and a user needs to know them to use the class. </br>
+                The private member total is something that is hidden from the outside world, but is needed for the class to operate properly.</br>
+                </br>
+                Designing Strategy:</br>
+                Most of us have learnt to make class members private by default unless we really need to expose them. That's just good encapsulation.</br>
+                This is applied most frequently to data members, but it applies equally to all members, including virtual functions.</br>
+
+            </h5>
+
+
+            <h3><strong>Interface in C++</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                An interface describes the behavior or capabilities of a C++ class without committing to a particular implementation of that class.</br>
+                The C++ interfaces are implemented using abstract classes and these abstract classes should not be confused with data abstraction which is a concept of keeping implementation details separate from associated data.</br>
+                A class is made abstract by declaring at least one of its functions as pure virtual function. A pure virtual function is specified by placing "= 0" in its declaration as follows −</br>
+                class Box {</br>
+                public:</br>
+                // pure virtual function</br>
+                virtual double getVolume() = 0;</br>
+
+                private:</br>
+                double length;      // Length of a box</br>
+                double breadth;     // Breadth of a box</br>
+                double height;      // Height of a box</br>
+                };</br>
+                The purpose of an abstract class (often referred to as an ABC) is to provide an appropriate base class from which other classes can inherit. Abstract classes cannot be used to instantiate objects and serves only as an interface. Attempting to instantiate an object of an abstract class causes a compilation error.</br>
+                Thus, if a subclass of an ABC needs to be instantiated, it has to implement each of the virtual functions, which means that it supports the interface declared by the ABC. Failure to override a pure virtual function in a derived class, then attempting to instantiate objects of that class, is a compilation error.</br>
+                Classes that can be used to instantiate objects are called concrete classes.
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+
+                        using namespace std;</br>
+
+                        // Base class</br>
+                        class Shape {</br>
+                        public:</br>
+                        // pure virtual function providing interface framework.</br>
+                        virtual int getArea() = 0;</br>
+                        void setWidth(int w) {</br>
+                        width = w;</br>
+                        }</br>
+
+                        void setHeight(int h) {</br>
+                        height = h;</br>
+                        }</br>
+
+                        protected:</br>
+                        int width;</br>
+                        int height;</br>
+                        };</br>
+
+                        // Derived classes</br>
+                        class Rectangle: public Shape {</br>
+                        public:</br>
+                        int getArea() {</br>
+                        return (width * height);</br>
+                        }</br>
+                        };</br>
+
+                        class Triangle: public Shape {</br>
+                        public:</br>
+                        int getArea() {</br>
+                        return (width * height)/2;</br>
+                        }</br>
+                        };</br>
+
+                        int main(void) {</br>
+                        Rectangle Rect;</br>
+                        Triangle  Tri;</br>
+
+                        Rect.setWidth(5);</br>
+                        Rect.setHeight(7);</br>
+
+                        // Print the area of the object.</br>
+                        cout << "Total Rectangle area: " << Rect.getArea() << endl;</br>
+
+                        Tri.setWidth(5);</br>
+                        Tri.setHeight(7);</br>
+
+                        // Print the area of the object.</br>
+                        cout << "Total Triangle area: " << Tri.getArea() << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                When the above code is compiled and executed, it produces the following result:</br>
+                Total Rectangle area: 35</br>
+                Total Triangle area: 17</br>
+
+                You can see how an abstract class defined an interface in terms of getArea() and two other classes implemented same function but with different algorithm to calculate the area specific to the shape.</br>
+                </br>
+                Designing Strategy:</br>
+                An object-oriented system might use an abstract base class to provide a common and standardized interface appropriate for all the external applications. Then, through inheritance from that abstract base class, derived classes are formed that operate similarly.</br>
+                The capabilities (i.e., the public functions) offered by the external applications are provided as pure virtual functions in the abstract base class. The implementations of these pure virtual functions are provided in the derived classes that correspond to the specific types of the application.</br>
+                This architecture also allows new applications to be added to a system easily, even after the system has been defined.
+
+            </h5>
+            
+        </div>
+
+        <!-- Second Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-third w3-center">
+                    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                </div>
+
+                <!--<div class="w3-twothird">
+                      <h1>Lorem Ipsum</h1>
+                      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                </div>-->
+                <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+                </div>-->
+                <script>
+                    // Used to toggle the menu on small screens when clicking on the menu button
+                    function myFunction() {
+                        var x = document.getElementById("navDemo");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+</body>
+</html>

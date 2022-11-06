@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+	
+   <a href="DL/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="applet.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">APPLET</a>
+    <a href="awt.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">AWT</a>
+    <a href="jdbc.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JDBC</a>
+    <a href="Servlets.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">SERVLETS</a>
+    <a href="JSP.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JSP</a>
+     <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+ 
+ </div>
+
+</div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">ADVANCE JAVA</h1>
+  <p class="w3-xlarge">Java Database Connectivity</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Java Database Connectivity(JDBC)</strong> </h1>
+      <h5 class="w3-padding-32"> Java Database Connectivity(JDBC) is an Application Programming Interface(API) used to connect Java application with Database. JDBC is used to interact with various type of Database such as Oracle, MS Access, My SQL and SQL Server. JDBC can also be defined as the platform-independent interface between a relational database and Java programming. It allows java program to execute SQL statement and retrieve result from database.</br></br>
+
+The JDBC API consists of classes and methods that are used to perform various operations like: connect, read, write and store data in the database. In this tutorial we will learn the JDBC with examples.</br></br>
+
+You can get idea of how JDBC connect Java Application to the database by following image.</br></br></br>
+<center><img src="https://static.studytonight.com/java/images/jdbc-architecture.jpg" alt="Girl in a jacket" width="500" height="250"></center>
+</h5>
+      <h1><strong>JDBC Driver</strong> </h1>
+<h5 class="w3-padding-32">
+A JDBC driver is a JDBC API implementation used for connecting to a particular type of database. There are several types of JDBC drivers:</br></br>
+
+  1).Type 1 : contains a mapping to another data access API; an example of this is the JDBC-ODBC driver</br>
+   2). Type 2 : is an implementation that uses client-side libraries of the target database; also called a native-API driver</br>
+    3).Type 3 : uses middleware to convert JDBC calls into database-specific calls; also known as a network protocol driver</br>
+    4).Type 4 : connect directly to a database by converting JDBC calls into database-specific calls; known as database protocol drivers or thin drivers.</br></br>
+
+The most commonly used type is type 4, as it has the advantage of being platform-independent. Connecting directly to a database server provides better performance compared to other types. The downside of this type of driver is that it's database-specific – given each database has its own specific protocol.</br></br>
+<h1><strong>1.Connecting to a Database:-</strong> </h1>
+To connect to a database, we simply have to initialize the driver and open a database connection.</br></br>
+<STRONG><font size="+2">1.1.Registering the Driver:-</STRONG></font></br></br>
+For our example, we will use a type 4 database protocol driver.</br>
+Since we're using a MySQL database, we need the mysql-connector-java dependency:</br></br>
+</h5>
+<h5 class="w3-padding-32">Next, let's register the driver using the Class.forName() method, which dynamically loads the driver class:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Class.forName("com.mysql.cj.jdbc.Driver");
+</div>
+</h5>
+<h5 class="w3-padding-32">In older versions of JDBC, before obtaining a connection, we first had to initialize the JDBC driver by calling the Class.forName method. As of JDBC 4.0, all drivers that are found in the classpath are automatically loaded. Therefore, we won't need this Class.forName part in modern environments.</br></br>
+<STRONG><font size="+2">1.2.Creating the Connection:-</STRONG></font></br></br>
+To open a connection, we can use the getConnection() method of DriverManager class. This method requires a connection URL String parameter:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+try (Connection con = DriverManager</br>
+  .getConnection("jdbc:mysql://localhost:3306/myDb", "user1", "pass")) {</br>
+    // use con here</br>
+}</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">Since the Connection is an AutoCloseable resource, we should use it inside a try-with-resources block.</br></br>
+The syntax of the connection URL depends on the type of database used. Let's take a look at a few examples:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+jdbc:mysql://localhost:3306/myDb?user=user1&password=pass
+</div>
+</h5>
+<h5 class="w3-padding-32">To connect to the specified myDb database, we will have to create the database and a user, and add grant necessary access:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+CREATE DATABASE myDb;</br>
+CREATE USER 'user1' IDENTIFIED BY 'pass';</br>
+GRANT ALL on myDb.* TO 'user1';</br>
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">2.Executing SQL Statements</font></strong></br></br>
+The send SQL instructions to the database, we can use instances of type Statement, PreparedStatement, or CallableStatement, which we can obtain using the Connection object.</br></br>
+<STRONG><font size="+1">2.1.Statement:-</STRONG></font></br></br>
+The Statement interface contains the essential functions for executing SQL commands.</br></br>
+First, let's create a Statement object:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+try (Statement stmt = con.createStatement()) {</br>
+    // use stmt here</br>
+}</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">Again, we should work with Statements inside a try-with-resources block for automatic resource management.</br></br>
+
+Anyway, executing SQL instructions can be done through the use of three methods:</br>
+
+   1). executeQuery() for SELECT instructions</br>
+  2).  executeUpdate() for updating the data or the database structure</br>
+   3). execute() can be used for both cases above when the result is unknown</br></br>
+
+Let's use the execute() method to add a students table to our database:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+String tableSql = "CREATE TABLE IF NOT EXISTS employees" </br>
+  + "(emp_id int PRIMARY KEY AUTO_INCREMENT, name varchar(30),"</br>
+  + "position varchar(30), salary double)";</br>
+stmt.execute(tableSql);</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">When using the execute() method to update the data, then the stmt.getUpdateCount() method returns the number of rows affected.</br></br>
+
+If the result is 0 then either no rows were affected, or it was a database structure update command.</br></br>
+
+If the value is -1, then the command was a SELECT query; we can then obtain the result using stmt.getResultSet().</br></br>
+
+Next, let's add a record to our table using the executeUpdate() method:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+String insertSql = "INSERT INTO employees(name, position, salary)"</br>
+  + " VALUES('john', 'developer', 2000)";</br>
+stmt.executeUpdate(insertSql);</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">The method returns the number of affected rows for a command that updates rows or 0 for a command that updates the database structure.</br></br>
+
+We can retrieve the records from the table using the executeQuery() method which returns an object of type ResultSet:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+String selectSql = "SELECT * FROM employees"; </br>
+try (ResultSet resultSet = stmt.executeQuery(selectSql)) {</br>
+    // use resultSet here</br>
+}</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">We should make sure to close the ResultSet instances after use. Otherwise, we may keep the underlying cursor open for a much longer period than expected. To do that, it's recommended to use a try-with-resources block, as in our example above.</br></br>
+<STRONG><font size="+1">2.2. PreparedStatement:-</STRONG></font></br></br>
+PreparedStatement objects contain precompiled SQL sequences. They can have one or more parameters denoted by a question mark.</br>
+
+Let's create a PreparedStatement which updates records in the employees table based on given parameters:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+String updatePositionSql = "UPDATE employees SET position=? WHERE emp_id=?";</br>
+try (PreparedStatement pstmt = con.prepareStatement(updatePositionSql)) {</br>
+    // use pstmt here</br>
+}</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">To add parameters to the PreparedStatement, we can use simple setters – setX() – where X is the type of the parameter, and the method arguments are the order and value of the parameter:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+pstmt.setString(1, "lead developer");</br>
+pstmt.setInt(2, 1);</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">The statement is executed with one of the same three methods described before: executeQuery(), executeUpdate(), execute() without the SQL String parameter:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+int rowsAffected = pstmt.executeUpdate();
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">2.3. CallableStatement:-</STRONG></font></br></br>
+The CallableStatement interface allows calling stored procedures.</br></br>
+
+To create a CallableStatement object, we can use the prepareCall() method of Connection:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+String preparedSql = "{call insertEmployee(?,?,?,?)}";</br>
+try (CallableStatement cstmt = con.prepareCall(preparedSql)) {</br>
+    // use cstmt here</br>
+}</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">Setting input parameter values for the stored procedure is done like in the PreparedStatement interface, using setX() methods:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+cstmt.setString(2, "ana");</br>
+cstmt.setString(3, "tester");</br>
+cstmt.setDouble(4, 2000);</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">If the stored procedure has output parameters, we need to add them using the registerOutParameter() method:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+cstmt.registerOutParameter(1, Types.INTEGER);
+</div>
+</h5>
+<h5 class="w3-padding-32">Then let's execute the statement and retrieve the returned value using a corresponding getX() method:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+cstmt.execute();</br>
+int new_id = cstmt.getInt(1);</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">For example to work, we need to create the stored procedure in our MySql database:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+delimiter //</br>
+CREATE PROCEDURE insertEmployee(OUT emp_id int, </br>
+  IN emp_name varchar(30), IN position varchar(30), IN salary double) </br>
+BEGIN</br>
+INSERT INTO employees(name, position,salary) VALUES (emp_name,position,salary);</br>
+SET emp_id = LAST_INSERT_ID();</br>
+END //</br>
+delimiter ;</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">The insertEmployee procedure above will insert a new record into the employees table using the given parameters and return the id of the new record in the emp_id out parameter.</br></br>
+
+To be able to run a stored procedure from Java, the connection user needs to have access to the stored procedure's metadata. This can be achieved by granting rights to the user on all stored procedures in all databases:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+GRANT ALL ON mysql.proc TO 'user1';
+</div>
+</h5>
+<h5 class="w3-padding-32">Alternatively, we can open the connection with the property noAccessToProcedureBodies set to true:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+con = DriverManager.getConnection(</br>
+  "jdbc:mysql://localhost:3306/myDb?noAccessToProcedureBodies=true", </br>
+  "user1", "pass");</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">This will inform the JDBC API that the user does not have the rights to read the procedure metadata so that it will create all parameters as INOUT String parameters.</br></br>
+<STRONG><font size="+2">3. Parsing Query Results:-</STRONG></font></br></br>
+After executing a query, the result is represented by a ResultSet object, which has a structure similar to a table, with lines and columns.</br></br>
+<STRONG><font size="+1">3.1.ResultSet Interface:-</STRONG></font></br></br>
+The ResultSet uses the next() method to move to the next line.</br></br>
+
+Let's first create an Employee class to store our retrieved records:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+public class Employee {</br>
+    private int id;</br>
+    private String name;</br>
+    private String position;</br>
+    private double salary;</br>
+ 
+    // standard constructor, getters, setters</br>
+}</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">Next, let's traverse the ResultSet and create an Employee object for each record:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+String selectSql = "SELECT * FROM employees"; </br>
+try (ResultSet resultSet = stmt.executeQuery(selectSql)) {</br>
+    List<Employee> employees = new ArrayList<>(); </br>
+    while (resultSet.next()) { </br>
+        Employee emp = new Employee(); </br>
+        emp.setId(resultSet.getInt("emp_id")); </br>
+        emp.setName(resultSet.getString("name")); </br>
+        emp.setPosition(resultSet.getString("position")); </br>
+        emp.setSalary(resultSet.getDouble("salary")); </br>
+        employees.add(emp); </br>
+    }</br>
+}</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">Retrieving the value for each table cell can be done using methods of type getX() where X represents the type of the cell data.</br></br>
+
+The getX() methods can be used with an int parameter representing the order of the cell, or a String parameter representing the name of the column. The latter option is preferable in case we change the order of the columns in the query.</br></br>
+<STRONG><font size="+1">3.2. Updatable ResultSet:-</STRONG></font></br></br>
+Implicitly, a ResultSet object can only be traversed forward and cannot be modified.</br></br>
+If we want to use the ResultSet to update data and traverse it in both directions, we need to create the Statement object with additional parameters:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+stmt = con.createStatement(</br>
+  ResultSet.TYPE_SCROLL_INSENSITIVE, </br>
+  ResultSet.CONCUR_UPDATABLE</br>
+);</br>
+</div>
+</h5>
+<h5 class="w3-padding-32">To navigate this type of ResultSet, we can use one of the methods:</br></br>
+
+    i).first(), last(), beforeFirst(), beforeLast() - to move to the first or last line of a ResultSet or to the line before these</br>
+    ii).next(), previous() - to navigate forward and backward in the ResultSet</br>
+    iii).getRow() - to obtain the current row number</br>
+    iv).moveToInsertRow(), moveToCurrentRow() - to move to a new empty row to insert and back to the current one if on a new row</br>
+    v).absolute(int row) - to move to the specified row</br>
+    vi).relative(int nrRows) - to move the cursor the given number of rows</br></br>
+
+Updating the ResultSet can be done using methods with the format updateX() where X is the type of cell data. These methods only update the ResultSet object and not the database tables.</br></br>
+
+To persist the ResultSet changes to the database, we must further use one of the methods:</br></br>
+
+    i).updateRow() - to persist the changes to the current row to the database</br>
+    ii).insertRow(), deleteRow() - to add a new row or delete the current one from the database</br>
+    iii).refreshRow() - to refresh the ResultSet with any changes in the database</br>
+    iv).cancelRowUpdates() - to cancel changes made to the current row</br></br>
+
+Let's take a look at an example of using some of these methods by updating data in the employee's table:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+try (Statement updatableStmt = con.createStatement(</br>
+  ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {</br>
+    try (ResultSet updatableResultSet = updatableStmt.executeQuery(selectSql)) {</br>
+        updatableResultSet.moveToInsertRow();</br>
+        updatableResultSet.updateString("name", "mark");</br>
+        updatableResultSet.updateString("position", "analyst");</br>
+        updatableResultSet.updateDouble("salary", 2000);</br>
+        updatableResultSet.insertRow();</br>
+    }</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">4.Parsing Metadata</strong></font></br></br>
+The JDBC API allows looking up information about the database, called metadata.
+<STRONG><font size="+1">4.1.DatabaseMetadata</strong></font>
+The DatabaseMetadata interface can be used to obtain general information about the database such as the tables, stored procedures, or SQL dialect.</br></br>
+
+Let's have a quick look at how we can retrieve information on the database tables:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+DatabaseMetaData dbmd = con.getMetaData();</br>
+ResultSet tablesResultSet = dbmd.getTables(null, null, "%", null);</br>
+while (tablesResultSet.next()) {</br>
+    LOG.info(tablesResultSet.getString("TABLE_NAME"));</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">4.2.ResultSetMetadata</strong></font></br></br>
+This interface can be used to find information about a certain ResultSet, such as the number and name of its columns:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+ResultSetMetaData rsmd = rs.getMetaData();</br>
+int nrColumns = rsmd.getColumnCount();</br>
+
+IntStream.range(1, nrColumns).forEach(i -> {</br>
+    try {</br>
+        LOG.info(rsmd.getColumnName(i));</br>
+    } catch (SQLException e) {</br>
+        e.printStackTrace();</br>
+    }</br>
+});
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">5.Closing the Resources</strong></font></br></br>
+When we're no longer using it, we need to close the connection to release database resources.</br></br>
+
+We can do this using the close() API:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+ <!--<div class="w3-third w3-center">-->
+con.close();
+</div>
+</h5>
+<h5 class="w3-padding-32">However, if we're using the resource in a try-with-resources block, we don't need to call the close() method explicitly, as the try-with-resources block does that for us automatically.</br></br>
+
+The same is true for the Statements, PreparedStatements, CallableStatements, and ResultSets.
+</div>
+</h5>
+</div>
+
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

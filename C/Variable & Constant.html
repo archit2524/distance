@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Array.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Array</a>
+    <a href="Operators.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Operators</a>
+    <a href="Datatypes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Datatypes</a>
+    <a href="Decision%20Making.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Decision Making</a>
+    <a href="loops.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Loops</a>
+    <a href="Pointer.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pointer</a>
+    <a href="Variable%20&%20Constant.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Variable & Constant</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">C Programming</h1>
+  <p class="w3-xlarge">Variable & Constant </p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Variable Definition in C</strong> </h1>
+      <h5 class="w3-padding-32">A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows -</br>
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+type variable_list;
+</div>
+</h5>
+<h5 class="w3-padding-32">Here, type must be a valid C data type including char, w_char, int, float, double, bool, or any user-defined object; and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+int    i, j, k;</br>
+char   c, ch;</br>
+float  f, salary;</br>
+double d;
+</div>
+</h5>
+<h5 class="w3-padding-32">The line int i, j, k; declares and defines the variables i, j, and k; which instruct the compiler to create variables named i, j and k of type int.</br></br>
+
+Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+</div>
+</h5>
+<h5 class="w3-padding-32">When you compile and execute the above program, it produces the following result on Linux -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+type variable_name = value;
+</div>
+</h5>
+<h5 class="w3-padding-32">Some examples are -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+extern int d = 3, f = 5;    // declaration of d and f. </br>
+int d = 3, f = 5;           // definition and initializing d and f.</br> 
+byte z = 22;                // definition and initializes z. </br>
+char x = 'x';               // the variable x has the value 'x'.
+</div>
+</h5>
+<h5 class="w3-padding-32">For definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables are undefined.</br></br>
+<strong><font size="+2">Variable Declaration in C</font></Strong></br></br>
+A variable declaration provides assurance to the compiler that there exists a variable with the given type and name so that the compiler can proceed for further compilation without requiring the complete detail about the variable. A variable definition has its meaning at the time of compilation only, the compiler needs actual variable definition at the time of linking the program.</br></br>
+
+A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use the keyword extern to declare a variable at any place. Though you can declare a variable multiple times in your C program, it can be defined only once in a file, a function, or a block of code.</br></br>
+<strong><font size="+1.5">Example</font></Strong></br></br>
+Try the following example, where variables have been declared at the top, but they have been defined and initialized inside the main function -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+
+// Variable declaration:</br>
+extern int a, b;</br>
+extern int c;</br>
+extern float f;</br>
+
+int main () {</br>
+
+   /* variable definition: */</br>
+   int a, b;</br>
+   int c;</br>
+   float f;</br>
+ 
+   /* actual initialization */</br>
+   a = 10;</br>
+   b = 20;</br>
+  
+   c = a + b;</br>
+   printf("value of c : %d \n", c);</br>
+
+   f = 70.0/3.0;</br>
+   printf("value of f : %f \n", f);</br>
+ 
+   return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">When the above code is compiled and executed, it produces the following result -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+value of c : 30</br>
+value of f : 23.333334
+</div>
+</h5>
+<h5 class="w3-padding-32">The same concept applies on function declaration where you provide a function name at the time of its declaration and its actual definition can be given anywhere else. For example -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+// function declaration</br>
+int func();</br>
+
+int main() {</br>
+
+   // function call</br>
+   int i = func();</br>
+}</br>
+
+// function definition</br>
+int func() {</br>
+   return 0;</br>
+}
+
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">Lvalues and Rvalues in C</font></strong></br></br>
+There are two kinds of expressions in C -</br>
+1).<strong>lvalue</strong> - Expressions that refer to a memory location are called "lvalue" expressions. An lvalue may appear as either the left-hand or right-hand side of an assignment.</br></br>
+
+2).<strong>rvalue</strong> - The term rvalue refers to a data value that is stored at some address in memory. An rvalue is an expression that cannot have a value assigned to it which means an rvalue may appear on the right-hand side but not on the left-hand side of an assignment.</br></br>
+
+Variables are lvalues and so they may appear on the left-hand side of an assignment. Numeric literals are rvalues and so they may not be assigned and cannot appear on the left-hand side. Take a look at the following valid and invalid statements -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+int g = 20; // valid statement</br>
+
+10 = 20; // invalid statement; would generate compile-time error
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+3">Constant</font></strong></br></br>
+A constant is a value or variable that can't be changed in the program, for example: 10, 20, 'a', 3.4, "c programming" etc.</br></br>
+
+There are different types of constants in C programming.</br></br>
+<strong><font size="+2">List of Constants in C</font></strong></br></br>
+<center><img src="https://www.crackyourinterview.com/images/Img264270-0.png" width="700" height="450"></center></br></br>
+<strong><font size="+2">2 ways to define constant in C</font></strong></br></br>
+There are two ways to define constant in C programming.</br></br>
+
+1).const keyword</br>
+2).#define preprocessor</br></br>
+<strong><font size="+1">1) C const keyword</font></strong></br></br>
+The const keyword is used to define constant in C programming.</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+const float PI=3.14;  
+</div>
+</h5>
+<h5 class="w3-padding-32">Now, the value of PI variable can't be changed.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include<stdio.h>    </br></br>
+int main(){    </br>
+    const float PI=3.14;</br>    
+    printf("The value of PI is: %f",PI);</br>    
+    return 0;</br>  
+}     
+</div>
+</h5>
+<h5 class="w3-padding-32">Output.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+The value of PI is: 3.140000
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">2).The #define Preprocessor:-</font></strong></br></br>
+Given below is the form to use #define preprocessor to define a constant -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#define identifier value
+</div>
+</h5>
+<h5 class="w3-padding-32">The following example explains it in detail -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+
+#define LENGTH 10  </br>< 
+#define WIDTH  5</br>
+#define NEWLINE '\n'</br></br>
+
+int main() {</br>
+   int area;  </br>
+  
+   area = LENGTH * WIDTH;</br>
+   printf("value of area : %d", area);</br>
+   printf("%c", NEWLINE);</br>
+
+   return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">Output -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+value of area : 50
+</div>
+</h5>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+	
+ <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Array.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Array</a>
+    <a href="Operators.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Operators</a>
+    <a href="Datatypes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Datatypes</a>
+    <a href="Decision%20Making.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Decision Making</a>
+    <a href="loops.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Loops</a>
+    <a href="Pointer.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pointer</a>
+    <a href="Variable%20&%20Constant.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Variable & Constant</a>
+    <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a> 
+ </div>
+
+</div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+ 
+</div>
+
+<!-- Header -->
+
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px"  >
+  <h1 class="w3-margin w3-jumbo">Downloads</h1>
+  <p class="w3-xlarge"></p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    
+</header>
+<center>
+<form method="GET" action="newdownload.php">
+<table border="2">
+<tr>
+<h3><center>C</center></h3>
+</tr>
+<tr>
+<td>Id</td>
+<td>File</td>
+<td>Download</td>
+</tr>
+<tr>
+<td>1.</td>
+<td>C</td>
+<td><a href="C.php">download</a></td>
+</tr>
+</table>
+</form>
+</center>
+ <script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

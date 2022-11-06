@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Array.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Array</a>
+    <a href="Operators.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Operators</a>
+    <a href="Datatypes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Datatypes</a>
+    <a href="Decision%20Making.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Decision Making</a>
+    <a href="loops.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Loops</a>
+    <a href="Pointer.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pointer</a>
+    <a href="Variable%20&%20Constant.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Variable & Constant</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">C Programming</h1>
+  <p class="w3-xlarge">Loops</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Loops</strong> </h1>
+      <h5 class="w3-padding-32">The looping can be defined as repeating the same process multiple times until a specific condition satisfies. There are three types of loops used in the C language. In this part of the tutorial, we are going to learn all the aspects of C loops.</br></br>
+<strong><font size="+1">Why use loops in C language?</font></Strong></br></br>
+The looping simplifies the complex problems into the easy ones. It enables us to alter the flow of the program so that instead of writing the same code again and again, we can repeat the same code for a finite number of times. For example, if we need to print the first 10 natural numbers then, instead of using the printf statement 10 times, we can print inside a loop which runs up to 10 iterations.</br></br>
+<strong><font size="+1">Advantage of loops in C</font></Strong></br></br>
+1) It provides code reusability.</br>
+
+2) Using loops, we do not need to write the same code again and again.</br>
+
+3) Using loops, we can traverse over the elements of data structures (array or linked lists).</br></br>
+<strong><font size="+2">Types of C Loops</font></Strong></br></br>
+There are three types of loops in C language that is given below:</br>
+
+1.do while</br>
+2.while</br>
+3.for</br></br>
+<strong><font size="+2">1.do-while loop</font></Strong></br></br>
+The do while loop is a post tested loop. Using the do-while loop, we can repeat the execution of several parts of the statements. The do-while loop is mainly used in the case where we need to execute the loop at least once. The do-while loop is mostly used in menu-driven programs where the termination condition depends upon the end user.</br></br>
+
+<strong>Syntax:-</strong>:</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+do{  </br>
+//code to be executed</br>  
+}while(condition); 
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Flowchart:-</font></Strong></br></br>
+<center><img src="https://www.programtopia.net/wp-content/uploads/2021/01/do_0.png" width="500" height="550"></center></br>
+<strong><font size="+1">Example:-</font></Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include<stdio.h>  </br></br>
+int main(){    </br>
+int i=1;      </br>
+do{    </br>
+printf("%d \n",i);</br>    
+i++;    </br>
+}</br>
+while(i<=10);</br>   
+return 0;  </br>
+}     
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output:-</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+1</br>
+2</br>
+3</br>
+4</br>
+5</br>
+6</br>
+7</br>
+8</br>
+9</br>
+10
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">2).while loop</font></Strong></br></br>
+While loop is also known as a pre-tested loop. In general, a while loop allows a part of the code to be executed multiple times depending upon a given boolean condition. It can be viewed as a repeating if statement. The while loop is mostly used in the case where the number of iterations is not known in advance.</br></br>
+<strong>Syntax:-</strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+while(condition){  </br>
+//code to be executed  </br>
+}  
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Flowchart:-</font></Strong></br>
+<center><img src="https://www.programtopia.net/wp-content/uploads/2021/01/while_0.png" height="550"></center></br>
+<strong><font size="+1">Properties of while loop:-</font></Strong></br></br>
+<ul>
+<li>A conditional expression is used to check the condition. The statements defined inside the while loop will repeatedly execute until the given condition fails.</li>
+<li>The condition will be true if it returns 0. The condition will be false if it returns any non-zero number.</li>
+<li>In while loop, the condition expression is compulsory.</li>
+<li>Running a while loop without a body is possible.</li>
+<li>We can have more than one conditional expression in while loop.</li>
+<li>If the loop body contains only one statement, then the braces are optional.</li>
+</ul>
+<strong><font size="+1">Example:-</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include<stdio.h>  </br></br>
+void main ()  </br>
+{  </br>
+    int j = 1;</br>  
+    while(j+=2,j<=10)</br>  
+    {  </br>
+        printf("%d ",j);</br>   
+    }  </br>
+    printf("%d",j);</br>  
+}  
+
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output:-</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+3 5 7 9 11
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">3).For loop-</font></Strong></br></br>
+The for loop in C language is used to iterate the statements or a part of the program several times. It is frequently used to traverse the data structures like the array and linked list.</br></br>
+<strong><font size="+1">Syntax:-</font></Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+   <!--<div class="w3-third w3-center">-->
+for(Expression 1; Expression 2; Expression 3){  </br>
+//code to be executed  </br>
+}  
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Properties of Expression 1:-</font></Strong></br></br>
+<ul>
+<li>The expression represents the initialization of the loop variable.</li>
+<li>We can initialize more than one variable in Expression 1.</li>
+<li>Expression 1 is optional.</li>
+<li>In C, we can not declare the variables in Expression 1. However, It can be an exception in some compilers.</li>
+</ul>
+<strong><font size="+1">Properties of Expression 2:-</font></Strong></br></br>
+<ul>
+<li>Expression 2 is a conditional expression. It checks for a specific condition to be satisfied. If it is not, the loop is terminated.</li>
+<li>Expression 2 can have more than one condition. However, the loop will iterate until the last condition becomes false. Other conditions will be treated as statements.</li>
+<li>Expression 2 is optional.</li>
+<li>Expression 2 can perform the task of expression 1 and expression 3. That is, we can initialize the variable as well as update the loop variable in expression 2 itself.</li>
+<li>We can pass zero or non-zero value in expression 2. However, in C, any non-zero value is true, and zero is false by default.</li>
+</ul>
+<strong><font size="+1">Properties of Expression 3:-</font></Strong></br></br>
+<ul>
+<li>Expression 3 is used to update the loop variable.</li>
+<li>We can update more than one variable at the same time.</li>
+<li>Expression 3 is optional.</li>
+</ul>
+<strong><font size="+1">Flowchart:-</font></Strong></br>
+<center><img src="https://www.programtopia.net/wp-content/uploads/2021/01/for_0.png" height="550"></center></br>
+<strong><font size="+1">Example</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include<stdio.h>  </br></br>
+int main(){  </br>
+int i=1,number=0; </br>     
+printf("Enter a number: ");</br>    
+scanf("%d",&number);    </br>
+for(i=1;i<=10;i++){      </br>
+printf("%d \n",(number*i));   </br> 
+}    </br>
+return 0; </br> 
+}    
+
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output:-</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Enter a number: 1000</br>
+1000</br>
+2000</br>
+3000</br>
+4000</br>
+5000</br>
+6000</br>
+7000</br>
+8000</br>
+9000</br>
+10000
+</div>
+</h5>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+	
+   <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="applet.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">APPLET</a>
+    <a href="awt.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">AWT</a>
+    <a href="jdbc.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JDBC</a>
+    <a href="Servlets.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">SERVLETS</a>
+    <a href="JSP.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JSP</a>
+     <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+ 
+ </div>
+
+</div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+ 
+</div>
+
+<!-- Header -->
+
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px"  >
+  <h1 class="w3-margin w3-jumbo">ADVANCE JAVA</h1>
+  <p class="w3-xlarge">APPLET</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Applet</strong> </h1>
+      <h5 class="w3-padding-32">An applet is a special kind of Java program that runs in a Java enabled browser. This is the first Java program that can run over the network using the browser. Applet is typically embedded inside a web page and runs in the browser.
+In other words, we can say that Applets are small Java applications that can be accessed on an Internet server, transported over Internet, and can be automatically installed and run as apart of a web document.</br></br>
+After a user receives an applet, the applet can produce a graphical user interface. It has limited access to resources so that it can run complex computations without introducing the risk of viruses or breaching data integrity.</br></br>
+To create an applet, a class must class extends java.applet.Applet class.</br></br>
+An Applet class does not have any main() method. It is viewed using JVM. The JVM can use either a plug-in of the Web browser or a separate runtime environment to run an applet application.
+JVM creates an instance of the applet class and invokes init() method to initialize an Applet.</br></br>
+<strong>Note:</strong> Java Applet is deprecated since Java 9. It means Applet API is no longer considered important.
+</h5>
+      <h1><strong>Lifecycle of Java Applet</strong> </h1>
+<h5 class="w3-padding-32">Following are the stages in Applet:-</br>
+1.	Applet is initialized.</br>
+2.	Applet is started</br>
+3.	Applet is painted.</br>
+4.	Applet is stopped.</br>
+5.	Applet is destroyed.</br>
+<center><img src="https://static.javatpoint.com/core/images/applet-life-cycle-in-java.png" width="500" height="250"></center>
+<STRONG>  <font size="+2">A Simple Applet Program:-</font></STRONG>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      import java.awt.*;</br>
+import java.applet.*;</br>
+public class Simple extends Applet</br>
+{</br>
+  public void paint(Graphics g)</br>
+    {</br>
+      g.drawString("A simple Applet", 20, 20);</br>
+    }</br>
+}
+  </div>
+</h5>
+<h5 class="w3-padding-32"><strong>OUTPUT:-</strong>
+<center><img src="https://static.studytonight.com/java/images/creating-simple-applet.jpg" width="500" height="250"></center></br>
+Every Applet application must import two packages - java.awt and java.applet.</br></br>
+java.awt.* imports the Abstract Window Toolkit (AWT) classes. Applets interact with the user (either directly or indirectly) through the AWT. The AWT contains support for a window-based, graphical user interface. java.applet.* imports the applet package, which contains the class Applet. Every applet that you create must be a subclass of Applet class. </br></br>
+The class in the program must be declared as public, because it will be accessed by code that is outside the program.Every Applet application must declare a paint() method. This method is defined by AWT class and must be overridden by the applet. The paint() method is called each time when an applet needs to redisplay its output. Another important thing to notice about applet application is that, execution of an applet does not begin at main() method. In fact an applet application does not have any main() method.</br></br>
+<STRONG><font size="+2">Advantages of Applets:-</STRONG></font></br></br>
+1.	It takes very less response time as it works on the client side.</br>
+2.	It can be run on any browser which has JVM running in it.</br></br>
+<STRONG><font size="+2">Applet class:-</STRONG></font></br></br>
+Applet class provides all necessary support for applet execution, such as initializing and destroying of applet. It also provide methods that load and display images and methods that load and play audio clips.</br></br>
+<STRONG><font size="+2">An Applet Skeleton:-</STRONG></font></br></br>
+Most applets override these four methods. These four methods forms Applet lifecycle.</br></br>
+
+<STRONG><font size="+1">i). init() :</STRONG></font> init() is the first method to be called. This is where variable are initialized. This method is called only once during the runtime of applet.</br></br>
+<STRONG><font size="+1">ii).start() :</STRONG></font> start() method is called after init(). This method is called to restart an applet after it has been stopped.</br></br>
+<STRONG><font size="+1">iii).stop() :</STRONG></font> stop() method is called to suspend thread that does not need to run when applet is not visible.</br></br>
+<STRONG><font size="+1">iv).destroy() :</STRONG></font> destroy() method is called when your applet needs to be removed completely from memory.</br></br>
+<STRONG>Note:</STRONG> The stop() method is always called before destroy() method.</br></br>
+<STRONG><font size="+2">Example of an Applet Skeleton:-</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+     import java.awt.*;</br>
+import java.applet.*;</br>
+public class AppletTest extends Applet</br>
+{</br>
+ public void init()</br>
+ {</br>
+  //initialization</br>
+ }</br>
+ public void start ()</br>
+ {</br>
+  //start or resume execution</br>
+ }</br>
+ public void stop()</br>
+ {</br>
+  //suspend execution</br>
+ {</br>
+ public void destroy()</br>
+ {</br>
+  //perform shutdown activity</br>
+ }</br>
+ public void paint (Graphics g)</br>
+ {</br>
+  //display the content of window</br>
+ }</br>
+}</br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">Example of an Applet :-</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      import java.applet.*;</br>
+import java.awt.*;</br>
+public class MyApplet extends Applet</br>
+{</br>
+ int height, width;</br>
+ public void init()</br>
+ {</br>
+  height = getSize().height;</br>
+  width = getSize().width;</br>
+  setName("MyApplet");</br>
+ }</br>
+ public void paint(Graphics g)</br>
+ {</br>
+  g.drawRoundRect(10, 30, 120, 120, 2, 3);</br>
+ }</br>
+}
+  </div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">OUTPUT :-</STRONG></font></br></br>
+<center><img src="https://static.studytonight.com/java/images/example-of-applet.jpg" width="500" height="250"></center></br>
+<STRONG><font size="+2">Parameter in Applet</STRONG></font></br></br>
+User-define Parameter can be applied in applet using <strong><PARAM…></strong> tags. Each <strong><PARAM…></strong> tag has a name and value attribute.</br></br>
+In an applet code, applet can refer to a parameter by its name and then find its value.</br></br>
+The two most important thing to handle and set up the parameter is the <PARAM> tag in the HTML document and an applet code to parse this parameter.</br></br>
+init() method is used to get hold of the parameters which is defined in the <PARAM> tags. And getParameter() method is used for getting the parameters.</br></br>
+In Applet, Parameters are passed on applet when it is loaded.</br></br>
+<STRONG><font size="+2">Example :</STRONG></font></br></br>
+<font size="+1">param.java</font>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      import java.applet.*;</br>
+import java.awt.*;</br>
+public class param extends Applet</br>
+{</br>
+  String str;</br>
+  public void init()</br>
+  {</br>
+    str=getParameter("pname");  </br>
+    if (str == null)</br>
+    str = "Welcome to studytonight.com";</br>
+    str = "Hello " + str; </br>
+  } </br>  
+    public void paint(Graphics g)</br>
+    {</br>
+      g.drawString(str, 200, 200);</br>
+    }</br>
+}</br>
+   </div>
+</h5>
+<h5 class="w3-padding-32"><font size="+1">OUTPUT</font></br>
+<center><img src="https://static.studytonight.com/java/images/applet-viewer-parameter.JPG" width="600" height="200"></center></br>
+<center><img src="https://static.studytonight.com/java/images/applet-start.JPG" width="500" height="250"></center></br>
+<STRONG><font size="+2">How to run an Applet Program</STRONG></font></br></br>
+An Applet program is compiled in the same way as you have been compiling your console programs. However there are two ways to run an applet.</br></br>
+<ul>
+<li>Executing the Applet within Java-compatible web browser.</li></br>
+<li>Using an Applet viewer, such as the standard tool, applet viewer. An applet viewer executes your applet in a window</li></br></br>
+</ul>
+For executing an Applet in an web browser, create short HTML file in the same directory. Inside body tag of the file, include the following code. (applet tag loads the Applet class)</br></br>
+<STRONG><font size="+2">Running Applet using Applet Viewer</STRONG></font></br></br>
+To execute an Applet with an applet viewer, write short HTML file as discussed above. If you name it as run.htm, then the following command will run your applet program.</br></br>
+f:/>appletviewer run.htm</br>
+<center><img src="https://static.studytonight.com/java/images/applet-viewer.jpg" width="500" height="250"></center></br></br>
+<STRONG><font size="+2">Graphics in Applet</STRONG></font></br></br>
+In Applet, java.awt.Graphicsclass provides methods for using graphics.</br></br>
+
+Below are the Methods of the Graphics class.</br></br>
+1.	public abstract void drawString(String str, int x, int y)     -	Used to draw specified string.</br></br>
+2.	public void drawRect(int x, int y, int width, int height)     -	Used to draw a rectangle of specified width and height.</br></br>
+3.	public abstract void fillRect(int x, int y, int width, int height) -  Used to draw a rectangle with a default colourof specified width and height.</br></br>
+4.	public abstract void drawOval(int x, int y, int width, int height)        -	Used to draw oval of specified width and height.</br></br>
+5.	public abstract void fillOval(int x, int y, int width, int height)  -  Used to draw oval with a default colour of specified width and height.</br></br>
+6.	public abstract void drawLine(int x1, int y1, int x2, int y2)  -	Used for drawing lines between the point (x1, x1) and (x2, y2).</br></br>
+7.	public abstract booleandrawImage(Image img, int x, int y, ImageObserver observer)       -	Used for drawing a specified image.</br></br>
+8.	public abstract void drawArc(int x, int y, int width, int height, intstartAngle, intarcAngle)  -	Used for drawing a circular arc.</br></br>
+9.	public abstract void fillArc(int x, int y, int width, int height, intstartAngle, intarcAngle)   - 	Used for filling circular arc.</br></br>
+10.	public abstract void setColor(Color c)  -	Used to set a colour to the object. </br></br>
+11.	public abstract void setFont(Font font)  -	Used to set font.</br></br>
+<STRONG><font size="+2">EXAMPLE</STRONG></font></br></br>
+GraphicsDemo1.java</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      import java.applet.Applet;</br>
+import java.awt.*;</br>
+public class GraphicsDemo1 extends Applet</br>
+{</br>
+  public void paint(Graphics g)</br>
+  {  </br>
+    g.setColor(Color.black);  </br>
+    g.drawString("Welcome to studytonight",50, 50); </br>
+    g.setColor(Color.blue);  </br>
+    g.fillOval(170,200,30,30);  </br>
+    g.drawArc(90,150,30,30,30,270); </br> 
+    g.fillArc(270,150,30,30,0,180);  </br>
+    g.drawLine(21,31,20,300);  </br>
+    g.drawRect(70,100,30,30);</br>  
+    g.fillRect(170,100,30,30); </br> 
+    g.drawOval(70,200,30,30);  </br>
+  } </br> 
+}</br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><font size="+1">OUTPUT</font></br>
+<center><img src="https://static.studytonight.com/java/images/images-with-applet.JPG"600" height="200"></center></br>
+<center><img src="https://static.studytonight.com/java/images/studytonight-icon-applet.JPG" width="500" height="250"></center></br>
+<strong><font size="+2">EventHandling in Applet</strong></font></br></br>
+In Applet we can also perform event handling.</br>
+Below is an example of event handling which prints a message when clicked on the button.</br></br>
+<strong><font size="+1.5">Example</strong></font></br></br>
+EventAppletDemo.java</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      import java.applet.*;  </br>
+import java.awt.*;</br>  
+import java.awt.event.*;</br>  
+public class EventAppletDemo extends Applet implements ActionListener</br>
+{ </br> 
+  Button b1; </br> 
+  TextField tf1;</br>  
+  public void init()</br>
+  {</br>  
+    tf1=new TextField(); </br> 
+    tf1.setBounds(30,40,200,20); </br> 
+    b1=new Button("Click");</br>  
+    b1.setBounds(80,150,60,50); </br>   
+    add(b1);</br>
+    add(tf1); </br> 
+    b1.addActionListener(this);</br>  
+    setLayout(null);</br>  
+  } </br> 
+  public void actionPerformed(ActionEvent e)</br>
+  {</br>  
+    tf1.setText("Welcome to studytonight");</br>  
+  }</br>   
+}</br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">OUTPUT</strong></font></br>
+<center><img src="https://static.studytonight.com/java/images/event-handling-in-applet.JPG"600" height="200"></center></br>
+<center><img src="https://static.studytonight.com/java/images/applet-with-event-handling.JPG" width="500" height="250"></center></br>
+<strong><font size="+2">Animation in Applet</strong></font></br></br>
+In Applet, we can also create animations in a program using a gif image. Below is an example in which drawImage() method is used which is of Graphics class, it is used for displaying an image.</br></br>
+<strong>Note:</strong> Download a gif file for the below example</br></br>
+<strong><font size="+2">Example:-</strong></font></br></br>
+AnimationDemo.java</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      
+import java.awt.*; </br> 
+import java.applet.*; </br>  
+public class AnimationDemo extends Applet </br> 
+{ </br>  
+  Image p;</br>   
+  public void init() </br> 
+  {  </br> 
+    p = getImage(getDocumentBase(),"ball.gif"); </br>  
+  }  </br> 
+  public void paint(Graphics g) </br> 
+  {  </br> 
+    for(inti=0;i<500;i++)</br> 
+    { </br>  
+      g.drawImage(p, i,50, this); </br>  
+      try</br> 
+      {</br> 
+        Thread.sleep(100);</br> 
+      }</br> 
+      catch(Exception e)</br> 
+      {}</br>   
+    }</br>   
+  }</br>   
+}</br>   
+  
+  </div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">OUTPUT</strong></font></br>
+<center><img src="https://static.studytonight.com/java/images/animation-applet.JPG" width="500" height="250"></center></br>
+<strong><font size="+2">JApplet class</strong></font></br></br>
+In Java, JApplet is the public class of swing. JApplet extends the class in java.applet.Applet. JApplet generates a bytecode with the help of JVM or the Applet viewer. JApplet can be written in any programming language and then can be compiled for Java Byte code.</br></br>
+<strong><font size="+2">EXAMPLE</strong></font></br></br>
+JAppletDemo.java</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      
+import java.applet.*; </br> 
+import javax.swing.*; </br> 
+import java.awt.event.*;  </br>
+public class JAppletDemo extends JApplet implements ActionListener</br>
+{ </br> 
+  JButton b;</br>  
+  JTextField t;</br>  
+  public void init()</br>
+  {  </br>
+    t=new JTextField(); </br> 
+    t.setBounds(30,40,220,20); </br> 
+    b=new JButton("Click"); </br> 
+    b.setBounds(80,150,70,40); </br> 
+    add(b);</br>
+    add(t); </br> 
+    b.addActionListener(this); </br> 
+    setLayout(null);</br>  
+  }  </br>
+  public void actionPerformed(ActionEvent e)</br>
+  { </br> 
+    t.setText("Welcome to studytonight.com"); </br> 
+  } </br> 
+}</br>
+     </div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">OUTPUT</strong></font></br>
+<center><img src="https://static.studytonight.com/java/images/jclass-applet.JPG" width="500" height="250"></center></br>
+<strong><font size="+2">Painting in Applet</strong></font></br></br>
+Below is an example of Painting using mouseDragged() method of MouseMotionListener in Applet.</br></br>
+<strong><font size="+2">EXAMPLE</strong></font></br></br>
+PaintingDemo.java</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      
+import java.awt.*; </br> 
+import java.awt.event.*;</br>  
+import java.applet.*; </br> 
+public class PaintingDemo extends Applet implements MouseMotionListener</br>
+{  </br>  
+  public void init()</br>
+  {  </br>
+    addMouseMotionListener(this); </br> 
+    setBackground(Color.white); </br> 
+  }  </br>
+  public void mouseDragged(MouseEvent me)</br>
+  {  </br>
+    Graphics g=getGraphics();  </br>
+    g.setColor(Color.black); </br> 
+    g.fillOval(me.getX(),me.getY(),5,5);  </br>
+  }  </br>
+  public void mouseMoved(MouseEvent me)</br>
+  {} </br> 
+} </br>
+  
+     </div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">OUTPUT</strong></font></br>
+<center><img src="https://static.studytonight.com/java/images/applet-painting.JPG" width="500" height="250"></center></br>
+<strong><font size="+2">Analog Clock in Applet</strong></font></br></br>
+In java, Applet can be used for creating anAnalog Clock. For creating a program for the Analog clock, java.apple, java.awt, java.util, and java.text package are imported. Date and Time functions are also used. Math functions play an important role in creating an Analog Clock. below is a program for creating anAnalog Clock</br></br>
+<strong><font size="+2">EXAMPLE</strong></font></br></br>
+AnalogDemo1.java</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+      
+import java.applet.*; </br>
+import java.awt.*;  </br>
+import java.util.*;  </br>
+import java.text.*; </br> 
+
+public class AnalogDemo1 extends Applet implements Runnable</br> 
+{</br>  
+int width, height;</br>  
+    Thread t = null;</br>  
+    booleanthreadSuspended;</br>  
+    int hours=0, minutes=0, seconds=0;</br>  
+    String timeString = ""; </br>
+    public void init() </br>
+      { </br>  
+        width = getSize().width;</br>  
+        height = getSize().height; </br> 
+        setBackground( Color.black ); </br> 
+      } </br> 
+public void start()</br> 
+  {  </br>
+    if ( t == null ) </br>
+      { </br> 
+        t = new Thread( this ); </br> 
+        t.setPriority( Thread.MIN_PRIORITY );</br>  
+        threadSuspended = false;</br>  
+        t.start();  </br>
+      } </br> 
+    else </br>
+      {</br>  
+        if ( threadSuspended ) </br>
+          {  </br>
+            threadSuspended = false; </br> 
+            synchronized( this ) </br>
+            {  </br>
+              notify(); </br> 
+            }  </br>
+          } </br> 
+      }  </br>
+   }</br>  
+
+public void stop() </br>
+{  </br>
+  threadSuspended = true;  </br>
+}  </br>
+
+public void run() {  </br>
+  try {  </br>
+     while (true) { </br> 
+
+        Calendar cal = Calendar.getInstance();  </br>
+        hours = cal.get( Calendar.HOUR_OF_DAY );  </br>
+        if ( hours> 12 ) hours -= 12;  </br>
+        minutes = cal.get( Calendar.MINUTE );  </br>
+        seconds = cal.get( Calendar.SECOND ); </br> 
+        SimpleDateFormat formatter = new SimpleDateFormat( "hh:mm:ss", Locale.getDefault() );  </br>
+        Date date = cal.getTime();  </br>
+        timeString = formatter.format( date );</br>  
+        if ( threadSuspended ) {</br>  
+            synchronized( this ) {  </br>
+              while ( threadSuspended ) {</br>  
+                wait();  </br>
+              }  </br>
+           } </br> 
+        }  </br>
+        repaint(); </br>
+        t.sleep( 1000 ); </br>
+     }</br>  
+  } </br> 
+  catch (Exception e) { }</br>
+} </br> 
+
+void drawHand( double angle, int radius, Graphics g ) {</br>  
+  angle -= 0.5 * Math.PI;  </br>
+  int x = (int)( radius*Math.cos(angle) ); </br> 
+  int y = (int)( radius*Math.sin(angle) ); </br> 
+  g.drawLine( width/2, height/2, width/2 + x, height/2 + y );</br>  
+} </br> 
+
+void drawWedge( double angle, int radius, Graphics g ) { </br> 
+  angle -= 0.5 * Math.PI;  </br>
+  int x = (int)( radius*Math.cos(angle) );</br>  
+  int y = (int)( radius*Math.sin(angle) ); </br> 
+  angle += 2*Math.PI/3;  </br>
+  int x2 = (int)( 5*Math.cos(angle) ); </br> 
+  int y2 = (int)( 5*Math.sin(angle) );</br>  
+  angle += 2*Math.PI/3;  </br>
+  int x3 = (int)( 5*Math.cos(angle) );  </br>
+  int y3 = (int)( 5*Math.sin(angle) );  </br>
+  g.drawLine( width/2+x2, height/2+y2, width/2 + x, height/2 + y );  </br>
+  g.drawLine( width/2+x3, height/2+y3, width/2 + x, height/2 + y );</br>  
+  g.drawLine( width/2+x2, height/2+y2, width/2 + x3, height/2 + y3 );  </br>
+}  </br>
+
+public void paint( Graphics g ) {  </br>
+  g.setColor( Color.pink );  </br>
+  drawWedge( 2*Math.PI * hours / 12, width/5, g );  </br>
+  drawWedge( 2*Math.PI * minutes / 60, width/3, g );  </br>
+  drawHand( 2*Math.PI * seconds / 60, width/2, g ); </br> 
+  g.setColor( Color.white ); </br> 
+  g.drawString( timeString, 10, height-10 );  </br>
+} </br> 
+} </br> 
+     </div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">OUTPUT</strong></font></br>
+<center><img src="https://static.studytonight.com/java/images/analog-clock.JPG" width="500" height="250"></center></br>
+<strong><font size="+2">Digital Clock in Applet</strong></font></br></br>
+In java, Applet can be used for creating a Digital Clock. For creating a program for the digital clock, java.apple, java.awt, java.util, and java.text package are imported. Date and Time functions are also used. below is a program for creating a Digital Clock.</br></br>
+<strong><font size="+2">EXAMPLE</strong></font></br></br>
+DigitalDemo1.java</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.applet.*;  </br>
+import java.awt.*;</br>  
+import java.util.*;</br>  
+import java.text.*;</br>  
+public class DigitalClockDemo1 extends Applet implements Runnable</br> 
+{ </br> 
+  Thread t = null;</br>  
+  int h=0, m=0, s=0;</br>  
+  String timeString = "";  </br>
+public void init() </br>
+{  </br>
+  setBackground( Color.black); </br> 
+}  </br>
+public void start() </br>
+{  </br>
+  t = new Thread( this ); </br> 
+  t.start();  </br>
+} </br> 
+public void run()</br> 
+{  </br>
+  try </br>
+    {  </br>
+      while (true) </br>
+        {  </br>
+          Calendar cal = Calendar.getInstance(); </br> 
+          h = cal.get( Calendar.HOUR_OF_DAY ); </br> 
+          if ( h> 12 ) h -= 12;  </br>
+          m = cal.get( Calendar.MINUTE );  </br>
+          s = cal.get( Calendar.SECOND );  </br>
+          SimpleDateFormat f = new SimpleDateFormat("hh:mm:ss");  </br>
+          Date date = cal.getTime();  </br>
+          timeString = f.format( date );</br>  
+          repaint();  </br>
+          t.sleep( 1000 );  </br>
+       }  </br>
+    }  </br>
+  catch (Exception e) { }</br>
+}  </br>
+public void paint( Graphics g ) </br>
+  {  </br>
+    g.setColor( Color.white );  </br>
+    g.drawString( timeString, 50, 50 ); </br> 
+  }  </br>
+} </br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">OUTPUT</strong></font></br>
+<center><img src="https://static.studytonight.com/java/images/digital-clock-applet.JPG" width="500" height="250"></center></br>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

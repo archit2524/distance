@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+               href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+            <a href="Chapter1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Introduction</a>
+            <a href="Chapter2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> Blocks of Language</a>
+            <a href="Chapter3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="Chapter4.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inheritance, Packages,Interfaces</a>
+            <a href="Chapter5.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Exception & Multithreaded</a>
+            <a href="Chapter6.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">File Handling</a>
+             <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">JAVA</h1>
+        <p class="w3-xlarge">
+            File Handling
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>Streams</strong> </h3>
+            <h5 class="w3-padding-32">
+                • A stream is a sequence of data. In Java a stream is composed of bytes.</br>
+                • In java, 3 streams are created for us automatically.</br>
+                1. System.out:standard output stream</br>
+                2. System.in:standard input stream</br>
+                3. System.err:standard error stream</br>
+            </h5>
+
+            <h3><strong>Byte Streams</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Java byte streams are used to perform input and output of 8-bits / 1byte at a time from binary file.</br>
+                • InputStream and OutpufStream class are most common used classes of byte stream.</br>
+                </br>
+            </h5>
+
+            <h3><strong>Method Call</strong> </h3>
+            <h5 class="w3-padding-32">
+                Syntax:</br>
+                var name object_name.method_name(parameter-list};</br>
+                Example:</br>
+                vol =bl.volumeQ;</br>
+                • In above example, bl is an object and when volume{ } is called, it is put on the right side of an assignment statement. On the left is a variable, in this case vol, that will receive the vaiue returned by volume( ).</br>
+                </br>
+                Byte Streams classes</br>
+                BufferedInputStream -- Used for Buffered input stream.</br>
+                BufferedOutputStream -- Used for Buffered output stream.</br>
+                DatalnputStream -- Contains method for reading java standard data type.</br>
+                DataOutputStream --An output stream that contain method for writing java standard data type.</br>
+                FilelnputStream -- Input stream that reads from a file.</br>
+                FileOutputStream -- Output stream that write to a file.</br>
+                InputStream -- Abstract class that describe stream input.</br>
+                OutputStream -- Abstract class that describe stream output.</br>
+                PrintStream -- Output stream that contain print() and println() method.</br>
+            </h5>
+
+            <h3><strong>FileOutputStream</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • FileOutputStream is used to create a file and write data into it.</br>
+                • The OutputStream will only create a file,if it doesn't already exist, before opening it for output.</br>
+                • There are two way for using file with FileOutputStream.</br>
+                1. FileOutputStream f = new FileOutputStream("C:/java/hello.txt");</br>
+                Here, directly File path is specified while creating the FileOutputStream object.</br>
+                2. File f = new File("C:/java/hello.txt");</br>
+                FileOutputStream fl = new FileOutputStream( f );</br>
+                In the second method,first object of File is created and then FileOutputStream object is created and File object passed to the FileOutputStream as a argument.</br>
+            </h5>
+
+            <h3><strong>FilelnputStrearn</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • FilelnputStream is used for reading data from the files.</br>
+                • While using FilelnputStream class, file must already exist if file does not exist it will generate error.</br>
+                • There are two way for using file with FilelnputStream.</br>
+                1. FilelnputStream fl = new FilelnputStream{"C:/java/hello.txt");</br>
+                Here,directly File path is specified while creatingthe FilelnputStream object.</br>
+                2. File f = new File(MC:/java/hello.txtM);</br>
+                FilelnputStream fl = new FilelnputStream( f );</br>
+                In the second method, first object of File is created and then FilelnputStream object is created and File object passed to the FilelnputStream as a argument.</br></br>
+                <STRONG>  <font size="+2">Example of FilelnputStream and FileOutputStream:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        import java.io.*;</br>
+                        public class File_l</br>
+                        {</br>
+                        public static void main(String[] args)</br>
+                        {</br>
+                        try</br>
+                        {</br>
+                        FilelnputStream in = new FilelnputStream("C:/temp/Hello.txt ");</br>
+                        FileOutputStream out- new FileOutputStream{"C:/temp/Flellol.txt ");</br>
+                        int c = 0;</br>
+                        while ((c = in.read() ) !=-l)</br>
+                        {</br>
+                        out.write(c);</br>
+                        }</br>
+                        in.close();</br>
+                        out.close();</br>
+                        System.out.println("Successfully Write");</br>
+                        }</br>
+                        catch (FileNotFoundException e)</br>
+                        {</br>
+                        e,printStackTrace();</br>
+                        }</br>
+                        catch (lOException e)</br>
+                        {</br>
+                        e.printStackTrace();</br>
+                        }</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Character Streams</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Character streams are used to perform input and output of 16-bits / 2 bytes at a time from Character file.</br>
+                • Reader and Writer are most common used classes of character stream.</br>
+
+                <strong>Character Stream classes</strong></br>
+
+                BufferedReader -- Handles buffered input stream.</br>
+                BufferedWriter -- Handles buffered output stream.</br>
+                FileReader -- Input stream that reads from file.</br>
+                FileWriter -- Output stream that writes to file.</br>
+                InputStreamReader -- Input stream that translate byte to character.</br>
+                OutputStreamReader -- Output stream that translate character to byte.</br>
+                Reader -- Abstract class that define character stream input.</br>
+                Writer -- Abstract class that define character stream output.</br>
+            </h5>
+
+            <h3><strong>FileWriter</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Java FileWriter class is used to write character data to the file.</br>
+                • Two ways to create FileWriter Object.</br>
+                1. FileWriter f = new FileWriter(String fname); //File path is specified in argument.</br>
+                2. FileWriter f = new FileWriter(File fl); //1st file is created and it is passed as argument.</br>
+                Method of FileWriter Class</br>
+                void write(int ch) -- Writing single character to the file.</br>
+                void write(String s) -- Writes the string into FileWriter.</br>
+                void write(char[] c) -- Writes char array into FileWriter.</br>
+                void close() -- Closes FileWriter.</br></br>
+                <STRONG>  <font size="+2">Example of FileReader and FileWriter:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        import java.io.*;</br>
+                        public class File_2</br>
+                        {</br>
+                        public static void main(String[] args) throws IOException</br>
+                        {</br>
+                        File f = new File("d:/temp/Hello.txt");</br>
+                        File fl= new File("d:/temp/Hellol.txt");</br>
+                        FileReader fr = new FileReader(f);</br>
+                        FileWriter fw = new FileWriter(fl);</br>
+                        int c = 0;</br>
+                        while ((c = fr.read())!=-l)</br>
+                        {</br>
+                        fw.write(c);</br>
+                        }</br>
+                        fr.close();</br>
+                        fw.close();</br>
+                        System.out.println("Successfully Write");</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Buffered Classes</strong> </h3>
+            <h5 class="w3-padding-32">
+                <strong>BufferedReader</strong></br>
+                • BufferedReader class can be used to read data line by line using of readLine() method.</br></br>
+                <strong>BufferedOutputStream</strong></br>
+                • BufferedOutputStream class uses an internal buffer to store data.
+                •It adds more efficiency than to write data directly into a stream. So, it makes the performance fast.</br></br>
+                <strong>BufferedlnputStream</strong></br>
+                • BufferedlnputStream class is used to read information from stream. It internally uses buffer mechanism to make the performance fast.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        public class File_3</br>
+                        {
+                        public static void main(String[] args)
+                        {
+                        InputStreamReader in = new InputStreamReader(System.in);</br>
+                        BufferedReader br = new BufferedReader(in);</br>
+                        File f = new File("d:/temp/Flello.txt");
+                        try</br>
+                        {</br>
+                        OutputStream out = new FileOutputStream(f);</br>
+                        System.out.print("Type your text to write in file==- ");</br>
+                        String str;</br>
+                        str = br.readUne();</br>
+                        byte b[] = str.getBytes();</br>
+                        out.write(b);</br>
+                        System.out.println("File Successfully Write,.");</br>
+                        br.close();</br>
+                        in.close();</br>
+                        outclose();</br>
+                        }</br>
+                        catch MOException (e)</br>
+                        {</br>
+                        e.printStackTrace();</br>
+                        }</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+        </div>
+        </div>
+        <!-- Second Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-third w3-center">
+                    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                </div>
+
+                <!--<div class="w3-twothird">
+                      <h1>Lorem Ipsum</h1>
+                      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                </div>-->
+                <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+                </div>-->
+           
+                <script>
+                    // Used to toggle the menu on small screens when clicking on the menu button
+                    function myFunction() {
+                        var x = document.getElementById("navDemo");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

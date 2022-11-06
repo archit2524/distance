@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Attributes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Attributes</a>
+    <a href="Basic%20Tags.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basic Tags</a>
+    <a href="comments.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Comments</a>
+    <a href="Formatting.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Formatting</a>
+     <a href="Phrase%20Tag.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pharse Tag</a>
+    <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a> 
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">HTML</h1>
+  <p class="w3-xlarge">Attributes</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Attributes</strong> </h1>
+      <h5 class="w3-padding-32">We have seen few HTML tags and their usage like heading tags &lth1&gt, &lth2&gt, paragraph tag &ltp&gt and other tags. We used them so far in their simplest form, but most of the HTML tags can also have attributes, which are extra bits of information.</br></br>
+
+An attribute is used to define the characteristics of an HTML element and is placed inside the element's opening tag. All attributes are made up of two parts - a name and a value</br></br>
+<ul>
+<li>The name is the property you want to set. For example, the paragraph <p> element in the example carries an attribute whose name is align, which you can use to indicate the alignment of paragraph on the page.</li>
+
+<li>The value is what you want the value of the property to be set and always put within quotations. The below example shows three possible values of align attribute: left, center and right.</li></br>
+</ul>
+Attribute names and attribute values are case-insensitive. However, the World Wide Web Consortium (W3C) recommends lowercase attributes/attribute values in their HTML 4 recommendation.</br></br>
+<strong><font size="+1">Example:-</font></Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    &lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+
+   &lthead&gt</br>
+      &lttitle&gtAlign Attribute  Example&lt/title&gt</br>
+   &lt/head&gt</br>
+	
+   &ltbody&gt</br>
+        &ltp align = "left"&gtThis is left aligned &lt/p&gt </br>
+       &ltp align = "center"&gtThis is center aligned &lt/p&gt </br>
+       &ltp align = "right"&gtThis is right aligned &lt/p &gt</br>
+   &lt/body&gt</br>
+	
+&lt/html&gt 
+
+</div>
+</h5>
+<h5 class="w3-padding-32">This will produce the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+<p align = "left">This is left aligned</p> 
+      <p align = "center">This is center aligned</p> 
+      <p align = "right">This is right aligned</p> 
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">Core Attributes:-</font></Strong></br></br>
+The four core attributes that can be used on the majority of HTML elements (although not all) are -</br></br>
+<ul>
+<li>Id</li>
+
+<li>Title</li>
+
+<li>Class</li>
+
+<li>Style</li>
+</ul>
+<strong><font size="+1">The Id Attribute:-</font></Strong></br></br>
+The id attribute of an HTML tag can be used to uniquely identify any element within an HTML page. There are two primary reasons that you might want to use an id attribute on an element -</br></br>
+<ul>
+<li>If an element carries an id attribute as a unique identifier, it is possible to identify just that element and its content.</li>
+
+<li>If you have two elements of the same name within a Web page (or style sheet), you can use the id attribute to distinguish between elements that have the same name.</li></br>
+</ul>
+We will discuss style sheet in separate tutorial. For now, let's use the id attribute to distinguish between two paragraph elements as shown below.</br></br>
+<Strong>Example</Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&ltp id = "html"&ltThis para explains what is HTML&lt/p&gt</br>
+&ltp id = "css"&ltThis para explains what is Cascading Style Sheet&lt/p&gt
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">The Title Attribute:-</font></Strong></br></br>
+The title attribute gives a suggested title for the element. They syntax for the title attribute is similar as explained for id attribute -</br></br>
+
+The behavior of this attribute will depend upon the element that carries it, although it is often displayed as a tooltip when cursor comes over the element or while the element is loading.</br></br>
+<Strong>Example</Strong>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+
+   &lthead&gt</br>
+      &lttitle&gtThe title Attribute Example&lt/title&gt</br>
+   &lt/head&gt</br>
+	
+   &ltbody&gt</br>
+      &lth3 title = "Hello HTML!"&gtTitled Heading Tag Example&lt/h3&gt</br>
+   &lt/body&gt</br>
+	
+&lt/html&gt
+</div>
+</h5>
+<h5 class="w3-padding-32">This will produce the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+ <h3 title = "Hello HTML!">Titled Heading Tag Example</h3>
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">The class Attribute:-</font></Strong></br></br>
+The class attribute is used to associate an element with a style sheet, and specifies the class of element. You will learn more about the use of the class attribute when you will learn Cascading Style Sheet (CSS). So for now you can avoid it.</br></br>
+
+The value of the attribute may also be a space-separated list of class names. For example -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+   <!--<div class="w3-third w3-center">-->
+ class = "className1 className2 className3"
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">The Style Attribute:-</font></Strong><br></br>
+The style attribute allows you to specify Cascading Style Sheet (CSS) rules within the element.
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+
+   &lthead&gt</br>
+      &lttitle&gtThe style Attribute&lt/title&gt</br>
+   &lt/head&gt</br>
+	
+   &ltbody&gt</br>
+      &ltp style = "font-family:arial; color:#FF0000;"&gtSome text...&lt/p&gt</br>
+   &lt/body&gt</br>
+	
+&lt/html&gt
+</div>
+</h5>
+<h5 class="w3-padding-32">This will produce the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+ <p style = "font-family:arial; color:#FF0000;">Some text...</p>
+</div>
+</h5>
+<h5 class="w3-padding-32">At this point of time, we are not learning CSS, so just let's proceed without bothering much about CSS. Here, you need to understand what are HTML attributes and how they can be used while formatting content.</br></br>
+<strong><font size="+2">Internationalization Attributes:-</font></strong></br></br>
+There are three internationalization attributes, which are available for most (although not all) XHTML elements.</br></br>
+1).dir</br>
+2).lang</br>
+3).xml:lang</br></br>
+</ul>
+<strong><font size="+1">1).The dir Attribute:-</font></strong></br></br>
+The dir attribute allows you to indicate to the browser about the direction in which the text should flow. The dir attribute can take one of two values, as you can see in the table that follows -</br></br>
+<ul>
+<li>ltr - Left to right (the default value)</li>
+<li>rtl	Right to left (for languages such as Hebrew or Arabic that are read right to left)</li></br>
+</ul>
+<Strong>Example</strong>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt!DOCTYPE html&gt</br>
+&lthtml dir = "ltr"&gt</br>
+
+   &lthead&gt</br>
+      &lttitle&gtDisplay Directions&lt/title&gt</br>
+   &lt/head&gt</br>
+	
+   &ltbody&gt</br>
+      This is how IE 5 renders left-to-right directed text.</br>
+   &lt/body&gt</br>
+	
+&lt/html&gt
+</div>
+</h5>
+<h5 class="w3-padding-32">This will produce the following result -</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+This is how IE 5 renders left-to-right directed text.
+</div>
+</h5>
+<h5 class="w3-padding-32">When dir attribute is used within the &lthtml&gt tag, it determines how text will be presented within the entire document. When used within another tag, it controls the text's direction for just the content of that tag -</br></br>
+<strong><font size="+1">1).The lang Attribute:-</font></strong></br></br>
+The lang attribute allows you to indicate the main language used in a document, but this attribute was kept in HTML only for backwards compatibility with earlier versions of HTML. This attribute has been replaced by the xml:lang attribute in new XHTML documents.</br></br>
+
+The values of the lang attribute are ISO-639 standard two-character language codes. Check HTML Language Codes: ISO 639 for a complete list of language codes.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt!DOCTYPE html&gt</br>
+&lthtml lang = "en"&gt</br>
+
+   &lthead&gt</br>
+      &lttitle&gtEnglish Language Page&lt/title&gt</br>
+   &lt/head&gt</br>
+
+   &ltbody&gt</br>
+      This page is using English Language</br>
+   &lt/body&gt</br>
+
+&lt/html&gt
+</div>
+</h5>
+<h5 class="w3-padding-32">This will produce the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+This page is using English Language
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">3).The xml:lang Attribute:-</font></strong></br></br>
+The xml:lang attribute is the XHTML replacement for the lang attribute. The value of the xml:lang attribute should be an ISO-639 country code as mentioned in previous section.</br></br>
+<Strong>Generic Attributes</Strong></br></br>
+<ul>
+<li>align - Horizontally aligns tags</li>
+<li>valign - Vertically aligns tags within an HTML element.</li>
+<li>bgcolor	- Places a background color behind an element</li>
+<li>background - Places a background image behind an element</li>
+<li>id - Names an element for use with Cascading Style Sheets.</li>
+<li>class - Classifies an element for use with Cascading Style Sheets.</li>
+<li>width - Specifies the width of tables, images, or table cells.</li>
+<li>height - Specifies the height of tables, images, or table cells.</li>
+<li>title - "Pop-up" title of the elements.</li>
+<ul>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+	
+   <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="applet.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">APPLET</a>
+    <a href="awt.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">AWT</a>
+    <a href="jdbc.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JDBC</a>
+    <a href="Servlets.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">SERVLETS</a>
+    <a href="JSP.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JSP</a>
+     <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+ 
+ </div>
+
+</div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">ADVANCE JAVA</h1>
+  <p class="w3-xlarge">Java Server Pages(JSP)</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Java Server Pages(JSP)</strong> </h1>
+      <h5 class="w3-padding-32"> JSP technology is used to create web application just like Servlet technology. It can be thought of as an extension to Servlet because it provides more functionality than servlet such as expression language, JSTL, etc.</br></br>
+
+A JSP page consists of HTML tags and JSP tags. The JSP pages are easier to maintain than Servlet because we can separate designing and development. It provides some additional features such as Expression Language, Custom Tags, etc.</br></br>
+<STRONG><font size="+2">Advantages of JSP over Servlet:-</STRONG></font></br></br>
+There are many advantages of JSP over the Servlet. They are as follows:</br></br>
+<STRONG><font size="+1">1) Extension to Servlet:-</STRONG></font></br></br>
+JSP technology is the extension to Servlet technology. We can use all the features of the Servlet in JSP. In addition to, we can use implicit objects, predefined tags, expression language and Custom tags in JSP, that makes JSP development easy.</br></br>
+<STRONG><font size="+1">2) Easy to maintain:-</STRONG></font></br></br>
+JSP can be easily managed because we can easily separate our business logic with presentation logic. In Servlet technology, we mix our business logic with the presentation logic.</br></br>
+<STRONG><font size="+1">3) Fast Development: No need to recompile and redeploy:-</STRONG></font></br></br>
+If JSP page is modified, we don't need to recompile and redeploy the project. The Servlet code needs to be updated and recompiled if we have to change the look and feel of the application.</br></br>
+<STRONG><font size="+1">4) Less code than Servlet:-</STRONG></font></br></br>
+In JSP, we can use many tags such as action tags, JSTL, custom tags, etc. that reduces the code. Moreover, we can use EL, implicit objects, etc.</br></br>
+<STRONG><font size="+2">The Lifecycle of a JSP Page:-</STRONG></font></br></br>
+The JSP pages follow these phases:</br></br>
+<ul>
+ <li>Translation of JSP Page</li>
+<li>Compilation of JSP Page</li>
+<li>Classloading (the classloader loads class file)</li>
+<li>Instantiation (Object of the Generated Servlet is created).</li>
+<li>Initialization ( the container invokes jspInit() method).</li>
+<li>Request processing ( the container invokes _jspService() method).</li>
+<li>Destroy ( the container invokes jspDestroy() method).</li>
+</ul>
+<center><img src="https://static.javatpoint.com/images/jspflow.JPG" alt="Girl in a jacket" width="500" height="250"></center>
+As depicted in the above diagram, JSP page is translated into Servlet by the help of JSP translator. The JSP translator is a part of the web server which is responsible for translating the JSP page into Servlet. After that, Servlet page is compiled by the compiler and gets converted into the class file. Moreover, all the processes that happen in Servlet are performed on JSP later like initialization, committing response to the browser and destroy.</br></br>
+<STRONG><font size="+2">Creating a simple JSP Page:-</STRONG></font></br></br>
+To create the first JSP page, write some HTML code as given below, and save it by .jsp extension. We have saved this file as index.jsp. Put it in a folder and paste the folder in the web-apps directory in apache tomcat to run the JSP page. </br></br>
+<strong>index.jsp</strong></br></br>
+Let's see the simple example of JSP where we are using the scriptlet tag to put Java code in the JSP page. We will learn scriptlet tag later.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lthtml&gt  </br>
+&ltbody&gt  </br>
+&lt% out.print(2*5); %&gt  </br>
+&lt/body&gt  </br>
+&lt/html&gt 
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">The Directory structure of JSP:-</STRONG></font></br></br>
+The directory structure of JSP page is same as Servlet. We contain the JSP page outside the WEB-INF folder or in any directory.</br></br>
+<center><img src="https://static.javatpoint.com/images/jspdirectory.JPG" alt="Girl in a jacket" width="500" height="350"></center>
+<STRONG><font size="+2">JSP Scriptlet tag (Scripting elements):-</STRONG></font></br></br>
+In JSP, java code can be written inside the jsp page using the scriptlet tag. Let's see what are the scripting elements first.</br></br>
+<STRONG><font size="+2">JSP Scripting elements:-</STRONG></font></br></br>
+The scripting elements provides the ability to insert java code inside the jsp. There are three types of scripting elements:</br></br>
+<ul>
+<li>scriptlet tag</li>
+<li>    expression tag</li>
+  <li>  declaration tag</li>
+</ul>
+<STRONG><font size="+1">1.JSP scriptlet tag:-</STRONG></font></br></br>
+A scriptlet tag is used to execute java source code in JSP. Syntax is as follows:</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt%  java source code %&gt 
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">Example:-</STRONG></font></br></br>
+In this example, we have created two files index.html and welcome.jsp. The index.html file gets the username from the user and the welcome.jsp file prints the username with the welcome message.</br></br>
+File: index.html</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+   &lt html &gt <br/>
+   &lt body&gt<br/>
+   &lt form action="welcome.jsp"&gt<br/>  
+   &lt input type="text" name="uname" &gt <br/>
+   &lt input type="submit" value="go"&gt<br/>  
+    &lt/form&gt  <br/>
+    &lt/body &gt <br/>
+    &lt/html &gt <br/>
+</div>
+</h5>
+<h5 class="w3-padding-32">File: welcome.jsp</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt html &gt <br/>
+   &lt body&gt<br/>
+&lt%  <br/>
+String name=request.getParameter("uname");  <br/>
+out.print("welcome "+name);  <br/>
+%&gt  <br/>
+  &lt/form&gt  <br/>
+    &lt/body &gt <br/>
+    &lt/html &gt 
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">2.JSP expression tag:-</STRONG></font></br></br>
+The code placed within JSP expression tag is written to the output stream of the response. So you need not write out.print() to write data. It is mainly used to print the values of variable or method. </br></br>
+<STRONG><font size="+1">Syntax</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+     &lt%=  statement %&gt  
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">Example:-</STRONG></font></br></br>
+In this example of jsp expression tag, we are simply displaying a welcome message.</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt html &gt <br/>
+   &lt body&gt<br/>
+&lt%=  "Welcome to jsp" %&gt 
+ &lt/form&gt  <br/>
+    &lt/body &gt <br/>
+    &lt/html &gt 
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">Example:-</STRONG></font></br></br>
+To display the current time, we have used the getTime() method of Calendar class. The getTime() is an instance method of Calendar class, so we have called it after getting the instance of Calendar class by the getInstance() method.</br></br>
+index.jsp</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt html &gt <br/>
+   &lt body&gt<br/>
+Current Time: &lt%= java.util.Calendar.getInstance().getTime() %&gt 
+&lt/body &gt <br/>
+    &lt/html &gt 
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">3.JSP Declaration Tag-</STRONG></font></br></br>
+The JSP declaration tag is used to declare fields and methods.The code written inside the jsp declaration tag is placed outside the service() method of auto generated servlet.So it doesn't get memory at each request.</br></br>
+<STRONG><font size="+1">Syntax</STRONG></font></br></br>
+The syntax of the declaration tag is as follows:
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+    &lt%!  field or method declaration %&gt 
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">Example</STRONG></font></br></br>
+In this example of JSP declaration tag, we are declaring the field and printing the value of the declared field using the jsp expression tag. </br></br>
+index.jsp</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt html &gt <br/>
+   &lt body&gt<br/>
+&lt%! int data=50; %&gt  
+&lt%= "Value of the variable is:"+data %&gt 
+&lt/body &gt <br/>
+    &lt/html &gt 
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">JSP-Directives</STRONG></font></br></br>
+Directives supply directions and messages to a JSP container. The directives provide global information about the entire page of JSP. Hence, they are an essential part of the JSP code. These special instructions are used for translating JSP to servlet code. In this chapter, you will learn about the different components of directives in detail.</br></br>
+
+In JSP's life cycle phase, the code must be converted to a servlet that deals with the translation phase. They provide commands or directions to the container on how to deal with and manage certain JSP processing portions. Directives can contain several attributes that are separated by a comma and act as key-value pairs. In JSP, directives are described with a pair of <%@ .... %> tags. </br></br>
+The syntax of Directives looks like:</br>
+
+&lt%@ directive attribute="" %&gt</br></br>
+There are 3 types of directives:</br></br>
+1).Page directive</br>
+2).Include directive</br>
+ 3).Taglib directive</br></br>
+<STRONG><font size="+2">1).Page Directive</STRONG></font></br></br>
+The page directive is used for defining attributes that can be applied to a complete JSP page. You may place your code for Page Directives anywhere within your JSP page. However, in general, page directives are implied at the top of your JSP page.</br></br>
+
+The basic syntax of the page directive is:&lt%@ page attribute = "attribute_value" %&gt</br></br>
+The XML equivalent for the above derivation is:&ltjsp:directive.page attribute = "attribute_value" /&gt</br></br>
+The attributes used by the Page directives are:</br></br>
+   <strong>1). buffer: </strong> Buffer attribute sets the buffer size in KB to control the JSP page's output.</br></br>
+    <strong> 2).contentType:  </strong>The ContentType attribute defines the document's MIME (Multipurpose Internet Mail Extension) in the HTTP response header.</br></br>
+    <strong> 3).autoFlush:  </strong>The autofill attribute controls the behavior of the servlet output buffer. It monitors the buffer output and specifies whether the filled buffer output should be flushed automatically or an exception should be raised to indicate buffer overflow.</br></br>
+    <strong> 4).errorPage: </strong> Defining the "ErrorPage" attribute is the correct way to handle JSP errors. If an exception occurs on the current page, it will be redirected to the error page.</br></br>
+    <strong>5). extends:  </strong>extends attribute used for specifying a superclass that tells whether the generated servlet has to extend or not.</br></br>
+    <strong>6). import:  </strong>The import attribute is used to specify a list of packages or classes used in JSP code, just as Java's import statement does in a Java code.</br></br>
+     <strong>7).isErrorPage: </strong> This "isErrorPage" attribute of the Page directive is used to specify that the current page can be displayed as an error page.</br></br>
+    <strong> 8).info: </strong> This "info" attribute sets the JSP page information, which is later obtained using the getServletInfo() method of the servlet interface.</br></br>
+    <strong> 9).isThreadSafe: </strong> Both the servlet and JSP are multithreaded. If you want to control JSP page behavior and define the threading model, you can use the "isThreadSafe" attribute of the page directive.</br></br>
+    <strong> 10).Language:  </strong>The language attribute specifies the programming language used in the JSP page. The default value of the language attribute is "Java".</br></br>
+    <strong> 11).Session:  </strong>In JSP, the page directive session attribute specifies whether the current JSP page participates in the current HTTP session.</br></br>
+    <strong> 12).isELIgnored:  </strong>This isELIgnored attribute is used to specify whether the expression language (EL) implied by the JSP page will be ignored.</br></br>
+    <strong> 13).isScriptingEnabled: </strong> This "isScriptingEnabled" attribute determines if the scripting elements are allowed for use or not.</br></br></br>
+<STRONG><font size="+2">2).Include Directive</STRONG></font></br></br>
+The JSP "include directive" is used to include one file in another JSP file. This includes HTML, JSP, text, and other files. This directive is also used to create templates according to the developer's requirement and breaks the pages in the header, footer, and sidebar.</br></br>
+
+To use this Include Directive, you have to write it like:&lt%@ include file = "relative url" &gt </br></br>
+The XML equivalent of the above way of representation is:&ltjsp:directive.include file = "relative url" /&gt</br></br>
+<STRONG><font size="+1">Example</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding = "ISO-8859-1"%&gt</br>
+&lt%@ include file="directive_header_code.jsp" %&gt</br></br>
+  
+&lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+    &lthead&gt</br>
+        &ltmeta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /&gt</br>
+        &lttitle&gtInclude Directive Example&lt/title&gt</br>
+    &lt/head&gt</br>
+    &ltbody&gt</br>
+        &ltp&gtThis file includes a header file named directive_header_code.jsp&lt/p&gt</br>
+    &lt/body&gt</br>
+&lt/html&gt</br>
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">3).Taglib Directive</STRONG></font></br></br>
+The JSP taglib directive is implemented to define a tag library with "taglib" as its prefix. Custom tag sections of JSP use taglib. JSP's taglibdirective is used as standard tag libraries.</br></br>
+
+To implement taglib, you have to write it like this:&lt%@ taglib uri="uri" prefix="value"%&gt</br></br>
+<STRONG><font size="+1">Example</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt%@ taglib uri = "http://www.example.com/custlib" prefix = "w3tag" %&gt</br></br>
+&lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+    &ltbody&gt</br>
+        &ltmytag: hi/&gt</br>
+    &lt/body&gt</br>
+&lt/html&gt</br>
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">Implicit Objects</STRONG></font></br></br>
+The JSP engine produces these objects during the translation phase (i.e., at the time of translation from JSP to Servlet). They are being formed within the service method so that JSP developers can use them directly in Scriptlet without declaration and initialization.</br></br>
+There are a total of nine implicit objects supported by the JSP. These are:</br></br>
+
+   <STRONG> 1).out: </STRONG>javax.servlet.jsp.JspWriter</br></br>
+   <STRONG> 2).request: </STRONG>javax.servlet.http.HttpServletRequest</br></br>
+    <STRONG>3).response: </STRONG>javax.servlet.http.HttpServletResponse</br></br>
+    <STRONG>4).session: </STRONG>javax.servlet.http.HttpSession</br></br>
+    <STRONG>5).application:</STRONG> javax.servlet.ServletContext</br></br>
+   <STRONG> 6).exception: </STRONG>javax.servlet.jsp.JspException</br></br>
+   <STRONG> 7).page: </STRONG>java.lang.Object</br></br>
+   <STRONG> 8).pageContext:</STRONG> javax.servlet.jsp.PageContext</br></br>
+   <STRONG> 9).config: </STRONG>javax.servlet.ServletConfig</br></br></br></br>
+<STRONG><font size="+2">1).Out Implicit Objects</STRONG></font></br></br>
+<ul>
+<li>An out object is an implicit object for writing data to the buffer and sending output as a response to the client's browser.</li></br>
+ <li>   The out implicit object is an instance of a javax.servlet.jsp.jspWriter class.</li></br>
+   <li> You will learn more about the various concepts of the out Object in subsequent chapters.</li>
+</ul>
+<STRONG><font size="+1">Example(html file)</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+    &lthead&gt</br>
+        &lttitle&gtPlease insert a User name and a password&lt/title&gt</br>
+    &lt/head&gt</br>
+    &ltbody&gt</br>
+        &lt% out.println("Today's date-time: "+java.util.Calendar.getInstance().getTime()); %&gt</br>
+    &lt/body&gt</br>
+&lt/html&gt
+</div>
+</h5>
+<h5 class="w3-padding-32">Output</br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Today's date-time: Nov 01 12:10:05 IST 2020
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">2).Request Implicit Objects</STRONG></font></br></br>
+<ul>
+  <li>  A request object is an implicit object that is used to request an implicit object, which is to receive data on a JSP page, which has been submitted by the user on the previous JSP/HTML page.</li></br>
+    <li>The request implicit object used in Java is an instance of a javax.servlet.http.HttpServletRequest interface where a client requests a page every time the JSP engine has to create a new object for characterizing that request.</li></br>
+    <li>The container creates it for every request.</li></br>
+  <li>  It is used to request information such as parameters, header information, server names, cookies, and HTTP methods.</li></br>
+  <li>  It uses the getParameter() method to access the request parameter.</li></br></br>
+</ul>
+Here is an example of a JSP request implicit object where a user submits login information, and another JSP page receives it for processing:</br></br>
+<STRONG><font size="+1">Example(html file)</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+    &lthead&gt</br>
+        &lttitle>Please insert a User name and a password&lt/title&gt</br>
+    &lt/head></br>
+    &ltbody></br>
+        &ltform action="login.jsp"&gt</br>
+            Please insert Username: &ltinput type="text" name="u_name" /&gt <br />
+            Please insert Password: &ltinput type="text" name="passwd" /&gt <br />
+            &ltinput type="submit" value="Submit Details" /&gt</br>
+        &lt/form&gt</br>
+    &lt/body&gt</br>
+&lt/html&gt</br>
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">Example(login.jsp):</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt%@ page import = " java.util.* " %&gt</br>
+&lt% </br>
+String username = request.getParameter("u_name"); </br>
+String password = request.getParameter("passwd"); </br>
+out.print("Name: "+username+" Password: " +passwd);</br>
+%&gt
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">3).Response Implicit Object:</STRONG></font></br></br>
+<ul>
+   <li> A response object is an implicit object implemented to modify or deal with the reply sent to the client (i.e., browser) after processing the request, such as redirect responding to another resource or an error sent to a client.</li></br>
+   <li> The response implicit object is an instance of a javax.servlet.http.HttpServletResponse interface.</li></br>
+   <li> The container creates it for every request.</li></br>
+   <li> You will learn more about the various concepts of the request and response in subsequent chapters.</li></br></br>
+</ul>
+<STRONG><font size="+2">4).Session Implicit Object:</STRONG></font></br></br>
+<ul>
+   <li> A session object is the most commonly used implicit object implemented to store user data to make it available on other JSP pages until the user's session is active.</li></br>
+   <li> The session implicit object is an instance of a javax.servlet.http.HttpSession interface.</li></br>
+   <li> This session object has different session methods to manage data within the session scope.</li></br>
+   <li> You will learn more about the use of the session in subsequent chapters.</li></br></br>
+</ul>
+<STRONG><font size="+2">5).Application Implicit Object:</STRONG></font></br></br>
+An application object is another implicit object implemented to initialize application-wide parameters and maintain functional data throughout the JSP application.</br></br>
+<STRONG><font size="+2">6).Exception Implicit Object:</STRONG></font></br></br>
+<ul>
+   <li> An exception implicit object is implemented to handle exceptions to display error messages.</li></br>
+    <li>The exception implicit object is an instance of the java.lang.Throwable class.</li></br>
+   <li> It is only available for JSP pages, with the isErrorPage value set as "True". This means Exception objects can only be used in error pages.</li></br></br>
+</ul>
+<STRONG><font size="+1">Example(html file)</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt!DOCTYPE html&gt</br>
+&lthtml&gt</br>
+    &lthead&gt</br>
+        &lttitle&gtEnter two Integers for Division &lt/title&gt</br>
+    &lt/head&gt</br>
+    &ltbody&gt</br>
+        &ltform action="submit.jsp"&gt</br>
+            Insert first Integer: &ltinput type="text" name="numone" /&gt<br />
+            Insert second Integer: <&ltinput type="text" name="numtwo" /&gt<br />
+            &ltinput type="submit" value="Get Results" /&gt<br />
+        &lt/form&gt<br />
+    &lt/body&gt<br />
+&lt/html&gt
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">Example(submit.jsp):</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt%@ page errorPage="exception.jsp" %&gt<br /><br />
+  
+&lt% <br />
+String num1 = request.getParameter("numone"); <br />
+String num2 = request.getParameter("numtwo"); <br />
+int var1= Integer.parseInt(num1);<br />
+int var2= Integer.parseInt(num2);<br />
+int r= var1 / var2;<br />
+out.print("Output is: "+ r);<br />
+%&gt
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+1">Example(exception.jsp):</STRONG></font></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt%@ page isErrorPage='true' %&gt<br /><br />
+  
+&lt% <br />
+out.print("Error Message : ");  <br />
+out.print(exception.getMessage());<br />
+%&gt
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">7).Page Implicit Object:</STRONG></font></br></br>
+A page object is an implicit object that is referenced to the current instance of the servlet. You can use it instead. Covering it specifically is hardly ever used and not a valuable implicit object while building a JSP application.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lt% String pageName = page.toString();<br />
+out.println("The current page is: " +pageName);%&gt
+</div>
+</h5>
+<h5 class="w3-padding-32"><STRONG><font size="+2">8).Config Implicit Object:</STRONG></font></br></br>
+A config object is a configuration object of a servlet that is mainly used to access and receive configuration information such as servlet context, servlet name, configuration parameters, etc. It uses various methods used to fetch configuration information.</br></br>
+You will learn more about how to set and use config objects in later chapters.</br></br></br>
+<STRONG><font size="+2">JSP Comments</STRONG></font></br></br>
+JSP comment marks to text or statements that the JSP container should ignore. A JSP comment is useful when you want to hide or "comment out", a part of your JSP page.</br></br>
+
+Following is the syntax of the JSP comments :-&lt%-- This is JSP comment -%&gt</br></br>
+Following example shows the JSP Comments -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+&lthtml&gt</br>
+   &lthead&gt</br>
+      &lttitle&gtA Comment Test&lt/title&gt</br>
+   &lt/head&gt</br>
+   &ltbody&gt</br>
+      &lth2&gtA Test of Comments&lt/h2&gt</br>
+      &lt%-- This comment will not be visible in the page source --%&gt</br>
+   &lt/body&gt</br>
+&lt/html&gt
+</div>
+</h5>
+<h5 class="w3-padding-32">The above code will generate the following result -</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+A Test of Comments
+</div>
+</h5>
+<h5 class="w3-padding-32">There are a small number of special constructs you can use in various cases to insert comments or characters that would otherwise be treated specially. Here's a summary -
+<ul>
+<strong>1.&lt%-- comment --%&gt</strong>-A JSP comment. Ignored by the JSP engine.</br></br>
+<strong>2.&lt!-- comment --&gt</strong>-An HTML comment. Ignored by the browser.</br></br>
+<strong>3.&lt\%</strong>-Represents static &lt% literal.</br></br>
+<strong>4.%\&gt</strong>-Represents static %&gt literal.</br></br>
+<strong>5.\'</strong>-A single quote in an attribute that uses single quotes.</br></br>
+<strong>6.\"</strong>-A double quote in an attribute that uses double quotes.</br></br></br>
+</ul>
+</div>
+</h5>
+</div>
+
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

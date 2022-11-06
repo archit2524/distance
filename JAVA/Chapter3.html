@@ -1,0 +1,632 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+
+    <!-- Navbar -->
+  <div class="w3-top">
+        <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+               href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+         <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+            <a href="Chapter1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Introduction</a>
+            <a href="Chapter2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> Blocks of Language</a>
+            <a href="Chapter3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="Chapter4.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inheritance, Packages,Interfaces</a>
+            <a href="Chapter5.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Exception & Multithreaded</a>
+            <a href="Chapter6.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">File Handling</a>
+            
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">JAVA</h1>
+        <p class="w3-xlarge">
+            Object Oriented Programming Concepts
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>Class</strong> </h3>
+            <h5 class="w3-padding-32">
+                • A class is a template that specifies the attributes and behavior of things or objects.</br>
+                • A class is a blueprint or prototype from which objects are created.</br>
+                • A class is the implementation of an abstract data type (ADT). It defines attributes and methods which implement the data structure and operations of the ADT, respectively.</br>
+                </br>
+                <strong>Syntax:</strong></br>
+                class classname</br>
+                {</br>
+                Datatype variable1;</br>
+                Datatype variable2;</br>
+                Datatype variableN;</br>
+                return_type methodnamel(parameter-list)</br>
+                {</br>
+                // body of method</br>
+                }</br>
+                return_type methodname2(parameter-list)</br>
+                {</br>
+                // body of method</br>
+                }</br>
+                return_type methodnamelM(parameter-list)</br>
+                {</br>
+                // body of method</br>
+                }</br>
+                }</br></br>
+                • A class is declared by use of the class keyword.</br>
+                • The data, or variables, defined within a class are called instance variables because eachinstance of the class (that is, each object of the class) contains its own copy of these variables. Thus,the data of one object is separate and unique from the data of another.</br>
+                • The actual code contained within methods.</br>
+                • The methods and variables defined within a class are called members of the class.</br>
+            </h5>
+
+            <h3><strong>Return value</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Method that have a return type other than void return a value to the calling method using the following form of the return statement:</br>
+                Syntax:</br>
+                return value;</br>
+                • Here, value is the value returned.</br></br>
+                <strong>Example:</strong></br>
+                class Box</br>
+                {</br>
+                double width =1;</br>
+                double height = 2;</br>
+                double depth = 3;</br>
+                double volume()</br>
+                {</br>
+                return (width * height * depth);</br>
+                }</br>
+                }
+                </br>
+            </h5>
+
+            <h3><strong>Method Call</strong> </h3>
+            <h5 class="w3-padding-32">
+                Syntax:</br>
+                var name object_name.method_name(parameter-list};</br>
+                Example:</br>
+                vol =bl.volumeQ;</br>
+                • In above example, bl is an object and when volume{ } is called, it is put on the right side of an assignment statement. On the left is a variable, in this case vol, that will receive the vaiue returned by volume( ).</br>
+                </br>
+            </h5>
+
+            <h3><strong>Declaring Object</strong> </h3>
+            <h5 class="w3-padding-32">
+                • To obtain an object of class, first you must declare a variable of the class type. This variable does not define an object. Instead, it is simply a variable that can refer to an object.</br>
+                • Second, you must obtain an actual copy of the object and assign it to that variable. You can do this using the new operator.</br>
+                • The new operator dynamically allocates (that is, allocates at run time) memory for an object and returns a reference to it. This reference Is an address in memory of the object allocated by new.</br>
+                Syntax:</br>
+                Step - 1: class_name class_var;</br>
+                Step - 2: classvar = new class_name();</br>
+                • Here, class_var is a variable of the class type being created. The class_name is the name of the class that is being instantiated.</br>
+            </h5>
+
+            <h3><strong>Assigning Object Reference Variables</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Object reference variables acts differently than you might expect when an assignment takes place.</br>
+                Example:</br>
+                Box bl = new Box();</br>
+                Box b2 = bl;</br>
+                Here, bl and b2 will both refer to the same object. The assignment of bl to b2 did not allocate any memory of the original object.</br>
+                It simply makes b2 refer to the same object as bl does. Thus, any changes made to the object through b2 will affect the object to which bl is referring, since they are the same object.</br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class Box</br>
+                        {</br>
+                        double width = 1.0;</br>
+                        double height = 2.0;</br>
+                        double depth = 3.0;</br>
+                        void volume()</br>
+                        {</br>
+                        System.out.print("Volume is ");</br>
+                        System.out.println(width * height * depth);</br>
+                        }</br>
+                        }</br>
+                        class BoxDemo</br>
+                        {</br>
+                        public static void main{String args[])
+                        {</br>
+                        Box bl;</br>
+                        bl = new Box()</br>
+                        //Box bl = new Box();</br>
+                        bl.volume();</br>
+                        // declare reference to object, allocate a Box objectt</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+                <h5 class="w3-padding-32">
+                    <strong>OUTPUT:</strong>
+                    <center><img src="" width="500" height="250"></center></br>
+                </h5>
+            </h5>
+            
+        <h3><strong>Visibility controls of JAVA</strong> </h3>
+        <h5 class="w3-padding-32">
+            • Java provides a number of access modifiers to set access levels for classes, variables, methodsand constructors. The four access levels are:</br>
+            1) Package/friendly (default) -Visible to the package. No modifiers are needed.</br>
+            2) Private - Visible to the class only.</br>
+            3) Public- Visible to the class as well as outside the class.</br>
+            4) Protected- Visible to the package and all subclasses.</br>
+            Default Access Modifier - No Keyword
+            • Default access modifier means no need to declare an access modifier for a class, field, method etc.</br>
+            • A variable or method declared without any access control modifier is available to any other class in the same package. The default modifier cannot be used for methods in an interface because the methods in an interface are by default public.</br>
+            </br>
+            <strong>Example:</strong></br>
+            String str = "Hi";</br>
+            void a()</br>
+            {</br>
+            System.out.println(str);</br>
+            }</br>
+
+            <h3><strong>Private Access Modifier</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Methods, Variables and Constructors that are declared private can only be accessed within the declared class itself.</br>
+                • Private access modifier is the most restrictive access level. Class and interfaces cannot be private.</br>
+                • Variables that are declared private can be accessed outside the class if public getter methods are present in the class.</br>
+                • Using the private modifier, an object encapsulates itself and hides data from the outside world.</br>
+                </br>
+                <strong>Example:</strong></br>
+                class A</br>
+                {</br>
+                private String si = "Hello";</br>
+                public String getName()</br>
+                {</br>
+                return this.si;</br>
+                }</br>
+                }</br>
+                Here,si variable of A class is private, so there's no way for other classes to retrieve. So, to make this variable available to the outside world, we defined public methods: getName{), which returns the value of si.</br>
+            </h5>
+
+            <h3><strong>Public Access Modifier</strong> </h3>
+            <h5 class="w3-padding-32">
+                • The public keyword is an access specifier, which allows the programmer to control the visibility of class members.</br>
+                • When a class member is preceded by public, then that member may be accessed by code outside the class.</br>
+                • A class, method, constructor, interface etc declared public can be accessed from any other class.</br>
+                Therefore, methods or blocks declared inside a public class can be accessed from any class belonging to the Java world.</br>
+                However, if the public class we are trying to access is in a different package, and then the public class still need to be imported. Because of class inheritance, all public methods and variables of a class are inherited by its subclasses.</br>
+                </br>
+                <strong>Example:</strong></br>
+                public static void main(String[] args)</br>
+                {</br>
+                If ,.</br>
+                }</br>
+                The main() method of an application needs to be public. Otherwise, it could not be called by a Java interpreter (such as java) to run the class.</br>
+
+                <h3><strong>Protected Access Modifier</strong> </h3>
+                <h5 class="w3-padding-32">
+                    Variables, methods and constructors which are declared protected in a super class can be accessed only by the subclasses in other package or any class within the package of the protected members' class.</br>
+                    The protected access modifier cannot be applied to class and interfaces. Methods can be declared protected, however methods in a interface cannot be declared protected.</br>
+                    Protected access gives chance to the subclass to use the helper method or variable, while prevents a non-related class from trying to use it.</br>
+                    </br>
+                    <STRONG>  <font size="+2">Example:</font></STRONG>
+                    <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                        <div class="w3-content">
+                            <!--<div class="w3-third w3-center">-->
+                            package pi;</br>
+                            class A</br>
+                            {</br>
+                            float fl;</br>
+                            protected intil;</br>
+                            } //class B belongs to the same package as class A</br>
+                            package pi;</br>
+                            class B</br>
+                            {</br>
+                            public void getData()</br>
+                            { // create an instance of class A</br>
+                            A al= new A();</br>
+                            al.fl= 19;</br>
+                            al.il = 12;</br>
+                            }</br>
+                            }</br>
+                        </div>
+                    </div>
+                    <h5 class="w3-padding-32">
+                        <strong>OUTPUT:</strong>
+                        <center><img src="" width="500" height="250"></center></br>
+                    </h5>
+                </h5>
+            </h5>
+        </h5>
+
+    <h3><strong>this Keyword</strong> </h3>
+    <h5 class="w3-padding-32">
+        • Sometimes a method will need to refer to the object that invoked it.</br>
+        • To allow this, Java defines the this keyword. Keyword this can be used inside any method or constructor of class to refer to the current object.</br>
+        • It means,this is always a reference to the object on which the method was invoked.</br>
+        • this keyword can be very useful in case of Variable Hiding.</br>
+        • You can use this anywhere a reference to an object of the current class' type is permitted.</br>
+        • We cannot create two Instance/Local variables with same name. But it is legal to create one instance variable & one local variable or method parameter with same name.</br>
+        • Local Variable will hide the instance variable which is called Variable Hiding.</br></br>
+        <STRONG>  <font size="+2">Example:</font></STRONG>
+        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+            <div class="w3-content">
+                <!--<div class="w3-third w3-center">-->
+                class A</br>
+                {</br>
+                int v = 5;</br>
+                public static void main(String args[])</br>
+                {</br>
+                A al = new A();</br>
+                al.method(20);</br>
+                al.method();</br>
+                }</br>
+                void methodfint variable()</br>
+                {</br>
+                int v = 10;
+                System.out.println("Value of Instance variable + this.v);</br>
+                System.out.println("Value of Local variable + v);</br>
+                }</br>
+                void method()</br>
+                {</br>
+                int v = 40;</br>
+                System.out.println('[Value of Instance variable + this.v);</br>
+                System.out.printlnC'Value of Local variable + v);</br>
+                )
+                }</br>
+            </div>
+        </div>
+        <h5 class="w3-padding-32">
+            <strong>OUTPUT:</strong>
+            <center><img src="" width="500" height="250"></center></br>
+        </h5>
+    </h5>
+
+    <h3><strong>static Keyword</strong> </h3>
+    <h5 class="w3-padding-32">
+        • When a member is declared static, it can be accessed before any objects of its class are created, and without reference to any object.</br>
+        • You can declare both methods and variables to be static. The most common example of a static member is main( ).</br>
+        • main( ) is declared as static because it must be called before any objects exist.</br>
+        • When objects of its class are declared, no copy of a static variable is made. Instead, all instances of the class share the same static variable.</br>
+        • Methods declared as static have several restrictions:</br>
+        1) They can only call other static methods.</br>
+        2) They must only access static data.</br>
+        3) They cannot refer to this or super in any way.</br>
+        • If you wish to call a static method from outside its class, you can do so using the following general form:</br>
+        A fi A
+        classname.method( );</br>
+        • Here, classname is the name of the class in which the static method is declared. No need to call static method through object of that class.</br></br>
+        <STRONG>  <font size="+2">Example:</font></STRONG>
+        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+            <div class="w3-content">
+                <!--<div class="w3-third w3-center">-->
+                class staticDemo</br>
+                {</br>
+                static int count=0; //will get memory only once and retain its value</br>
+                staticDemo()</br>
+                {</br>
+                count++;</br>
+                System.out.println(count);</br>
+                }</br>
+                static</br>
+                {</br>
+                System.out.println("Static block initialized...");</br>
+                }</br>
+                static void display()</br>
+                {</br>
+                System.out.println("Static method call...");</br>
+                }</br>
+                public static void main(String args[j])</br>
+                {</br>
+                staticDemo sl=new staticDemoO;</br>
+                staticDemo s2=new staticDemoO;</br>
+                staticDemo s3-new staticDemoO;</br>
+                display();</br>
+                }</br>
+                }</br>
+            </div>
+        </div>
+        <h5 class="w3-padding-32">
+            <strong>OUTPUT:</strong>
+            <center><img src="" width="500" height="250"></center></br>
+        </h5>
+    </h5>
+
+    <h3><strong>final Keyword</strong> </h3>
+    <h5 class="w3-padding-32">
+        • A variable can be declared as final. You cannot change the value of final variable. It means, final variable act as constant and value of that variable can never be changed.</br>
+        • If you declared any method as final then you cannot override it.</br>
+        • If you declared any class as final then you cannot inherit it.</br>
+        </br>
+        <STRONG>  <font size="+2">Example:</font></STRONG>
+        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+            <div class="w3-content">
+                <!--<div class="w3-third w3-center">-->
+                class finalDemo</br>
+                {</br>
+                final int b = 100;</br>
+                void ml()</br>
+                {</br>
+                b = 200; /* Error generate because we cannot change the value of final variable*/</br>
+                }</br>
+                public static void main(String args[])</br>
+                {</br>
+                finalDemo fl = new finalDemo();</br>
+                fl.mlQ;</br>
+                }</br>
+                }</br>
+            </div>
+        </div>
+        <h5 class="w3-padding-32">
+            <strong>OUTPUT:</strong>
+            <center><img src="" width="500" height="250"></center></br>
+        </h5>
+    </h5>
+            
+    <h3><strong>Method Overloading</strong> </h3>
+    <h5 class="w3-padding-32">
+        • If class have multiple methods with same name but different parameters is known as Method Overloading.</br>
+        • Method overloading is also known as compile time (static) polymorphism.</br>
+        • The same method name will be used with different number of parameters and parameters of different type.</br>
+        • Overloading of methods with different return types is not allowed.</br>
+        • Compiler identifies which method should be called among all the methods have same name using the type and number of arguments.</br>
+        • However, the two functions with the same name must differ in at least one of the following.</br>
+        1) The number of parameters</br>
+        2) The data type of parameters</br>
+        3) The order of parameter</br>
+        </br>
+        <STRONG>  <font size="+2">Example:</font></STRONG>
+        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+            <div class="w3-content">
+                <!--<div class="w3-third w3-center">-->
+                class overloadingDemo</br>
+                {</br>
+                void sum(int a,int b)</br>
+                {</br>
+                System.out.println("Sum of (a+b) is:: "+(a+b));</br>
+                }</br>
+                void sumfint a,int b,int c)</br>
+                {</br>
+                System.out.println("Sum of (a+b+c) is:: ”+(a+b+c));</br>
+                }</br>
+                void sum{double a,double b)</br>
+                {</br>
+                System.out.println(,rSum of double (a+b) is:: "+(a+b});</br>
+                }</br>
+                public static void main(String args[])</br>
+                {</br>
+                overloadingDemo ol = new overloadingDemo();</br>
+                ol.sum{10,10);</br>
+                ol.sum(10,10,10);</br>
+                ol.sum(10.5,10.5);</br>
+                // call methodl</br>
+                // call method2</br>
+                // call method3</br>
+                }</br>
+                }</br>
+            </div>
+        </div>
+        <h5 class="w3-padding-32">
+            <strong>OUTPUT:</strong>
+            <center><img src="" width="500" height="250"></center></br>
+        </h5>
+    </h5>
+
+    <h3><strong>Constructor</strong> </h3>
+    <h5 class="w3-padding-32">
+        • Constructor is special type of method that is used to initialize the object.</br>
+        • It is invoked at the time of object creation.</br>
+        • There are two rules to define constructor as given below:</br>
+        1) Constructor name must be same as its class name.</br>
+        2) Constructor must not have return type.</br>
+        • Return type of class constructor is the class type itself.</br>
+        • There are two type of constructor :</br>
+        1) Default Constructor</br>
+        2) Parameterized constructor</br></br>
+
+        <STRONG>  <font size="+2">Example:</font></STRONG>
+        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+            <div class="w3-content">
+                <!--<div class="w3-third w3-center">-->
+                class A</br>
+                {</br>
+                A() //Default constructor</br>
+                {</br>
+                System.out.println("Default constructor called..");</br>
+                }</br>
+                public static void main(String args[])</br>
+                {</br>
+                A a = new A();</br>
+                }</br>
+                }</br>
+            </div>
+        </div>
+        <h5 class="w3-padding-32">
+            <strong>OUTPUT:</strong>
+            <center><img src="" width="500" height="250"></center></br>
+
+        <strong>Parameterized Constructor:</strong></br></br>
+
+        • A constructor that has parameters is known as parameterized constructor.</br>
+        • It is used to provide different values to the distinct objects.</br>
+        • It is required to pass parameters on creation of objects.</br>
+        • If we define only parameterized constructors, then we cannot create an object with default constructor. This is because compiler will not create default constructor. You need to create default constructor explicitly.</br>
+        </br>
+        <STRONG>  <font size="+2">Example:</font></STRONG>
+        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+            <div class="w3-content">
+                <!--<div class="w3-third w3-center">-->
+                class A</br>
+                {</br>
+                int a;</br>
+                Stringsi;</br>
+                A(int b,String s2) //Parameterized constructor</br>
+                {</br>
+                b = a;</br>
+                s2 - si;</br>
+                }</br>
+                void display()</br>
+                {</br>
+                System.out.println("Value of parameterized constructor is: "fa^1 and "+bj;</br>
+                }</br>
+                public static void main(String args[])</br>
+                {</br>
+                A a = new A(10,"Hello");</br>
+                a.displayO;</br>
+                }</br>
+                }</br>
+            </div>
+        </div>
+        <h5 class="w3-padding-32">
+            <strong>OUTPUT:</strong>
+            <center><img src="" width="500" height="250"></center></br>
+
+            <strong>Copy Constructor</strong></br></br>
+
+            • A copy constructor is a constructor that takes only one parameter which is the same type as the class in which the copy constructor is defined.</br>
+            • A copy constructor is used to create another object that is a copy of the object that it takes as a parameter, But, the newly created copy is totally independent of the original object.</br>
+            • It is independent in the sense that the copy is located at different address in memory than the original.</br></br>
+
+            <strong>Overloading Constructor</strong></br></br>
+            • Constructor overloading in java allows to more than one constructor inside one Class.</br>
+            • It is not much different than method overloading. In Constructor overloading you have multiple constructors with different signature with only difference that constructor doesn't have return type.</br>
+            • These types of constructor known as overloaded constructor.</br></br>
+
+            <strong>Passing object as a parameter</strong></br></br>
+            • If you want to construct a new object, thatis initially the same as some existing object. To do this, you must define a constructor that takes an object of its class as a parameter.</br>
+            </br>
+            <STRONG>  <font size="+2">Example:</font></STRONG>
+            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                <div class="w3-content">
+                    <!--<div class="w3-third w3-center">-->
+                    class Box</br>
+                    {</br>
+                    double width;</br>
+                    double height;</br>
+                    double depth;</br>
+                    // It takes an object of type Box. Copy constructor</br>
+                    BoxfBox obj;</br>
+                    {</br>
+                    // pass object to constructor</br>
+                    width = ob.width;</br>
+                    height = ob.height;</br>
+                    depth = ob.depth;</br>
+                    }
+                    //Parameterized constructor</br>
+                    Box(double w, double h, double d)</br>
+                    {</br>
+                    width = w;</br>
+                    height = h;</br>
+                    depth = d;</br>
+                    }// Default constructor</br>
+                    Box()</br>
+                    {</br>
+                    width = -1; // use -1 to indicate</br>
+                    height =1;// an uninitialized</br>
+                    depth = -1;// box</br>
+                    }</br>
+                    //constructor used when cube is created</br>
+                    Box(double len)</br>
+                    {</br>
+                    width = height = depth = len;</br>
+                    }</br>
+                    compute and return volume</br>
+                    double volume()</br>
+                    {</br>
+                    return width * height * depth;</br>
+                    }</br>
+                    }</br>
+                    class DemoAIICons</br>
+                    {</br>
+                    public static void main{$tring args[])</br>
+                    {</br>
+                    Box myboxl = new Box(10,20,15);</br>
+                    Box mybox2 = new Box();</br>
+                    Box mycube = new Box(7);</br>
+                    Box myclone = new Box(myboxl); // create copy of myboxl</br>
+                    double vol;</br>
+                    // get volume of first box</br>
+                    vol = myboxl.volumeO;</br>
+                    System.out.println("Volume of myboxl is " + vol);</br>
+                    // get volume of second box</br>
+                    vol = mybox2.volume();</br>
+                    System.out.println("Volume of mybox2 is " + vol);</br>
+                    // get volume of cube</br>
+                    vol = mycube.volume();</br>
+                    System.out.println("Volume of cube is " + vol);</br>
+                    // get volume of clone</br>
+                    vol = myclone.volumeQ;</br>
+                    System.out.println("Volume of clone is 11 + vol);</br>
+                    }</br>
+                    }</br>
+                </div>
+            </div>
+            <h5 class="w3-padding-32">
+                <strong>OUTPUT:</strong>
+                <center><img src="" width="500" height="250"></center></br>
+            </h5>
+        </h5>
+        </h5>
+        </h5>
+        </div>
+        </div>
+            <!-- Second Grid -->
+            <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+                <div class="w3-content">
+                    <div class="w3-third w3-center">
+                        <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                    </div>
+
+                    <!--<div class="w3-twothird">
+                  <h1>Lorem Ipsum</h1>
+                  <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                  <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>-->
+                    <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+            </div>-->
+
+                    <script>
+                        // Used to toggle the menu on small screens when clicking on the menu button
+                        function myFunction() {
+                            var x = document.getElementById("navDemo");
+                            if (x.className.indexOf("w3-show") == -1) {
+                                x.className += " w3-show";
+                            } else {
+                                x.className = x.className.replace(" w3-show", "");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+    </body>
+</html>

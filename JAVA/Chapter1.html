@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor,
+    .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+    <div class="w3-top">
+        <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+               href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="DL/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+            <a href="Chapter1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Introduction</a>
+            <a href="Chapter2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> Blocks of Language</a>
+            <a href="Chapter3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="Chapter4.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inheritance, Packages,Interfaces</a>
+            <a href="Chapter5.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Exception & Multithreaded</a>
+            <a href="Chapter6.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">File Handling</a>
+            
+        </div>
+
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">JAVA</h1>
+        <p class="w3-xlarge">Introduction to Java</p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>History of Java</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Java was initially developed in 1991named as "oak" but was renamed "Java" in 1995.
+                </br>
+                • Originally designed for small, embedded systems in electronic appliances like set-top boxes.
+                </br>
+                • The primary motivation was the need for a platform-independent language that could be used to create software to
+                be embedded in various consumer electronic devices.
+                </br>
+                • Java programming language was originally developed by Sun Microsystems which was initiated by James Gosling and
+                released in 1995 as core component of Sun Microsystems' Java platform (Java 1.0 [J2SE]}.
+                </br>
+                • It promised Write Once, Run Anywhere (WORA), providing no-cost run-times on popular platforms.
+                </br>
+                • Java 2, new versions had multiple configurations built for different types of platforms. J2EE included
+                technologies and APIs for enterprise applications typically run in server environments, while J2ME featured APIs
+                optimized for mobile applications.
+                </br>
+                • The desktop version was renamed J2SE. In 2006, for marketing purposes, Sun renamed new J2 versions as Java EE,
+                Java ME, and Java SE, respectively.
+                </br>
+                • On 13 November 2006, Sun released much of Java as free and open-source software (FOSS), under the terms of the
+                GNU General Public License (GPL).
+                </br>
+                • On 8 May 2007, Sun finished the process, making all of Java's core code free and open-source, aside from a small
+                portion of code to which Sun did not hold the copyright.
+                </br></br>
+            </h5>
+
+            <h3><strong>Features/Advantages of Java</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Java promised "Write Once, Run Anywhere", providing no-cost run-time on popular platform.</br>
+                • Fairly secure and featuring configurable security, it allowed network and file access restriction.</br>
+                </br>
+
+                <strong>Simple</strong>
+                </br>
+                • It's simple because it contains many features of other languages like C and C++ and java removes complexities because it doesn't use pointers, Storage classes and Go To statement and it also does not support multiple inheritance.</br>
+                </br>
+
+                <strong>Secure</strong>
+                </br>
+                • When we transfer the code from one machine to another machine, it will first check the code it is affected by the virus or not, it checks the safety of the code, if it contains virus then it will never execute that code.</br>
+                </br>
+
+                <strong>Object-Oriented</strong>
+                </br>
+                • We know that all pure object oriented language, in them all of the code is in the form of classes and objects.</br>
+                • This feature of java is most important and it also supports code reusability and maintainability etc.</br>
+                </br>
+
+                <strong>Robust</strong>
+                </br>
+                Two main reasons for program failures are:</br>
+                1. Memory management mistake</br>
+                2. Mishandled exception or Run time errors</br>
+                • Java does not support direct pointer manipulation. This resolves the java program to overwrite memory,</br>
+                • Java manages the memory allocation and de-allocation itself. De-allocation is completely automatic, because Java provides garbage collection for unused objects.</br>
+                • Java provides object-oriented exception handling. In a well written Java program all runtime errors can be managed by the program.</br>
+                </br>
+
+                <strong>Multithreaded</strong>
+                </br>
+                • A thread is like a separate program executing concurrently.</br>
+                • We can write java programs that deal with many tasks at once by defining multiple threads.</br>
+                • The main advantage of multithreading is that it shares the same memory.</br>
+                • Threads are important for multi-media, web application etc.</br>
+                </br>
+
+                <strong>Distributed</strong>
+                </br>
+                • Java is designedfor thedistributed environment of theInternet,becauseit handles TCP/ IP protocols.</br>
+                • The widely used protocol like HTTP and FTP are developed in Java.</br>
+                • Internet programmers can call functions on these protocols and can get access the files from any remote machine on the internet rather than writing code on their local system.</br>
+                </br>
+
+                <strong>Architecture-Neutral</strong>
+                </br>
+                • It means that the programs written in one platform can run on any other platform without rewrite or recompilemthem. In other words it follows "write once, run anywhere, any time, forever" approach,</br>
+                • Java program are compiled into bytecode format which does not depend on any machine architecture but can be easily translated into a specific machine by a JVM for that machine.</br>
+                • This will be very helpful when applets or applications are developed which are download by any machine & run anywhere in any system.</br>
+                </br>
+
+                <strong>Platform Independent</strong>
+                </br>
+                • It means when we compile a program in java,it will create a byte code of that program and that byte code will be executed when we run the program.</br>
+                • It's not compulsory in java, that in which operating system we create java program, in the same operating system.</br>
+                • we have to execute the program.
+                </br>
+
+                <strong>Interpreted</strong>
+                </br>
+                • Most of the programming languages either compiled or interpreted, java is both compiled and interpreted.</br>
+                • Java compiler translates a java source file to byte code and the java interpreter executes the translated byte codes directly on the system that implements the JVM.</br>
+                </br>
+
+                <strong>High Performance</strong>
+                </br>
+                • Java programs are complied in to intermediate representation called bytecode, rather than to native machine level instructions and JVM executes Java bytecode on any machine on which JVM is installed.</br>
+                • Java bytecode then translate directly into native machine code for very high performance by using a Just-In-Time compiler.</br>
+                • So,Java programs are faster than program or scripts written in purely interpreted languages but slower than C and C++ programs that compiled to native machine languages.</br>
+                </br>
+
+                <strong>Dynamic</strong>
+                </br>
+                • At the run time, java environment can extend itself by linking in classes that may be located on remote serveron a network,</br>
+                • At the run time, java interpreter performs name resolution while linking in the necessary classes.</br>
+                • The java interpreter is responsible for determining the placement of object in the memory.</br>
+                </br>
+            </h5>
+
+            <h3><strong>JDK (Java Development Kit)</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Java Developer Kit contains tools needed to develop the Java programs, and JRE to run the programs.</br>
+                • The tools include compiler (javac.exe), Java application launcher (java.exe), Appletviewer, etc Compiler converts java code into byte code.</br>
+                • Java application launcher opens a JRE, loads the class, and invokes its main method.</br>
+                • For running java programs, JRE is sufficient. JRE is targeted for execution of Java files i.e. JRE = JVM + Java Packages Classes(like util, math, lang, awt,swing etcj+runtime libraries.
+                </br>
+                </br>
+            </h5>
+
+            <h3><strong>JRE (Java Runtime Environment)</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Java Runtime Environment contains JVM, class libraries, and other supporting files.</br>
+                • It does not contain any development tools such as compiler, debugger, etc.</br>
+                • Actually, JVM runs the program, and it uses the class libraries, and other supporting files provided in JRE.</br>
+            </h5>
+
+            <h3><strong>JVM (Java Virtual Machine)</strong> </h3>
+            <h5 class="w3-padding-32">
+                • The JVM is called virtual because it provides a machine interface that does not depend on the operating system and machine hardware architecture.</br>
+                • This independence from hardware and operating system is a cornerstone of the write-once, run-anywhere java programs.</br>
+                • When we compile a Java file, output is not an '.exe' but it is a '.class' file.</br>
+                • '.class' file consists of Java byte codes which are understandable by JVM.</br>
+                • Java Virtual Machine interprets the byte code into the machine code depending upon the operating system and hardware combination.</br>
+                • It is responsible for all the things like garbage collection, array bounds checking, etc.</br>
+                • JVM itself is platform dependent</br>
+                • As of 2014 most JVMs use JIT (Just in Time} compiling, not interpreting, to achieve greater speed.</br>
+            </h5>
+
+            <h3><strong>BYTE Code</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Bytecode is nothing but the intermediate representation of Java source code which is produced by the Java compiler by compiling that source code.</br>
+                • This byte code is a machine independent code. It is not completely a compiled code but it is an intermediate code somewhere in the middle which is later interpreted and executed by JVM..</br>
+                • Bytecode is a machine code for JVM. But the machine code is platform specific whereas bytecode is platform independent that is the main difference between them.</br>
+                • It is stored in .class file which is created after compiling the source code.</br>
+            </h5>
+            <h3><strong>JAVA Environment Setup</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Setting up the path for windows: Assuming you have installed Java in c:\Program Files\java\jdk directory.</br>
+                • Right-click on 'My Computer' and select 'Properties'.</br>
+                • Click on the 'Environment variables' button under the 'Advanced' tab.</br>
+                • Now, Under 'System variables' alter the ’Path1 variable so that it also contains the path to the Java executable.</br>
+                • Example, if the path is currently set to 'C:\WINDOWS\SYSTEM321, then change your path to read 'C:\WINDOWS\SYSTEM32;c:\Program Fi!es\java\jdk\bin'.
+            </h5>
+
+            <h3><strong>Structure of JAVA program</strong> </h3>
+            <h5 class="w3-padding-32">
+                • A Java Program may contain many classes of which only one class defines a main method.</br>
+                • Classes contain data members and methods that operate on the data members of the class.</br>
+                • Methods may contain data type declarations and executable statements.</br>
+                </br>
+
+                <strong>Documentation Section</strong>
+                </br>
+                • The documentation section comprises a set of comment lines giving the name of the program, the author and other details, which the programmers would like to refer to at a later stage.</br>
+                • Java also uses a comment such as /* .... * / know as documentation comment.</br>
+                • This form is used for documentation automatically.</br>
+                </br>
+
+                <strong>Package Statement</strong>
+                </br>
+                • The first statement allowed in Java file is a package statement.</br>
+                • This statement declares a package name and informs the compiler that the classes defined here belong to this package.</br>
+                Example: Package Student;</br>
+                • The main advantage of multithreading is that it shares the same memory.</br>
+                • Threads are important for multi-media, web application etc.</br>
+                </br>
+
+                <strong>Import Statements</strong>
+                </br>
+                • The next thing after a package statement may be a number of import statements. This is similar to the ^include statement in C.</br>
+                Example: Import student.test;</br>
+                </br>
+
+                <strong>Interface Statement</strong>
+                </br>
+                • An interface is like a class but includes a group of method declarations.</br>
+                • This is also an optional section and is used only when we wish to implement the multiple inheritance features in the program.</br>
+                </br>
+
+                <strong>Class Definition</strong>
+                </br>
+                • A Java Program may contain multiple class definitions.</br>
+                • Classes are primary and essential elements of Java program.</br>
+                • These classes are used to map the objects of real-world programs.</br>
+                </br>
+
+                <strong>Main Method Class</strong>
+                </br>
+                • Since, every Java stand-alone program requires a main method as its starting point this is the essential part of Java program.</br>
+                • A simple Java program may contain only this part.</br>
+                • The main method creates objects of various classes and establishes communication between them.</br>
+                </br>
+            </h5>
+
+            <h1><strong>POP VS OOP</strong></h1>
+            <center><img src="C:\Users\Aarya Tiwari\Desktop\Project" width="500" height="600"></center></br>
+
+            <h1><strong>Basic Concepts of OOP</strong> </h1>
+            <h5 class="w3-padding-32">
+                </br>• Various concepts present in OOP to make it more powerful, secure, reliable and easy.</br>
+                </br>
+
+                <strong>Object</strong>
+                </br>
+                • An object is an instance of a class.</br>
+                • An object means anything from real world like as person, computer etc.</br>
+                • Every object has at least one unique identity.</br>
+                • An object is a component of a program that knows how to interact with other pieces of the program.</br>
+                • An object is the variable of the type class.</br>
+                </br>
+
+                <strong>Class</strong>
+                </br>
+                • A class is a template that specifies the attributes and behavior of objects.</br>
+                • A class is a blueprint or prototype from which objects are created.</br>
+                • Simply class is collection of objects.</br>
+                • A class is the implementation of an abstract data type (ADT). it defines attributes and methods which implement the data structure and operations of the ADT, respectively.</br>
+                </br>
+
+                <strong>Data Abstraction</strong>
+                </br>
+                • Just represent essential features without including the background details.</br>
+                • Implemented in class to provide data security.</br>
+                • We use abstract class and interface to achieve abstraction.</br>
+                </br>
+
+                <strong>Encapsulation</strong>
+                </br>
+                • Wrapping up (Binding) of a data and functions into single unit is known as encapsulation.</br>
+                • The data is not accessible to the outside world, only those functions can access it which is wrapped together within single unit.</br>
+                </br>
+
+                <strong>Inheritance</strong>
+                </br>
+                • Inheritance is the process, by which class can acquire the properties and methods of another class.</br>
+                • The mechanism of deriving a new class from an old class is called inheritance.</br>
+                • The new class is called derived class and old class is called base class.</br>
+                • The derived class may have all the features of the base class and the programmer can add new features to the derived class.</br>
+                </br>
+
+                <strong>Polymorphism</strong>
+                </br>
+                • Polymorphism means the ability to take more than one form.</br>
+                • It allows a single name to be used for more than one related purpose.</br>
+                • It means ability of operators and functions to act differently in different situations.</br>
+                • We use method overloading and method overriding to achieve polymorphism.</br>
+                </br>
+
+                <strong>Message Passing</strong>
+                </br>
+                • A program contains set of object that communicates with each other.</br>
+                • Basic steps to communicate</br>
+                1. Creating classes that define objects and their behavior.</br>
+                2. Creating objects from class definition</br>
+                3. Establishing communication among objects.</br>
+                </br>
+            </h5>
+
+            <h1><strong>Dynamic and Static Binding</strong></h1>
+            <center><img src="C:\Users\Aarya Tiwari\Desktop\Project" width="500" height="300"></center></br>
+
+
+            <STRONG><font size="+2">First Java program: </STRONG></font></br></br>
+            <font size="+1">FirstProgram.java</font>
+            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                <div class="w3-content">
+                    import java.util;</br>
+                    class FirstProgram</br>
+                    {</br>
+                    String str;</br>
+                    public static void main(String[] args)</br>
+                    {</br>
+                    System.out.println("My First Program In Java...");</br>
+                    }</br>
+                </div>
+            </div>
+            </h5>
+            <h5 class="w3-padding-32">
+                <font size="+1">OUTPUT:</font></br>
+                <center><img src="C:\Users\Aarya Tiwari\Desktop\Project" width="600" height="200"></center></br>
+            </h5>
+
+        </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+            </div>
+
+            <!--<div class="w3-twothird">
+                  <h1>Lorem Ipsum</h1>
+                  <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                  <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>-->
+            <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+            </div>-->
+        
+            <script>
+                // Used to toggle the menu on small screens when clicking on the menu button
+                function myFunction() {
+                    var x = document.getElementById("navDemo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

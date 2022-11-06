@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+
+    <!-- Navbar -->
+    <div class="w3-top">
+       <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+            <a href="C++1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basics of C++ (Part 1)</a>
+            <a href="C++2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basics of C++ (Part 2)</a>
+            <a href="C++3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+           <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+	 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+        </div>
+
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">C++</h1>
+        <p class="w3-xlarge">
+            Basics of C++ (Part 1)
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>Why C++</strong> </h3>
+            <h5 class="w3-padding-32">
+                C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.</br>
+                This C++ tutorial adopts a simple and practical approach to describe the concepts of C++ for beginners to advanced software engineers.</br>
+
+                C++ is a MUST for students and working professionals to become a great Software Engineer. I will list down some of the key advantages of learning C++:</br>
+                •	C++ is very close to hardware, so you get a chance to work at a low level which gives you lot of control in terms of memory management, better performance and finally a robust software development.</br>
+                •	C++ programming gives you a clear understanding about Object Oriented Programming. You will understand low level implementation of polymorphism when you will implement virtual tables and virtual table pointers, or dynamic type identification.</br>
+                •	C++ is one of the every green programming languages and loved by millions of software developers. If you are a great C++ programmer then you will never sit without work and more importantly you will get highly paid for your work.</br>
+                •	C++ is the most widely used programming languages in application and system programming. So you can choose your area of interest of software development.</br>
+                •	C++ really teaches you the difference between compiler, linker and loader, different data types, storage classes, variable types their scopes etc.</br>
+                There are 1000s of good reasons to learn C++ Programming. But one thing for sure, to learn any programming language, not only C++, you just need to code, and code and finally code until you become expert.</br>
+                </br>
+                </br>
+
+                <STRONG>  <font size="+2">Example of Hello World using C++:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        // main() is where program execution begins.</br>
+                        int main() {</br>
+                        cout << "Hello World"; // prints Hello World</br>
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                There are many C++ compilers available which you can use to compile and run above mentioned program:</br>
+                •	Apple C++. Xcode</br>
+                •	Bloodshed Dev-C++</br>
+                •	Clang C++</br>
+                •	Cygwin (GNU C++)</br>
+                •	Mentor Graphics</br>
+                •	MINGW - "Minimalist GNU for Windows"</br>
+                •	GNU CC source</br>
+                •	IBM C++</br>
+                •	Intel C++</br>
+                •	Microsoft Visual C++</br>
+                •	Oracle C++</br>
+                •	HP C++</br>
+                It is really impossible to give a complete list of all the available compilers. The C++ world is just too large and too much new is happening.
+
+            </h5>
+
+            <h3><strong>Applications of C++ Programming</strong> </h3>
+            <h5 class="w3-padding-32">
+                
+                As mentioned before, C++ is one of the most widely used programming languages. It has it's presence in almost every area of software development. I'm going to list few of them here:</br>
+                •	Application Software Development - C++ programming has been used in developing almost all the major Operating Systems like Windows, Mac OSX and Linux. Apart from the operating systems, the core part of many browsers like Mozilla Firefox and Chrome have been written using C++. </br>
+                C++ also has been used in developing the most popular database system called MySQL.</br>
+                •	Programming Languages Development - C++ has been used extensively in developing new programming languages like C#, Java, JavaScript, Perl, UNIX’s C Shell, PHP and Python, and Verilog etc.</br>
+                •	Computation Programming - C++ is the best friends of scientists because of fast speed and computational efficiencies.</br>
+                •	Games Development - C++ is extremely fast which allows programmers to do procedural programming for CPU intensive functions and provides greater control over hardware, because of which it has been widely used in development of gaming engines.</br>
+                •	Embedded System - C++ is being heavily used in developing Medical and Engineering Applications like softwares for MRI machines, high-end CAD/CAM systems etc.</br>
+                This list goes on, there are various areas where software developers are happily using C++ to provide great softwares. I highly recommend you to learn C++ and contribute great softwares to the community.
+                </br>
+                </br>
+            </h5>
+
+            <h3><strong>C++ Overview</strong> </h3>
+            <h5 class="w3-padding-32">
+
+
+                C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural, object-oriented, and generic programming.</br>
+                C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features.</br>
+                C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey, as an enhancement to the C language and originally named C with Classes but later it was renamed C++ in 1983.</br>
+                C++ is a superset of C, and that virtually any legal C program is a legal C++ program.</br>
+                Note − A programming language is said to use static typing when type checking is performed during compile-time as opposed to run-time.</br>
+                </br>
+                Object-Oriented Programming</br>
+                </br>
+                C++ fully supports object-oriented programming, including the four pillars of object-oriented development-</br>
+                •	Encapsulation</br>
+                •	Data hiding</br>
+                •	Inheritance</br>
+                •	Polymorphism</br>
+                </br>
+                Standard Libraries
+                </br></br>
+                Standard C++ consists of three important parts:</br>
+                •	The core language giving all the building blocks including variables, data types and literals, etc.</br>
+                •	The C++ Standard Library giving a rich set of functions manipulating files, strings, etc.</br>
+                •	The Standard Template Library (STL) giving a rich set of methods manipulating data structures, etc.</br>
+                </br>
+                The ANSI Standard
+                </br></br>
+                The ANSI standard is an attempt to ensure that C++ is portable; that code you write for Microsoft's compiler will compile without errors, using a compiler on a Mac, UNIX, a Windows box, or an Alpha.</br>
+                The ANSI standard has been stable for a while, and all the major C++ compiler manufacturers support the ANSI standard.</br>
+                </br>
+                Learning C++</br>
+                </br>
+                The most important thing while learning C++ is to focus on concepts.</br>
+                The purpose of learning a programming language is to become a better programmer; that is, to become more effective at designing and implementing new systems and at maintaining old ones.</br>
+                C++ supports a variety of programming styles. You can write in the style of Fortran, C, Smalltalk, etc., in any language. Each style can achieve its aims effectively while maintaining runtime and space efficiency.</br>
+                </br>
+                Use of C++
+                </br></br>
+                C++ is used by hundreds of thousands of programmers in essentially every application domain.</br>
+                C++ is being highly used to write device drivers and other software that rely on direct manipulation of hardware under realtime constraints.</br>
+                C++ is widely used for teaching and research because it is clean enough for successful teaching of basic concepts.</br>
+                Anyone who has used either an Apple Macintosh or a PC running Windows has indirectly used C++ because the primary user interfaces of these systems are written in C++.
+            </h5>
+
+            <h3><strong>C++ Environment Setup</strong> </h3>
+            <h5 class="w3-padding-32">
+
+
+                Local Environment Setup
+                </br></br>
+                If you are still willing to set up your environment for C++, you need to have the following two softwares on your computer.</br>
+                </br>
+                Text Editor
+                </br></br>
+                This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi.</br>
+                Name and version of text editor can vary on different operating systems. For example, Notepad will be used on Windows and vim or vi can be used on windows as well as Linux, or UNIX.</br>
+                The files you create with your editor are called source files and for C++ they typically are named with the extension .cpp, .cp, or .c.</br>
+                A text editor should be in place to start your C++ programming.</br>
+                </br>
+                C++ Compiler
+                </br></br>
+                This is an actual C++ compiler, which will be used to compile your source code into final executable program.</br>
+                Most C++ compilers don't care what extension you give to your source code, but if you don't specify otherwise, many will use .cpp by default.</br>
+                Most frequently used and free available compiler is GNU C/C++ compiler, otherwise you can have compilers either from HP or Solaris if you have the respective Operating Systems.</br>
+                </br>
+                Installing GNU C/C++ Compiler
+                </br></br>
+                UNIX/Linux Installation
+                </br></br>
+                If you are using Linux or UNIX then check whether GCC is installed on your system by entering the following command from the command line:</br>
+                $ g++ -v</br>
+                If you have installed GCC, then it should print a message such as the following:</br>
+                Using built-in specs.</br>
+                Target: i386-redhat-linux</br>
+                Configured with: ../configure --prefix=/usr .......</br>
+                Thread model: posix</br>
+                gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</br>
+                If GCC is not installed, then you will have to install it yourself using the detailed instructions available at https://gcc.gnu.org/install/ </br></br>
+
+                Mac OS X Installation
+                </br></br>
+                If you use Mac OS X, the easiest way to obtain GCC is to download the Xcode development environment from Apple's website and follow the simple installation instructions.</br>
+                Xcode is currently available at developer.apple.com/technologies/tools/.</br>
+                </br>
+                Windows Installation
+                </br></br>
+                To install GCC at Windows you need to install MinGW. To install MinGW, go to the MinGW homepage, www.mingw.org, and follow the link to the MinGW download page. </br>
+                Download the latest version of the MinGW installation program which should be named MinGW-< version >.exe.</br>
+                While installing MinGW, at a minimum, you must install gcc-core, gcc-g++, binutils, and the MinGW runtime, but you may wish to install more.</br>
+                Add the bin subdirectory of your MinGW installation to your PATH environment variable so that you can specify these tools on the command line by their simple names.</br>
+                When the installation is complete, you will be able to run gcc, g++, ar, ranlib, dlltool, and several other GNU tools from the Windows command line.
+
+            </h5>
+
+            <h3><strong>C++ Basic syntax</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class, object, methods, and instant variables mean.</br>
+                •	Object − Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors - wagging, barking, eating. An object is an instance of a class.</br>
+                •	Class − A class can be defined as a template/blueprint that describes the behaviors/states that object of its type support.</br>
+                •	Methods − A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.</br>
+                •	Instance Variables − Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables.
+                </br></br>
+                <STRONG>  <font size="+2">Example of C++ Program Structure:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        // main() is where program execution begins.</br>
+                        int main() </br>
+                        cout << "Hello World"; // prints Hello World</br>
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                Let us look at the various parts of the above program:</br>
+                •	The C++ language defines several headers, which contain information that is either necessary or useful to your program. For this program, the header < iostream > is needed.</br>
+                •	The line using namespace std; tells the compiler to use the std namespace. Namespaces are a relatively recent addition to C++.</br>
+                •	The next line '// main() is where program execution begins.' is a single-line comment available in C++. Single-line comments begin with // and stop at the end of the line.</br>
+                •	The line int main() is the main function where program execution begins.</br>
+                •	The next line cout << "Hello World"; causes the message "Hello World" to be displayed on the screen.</br>
+                •	The next line return 0; terminates main( )function and causes it to return the value 0 to the calling process.</br>
+                </br>
+                Compile and Execute C++ Program</br>
+
+                Let's look at how to save the file, compile and run the program. Please follow the steps given below:</br>
+                •	Open a text editor and add the code as above.</br>
+                •	Save the file as: hello.cpp</br>
+                •	Open a command prompt and go to the directory where you saved the file.</br>
+                •	Type 'g++ hello.cpp' and press enter to compile your code. If there are no errors in your code the command prompt will take you to the next line and would generate a.out executable file.</br>
+                •	Now, type 'a.out' to run your program.</br>
+                •	You will be able to see ' Hello World ' printed on the window.</br>
+                $ g++ hello.cpp</br>
+                $ ./a.out</br>
+                Hello World</br>
+                </br>
+                Make sure that g++ is in your path and that you are running it in the directory containing file hello.cpp.</br>
+                You can compile C/C++ programs using makefile.</br>
+                </br>
+
+                Semicolons and Blocks in C++</br>
+                </br>
+                In C++, the semicolon is a statement terminator. That is, each individual statement must be ended with a semicolon. It indicates the end of one logical entity.</br>
+                For example, following are three different statements −</br>
+                x = y;</br>
+                y = y + 1;</br>
+                add(x, y);</br>
+                A block is a set of logically connected statements that are surrounded by opening and closing braces. For example-</br>
+                {</br>
+                cout << "Hello World"; // prints Hello World</br>
+                return 0;</br>
+                }</br>
+                C++ does not recognize the end of the line as a terminator. For this reason, it does not matter where you put a statement in a line. For example−</br>
+                x = y;</br>
+                y = y + 1;</br>
+                add(x, y);</br>
+                is the same as</br>
+                x = y; y = y + 1; add(x, y);</br>
+                </br>
+
+                C++ Identifiers</br>
+                </br>
+                A C++ identifier is a name used to identify a variable, function, class, module, or any other user-defined item.</br>
+                An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores, and digits (0 to 9).</br>
+                C++ does not allow punctuation characters such as @, $, and % within identifiers. C++ is a case-sensitive programming language. Thus, Manpower and manpower are two different identifiers in C++.</br>
+                Here are some examples of acceptable identifiers −</br>
+                mohd       zara    abc   move_name  a_123</br>
+                myname50   _temp   j     a23b9      retVal
+                </br></br>
+                C++ Keywords</br>
+                </br>
+                The following list shows the reserved words in C++.</br>
+                These reserved words may not be used as constant or variable or any other identifier names.</br>
+                asm	else	new	this</br>
+                auto	enum	operator	throw</br>
+                bool	explicit	private	true</br>
+                </br>
+                Trigraphs</br>
+                </br>
+                A few characters have an alternative representation, called a trigraph sequence.</br>
+                A trigraph is a three-character sequence that represents a single character and the sequence always starts with two question marks.</br>
+                Trigraphs are expanded anywhere they appear, including within string literals and character literals, in comments, and in preprocessor directives.</br>
+                Following are most frequently used trigraph sequences −</br>
+                </br>
+                =	#</br>
+                /	\</br>
+                '	^</br>
+                (	[</br>
+                )	]</br>
+                !	|</br>
+                <	{</br>
+                >	}</br>
+                -	~</br>
+                All the compilers do not support trigraphs and they are not advised to be used because of their confusing nature.
+                </br>
+
+                Whitespace in C++</br>
+                </br>
+                A line containing only whitespace, possibly with a comment, is known as a blank line, and C++ compiler totally ignores it.</br>
+                Whitespace is the term used in C++ to describe blanks, tabs, newline characters and comments. Whitespace separates one part of a statement from another and enables the compiler to identify where one element in a statement, such as int, ends and the next element begins.</br>
+                Statement 1:</br>
+                int age;</br>
+                In the above statement there must be at least one whitespace character (usually a space) between int and age for the compiler to be able to distinguish them.
+                </br>
+                Statement 2</br>
+                fruit = apples + oranges;   // Get the total fruit</br>
+                In the above statement 2, no whitespace characters are necessary between fruit and =, or between = and apples, although you are free to include some if you wish for readability purpose.
+
+            </h5>
+
+            <h3><strong>Comments in C++</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                Program comments are explanatory statements that you can include in the C++ code. These comments help anyone reading the source code. All programming languages allow for some form of comments.</br>
+                C++ supports single-line and multi-line comments. All characters available inside any comment are ignored by C++ compiler.</br>
+                C++ comments start with /* and end with */. For example −</br>
+                /* This is a comment */</br>
+
+                /* C++ comments can also</br>
+                * span multiple lines</br>
+                */</br>
+                A comment can also start with //, extending to the end of the line.</br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        main() {</br>
+                        cout << "Hello World"; // prints Hello World</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                When the above code is compiled, it will ignore // prints Hello World and final executable will produce the following result −</br>
+                Hello World</br>
+                Within a /* and */ comment, // characters have no special meaning. Within a // comment, /* and */ have no special meaning. Thus, you can "nest" one kind of comment within the other kind. For example −</br>
+                /* Comment out printing of Hello World:</br>
+
+                cout << "Hello World"; // prints Hello World</br>
+
+                */
+
+            </h5>
+
+            <h3><strong>C++ Data types</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                While writing program in any language, you need to use various variables to store various information. Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.</br>
+                You may like to store information of various data types like character, wide character, integer, floating point, double floating point, boolean etc. Based on the data type of a variable, the operating system allocates memory and decides what can be stored in the reserved memory.</br></br>
+                Primitive Built-in Types</br></br>
+                C++ offers the programmer a rich assortment of built-in as well as user defined data types. Following table lists down seven basic C++ data types −</br>
+
+                Boolean -- bool</br>
+                Character -- char</br>
+                Integer --	int</br>
+                Floating point --	float
+                Double floating point --	double</br>
+                Valueless --	void</br>
+                Wide character --	wchar_t</br>
+                Several of the basic types can be modified using one or more of these type modifiers −signed</br>
+                •	unsigned</br>
+                •	short</br>
+                •	long</br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        int main() {</br>
+                        cout << "Size of char : " << sizeof(char) << endl;</br>
+                        cout << "Size of int : " << sizeof(int) << endl;</br>
+                        cout << "Size of short int : " << sizeof(short int) << endl;</br>
+                        cout << "Size of long int : " << sizeof(long int) << endl;</br>
+                        cout << "Size of float : " << sizeof(float) << endl;</br>
+                        cout << "Size of double : " << sizeof(double) << endl;</br>
+                        cout << "Size of wchar_t : " << sizeof(wchar_t) << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                This example uses endl, which inserts a new-line character after every line and << operator is being used to pass multiple values out to the screen. We are also using sizeof() operator to get size of various data types.</br>
+                When the above code is compiled and executed, it produces the following result which can vary from machine to machine −</br>
+                Size of char : 1</br>
+                Size of int : 4</br>
+                Size of short int : 2</br>
+                Size of long int : 4</br>
+                Size of float : 4</br>
+                Size of double : 8</br>
+                Size of wchar_t : 4</br>
+                </br>
+                Typedef Declarations</br></br>
+                You can create a new name for an existing type using typedef. Following is the simple syntax to define a new type using typedef −</br>
+                Typedef type newname;</br>
+                For example, the following tells the compiler that feet is another name for int −</br>
+                typedef int feet;</br>
+                Now, the following declaration is perfectly legal and creates an integer variable called distance −</br>
+                feet distance;</br>
+                </br>
+                Enumerated Types</br></br>
+                An enumerated type declares an optional type name and a set of zero or more identifiers that can be used as values of the type. Each enumerator is a constant whose type is the enumeration.</br>
+                Creating an enumeration requires the use of the keyword enum. The general form of an enumeration type is −</br>
+                enum enum-name { list of names } var-list;</br>
+                Here, the enum-name is the enumeration's type name. The list of names is comma separated.</br>
+                For example, the following code defines an enumeration of colors called colors and the variable c of type color. Finally, c is assigned the value "blue".</br>
+                enum color { red, green, blue } c;</br>
+                c = blue;</br>
+                By default, the value of the first name is 0, the second name has the value 1, and the third has the value 2, and so on. But you can give a name, a specific value by adding an initializer. For example, in the following enumeration, green will have the value 5.</br>
+                enum color { red, green = 5, blue };</br>
+                Here, blue will have a value of 6 because each name will be one greater than the one that precedes it.
+
+            </h5>
+
+
+            <h3><strong>Character Streams</strong> </h3>
+            <h5 class="w3-padding-32">
+                C++ VARIABLE TYPES
+                A variable provides us with named storage that our programs can manipulate. Each variable in C++ has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.</br>
+                The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C++ is case-sensitive −</br>
+                There are following basic types of variable in C++ as explained in last chapter −</br>
+                </br>
+                1	bool</br>
+                Stores either value true or false.</br></br>
+                2	char</br>
+                Typically a single octet (one byte). This is an integer type.</br></br>
+                3	int</br>
+                The most natural size of integer for the machine.</br></br>
+                4	float</br>
+                A single-precision floating point value.</br></br>
+                5	double</br>
+                A double-precision floating point value.</br></br>
+                6	void</br>
+                Represents the absence of type.</br></br>
+                7	wchar_t</br>
+                A wide character type.</br></br>
+                C++ also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Reference, Data structures, and Classes.</br>
+                Following section will cover how to define, declare and use various types of variables.</br>
+                </br>
+                Variable Definition in C++
+                </br></br>
+                A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type, and contains a list of one or more variables of that type as follows −</br>
+                type variable_list;</br>
+                Here, type must be a valid C++ data type including char, w_char, int, float, double, bool or any user-defined object, etc., and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here −</br>
+                int    i, j, k;</br>
+                char   c, ch;</br>
+                float  f, salary;</br>
+                double d;</br>
+                The line int i, j, k; both declares and defines the variables i, j and k; which instructs the compiler to create variables named i, j and k of type int.</br>
+                Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows −</br>
+                type variable_name = value;</br>
+                Some examples are −</br>
+                extern int d = 3, f = 5;    // declaration of d and f.</br>
+                int d = 3, f = 5;           // definition and initializing d and f.</br>
+                byte z = 22;                // definition and initializes z.</br>
+                char x = 'x';               // the variable x has the value 'x'.</br>
+                For definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables is undefined.
+                </br>
+                </br>
+                Variable Declaration in C++</br>
+                </br>
+                A variable declaration provides assurance to the compiler that there is one variable existing with the given type and name so that compiler proceed for further compilation without needing complete detail about the variable.</br>
+                A variable declaration has its meaning at the time of compilation only, compiler needs actual variable definition at the time of linking of the program.</br>
+                A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use extern keyword to declare a variable at any place. </br>
+                Though you can declare a variable multiple times in your C++ program, but it can be defined only once in a file, a function or a block of code.</br>
+
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        // Variable declaration:</br>
+                        extern int a, b;</br>
+                        extern int c;</br>
+                        extern float f;</br>
+
+                        int main () {</br>
+                        // Variable definition:</br>
+                        int a, b;</br>
+                        int c;</br>
+                        float f;</br>
+
+                        // actual initialization</br>
+                        a = 10;</br>
+                        b = 20;</br>
+                        c = a + b;</br>
+
+                        cout << c << endl ;</br>
+
+                        f = 70.0/3.0;</br>
+                        cout << f << endl ;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                When the above code is compiled and executed, it produces the following result −</br>
+                30</br>
+                23.3333</br></br>
+                Same concept applies on function declaration where you provide a function name at the time of its declaration and its actual definition can be given anywhere else. For example −</br></br>
+                // function declaration</br>
+                int func();</br>
+                int main() {</br>
+                // function call</br>
+                int i = func();</br>
+                }</br>
+
+                // function definition</br>
+                int func() {</br>
+                return 0;</br>
+                }</br>
+                </br>
+                Lvalues and Rvalues</br></br>
+                There are two kinds of expressions in C++ </br>
+                •	lvalue − Expressions that refer to a memory location is called "lvalue" expression. An lvalue may appear as either the left-hand or right-hand side of an assignment.</br>
+                •	rvalue − The term rvalue refers to a data value that is stored at some address in memory. An rvalue is an expression that cannot have a value assigned to it which means an rvalue may appear on the right- but not left-hand side of an assignment.</br>
+                Variables are lvalues and so may appear on the left-hand side of an assignment. Numeric literals are rvalues and so may not be assigned and can not appear on the left-hand side. Following is a valid statement −</br>
+                int g = 20;</br>
+                But the following is not a valid statement and would generate compile-time error −</br>
+                10 = 20;</br>
+
+            </h5>
+
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+            </div>
+
+            <!--<div class="w3-twothird">
+                  <h1>Lorem Ipsum</h1>
+                  <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                  <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>-->
+            <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+            </div>-->
+ 
+            <script>
+                // Used to toggle the menu on small screens when clicking on the menu button
+                function myFunction() {
+                    var x = document.getElementById("navDemo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

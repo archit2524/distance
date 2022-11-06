@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+               href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+           <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+            <a href="Chapter1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Introduction</a>
+            <a href="Chapter2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> Blocks of Language</a>
+            <a href="Chapter3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="Chapter4.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inheritance, Packages,Interfaces</a>
+            <a href="Chapter5.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Exception & Multithreaded</a>
+            <a href="Chapter6.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">File Handling</a>
+             <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">JAVA</h1>
+        <p class="w3-xlarge">
+            Exception Handling & Multithreaded
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>Exceptions Handling</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • An exception (or exceptional event) is a problem that arises during the execution of a program.</br>
+                • When an Exception occurs the normal flow of the program is disrupted and thenprogram/Appiication terminates abnormally,therefore these exceptions are needs to be handled.</br>
+                • A Java Exception is an object that describes the exception that occurs in a program. When annexceptional event occurs in java, an exception is said to be thrown.</br>
+                • An exception can occur for many different reasons, some of them are as given below:</br>
+                • A user has entered invalid data.</br>
+                • A file that needs to be opened cannot be found.</br>
+                • A network connection has been lost in the middle of communications, or the JVM has run out of memory.</br>
+                • Exceptions are caused by users, programmers or when some physical resources get failed.</br>
+                • The Exception Handling in java is one of the powerful mechanisms to handle the exceptionn(runtime errors), so that normal flow of the application can be maintained.</br></br>
+                • In Java there are three categories of Exceptions:</br>
+                </br>
+                1) Checked exceptions: A checked exception is an exception that occurs at the compile time,
+                these are also called as compile time exceptions. Example, lOException, SQLException etc.</br>
+                </br>
+                2) Runtime exceptions: An Unchecked exception is an exception that occurs during the execution, these are also called as Runtime Exceptions. These include programming bugs, such as logic errors or improper use of an API.</br>
+                Runtime exceptions are ignored at the time of compilation.</br>
+                Example :</br>
+                ArithmeticExceptlon, NullPointerException, Array Index out of Bound exception.</br>
+                </br>
+                3) Errors: These are not exceptions at all, but problems that arise beyond the control of the user or the programmer.</br>
+                Example:</br>
+                OutOfMemoryError, VirtuaiMachineErrorException.</br>
+                • All exception classes are subtypes of the java.Iang.Exception class. The exception class is a subclass of the Throwable class. Other than the exception class there is another subclass called
+                Error which is derived from the Throwable class.</br>
+                • Errors are not normally trapped form the Java programs. These conditions normally happen in case of severe failures, which are not handled by the java programs. Errors are generated to indicate errors generated by the runtime environment. </br>
+                Example: </br>
+                JVM is out of Memory. Normally programs cannot recover from errors.</br>
+                • The Exception class has two main subclasses: lOException class and RuntimeException class.</br>
+            </h5>
+
+            <h3><strong>Exception Handling Mechanism</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Exception handling is done using five keywords:</br></br>
+                1) try</br>
+                2) catch</br>
+                3) finally</br>
+                4) throw</br>
+                5) throws</br>
+                </br>
+                <strong>1) try block :</strong></br>
+
+                • Java try block is used to enclose the code that might throw an exception. It must be used within the method.</br>
+                • Java try block must be followed by either catch or finally block.</br>
+                </br>
+                <strong>2) catch block :</strong></br>
+                • Java catch block is used to handle the Exception. It must be used after the try block only.</br>
+                • The catch block that follows the try is checked, if the type of exception that occurred is listed in the catch block then the exception is handed over to the catch block that handles it.</br>
+                • You can use multiple catch block with a single try.</br>
+                </br>
+                Syntax:</br>
+                try</br>
+                {</br>
+                //Protected code</br>
+                }</br>
+                catch(ExceptionNamel el)</br>
+                {</br>
+                //Catch block 1</br>
+                }</br>
+                catch(ExceptionName2 e2)</br>
+                {</br>
+                //Catch block 2</br>
+                }</br></br>
+                • In above syntax, there are two catch blocks. In try block, we write code that might generate exception. If the exception generated by protected code then exception thrown to the first catch block.</br>
+                • If the data type of the exception thrown matches ExceptionNamel, it gets caught there and execute the catch block.</br>
+                • If not, the exception passes down to the second catch block.</br>
+                • This continues until the exception either is caught or falls through all catches, in that case the current method stops execution.</br>
+
+                </br>
+
+                <strong>Nested Try-Catch Blocks</strong></br>
+
+                • In java, the try block within a try block is known as nested try block.</br>
+                • Nested try block is used when a part of a block may cause one error while entire block may
+                cause another error.</br>
+                • In that case, if inner try block does not have a catch handler for a particular exception then the
+                outer try is checked for match.</br>
+                • This continues until one of the catch statements succeeds, or until the entire nested try
+                statements are done in. If no one catch statements match
+                ,then the Java run-time system will
+                handle the exception.</br>
+                </br>
+                Syntax:</br>
+                try</br>
+                {</br>
+                Statement 1;</br>
+                try</br>
+                {</br>
+                //Protected code</br>
+                }</br>
+                catch(ExceptionName el)</br>
+                {</br>
+                //Catch blockl</br>
+                }</br>
+                }</br>
+                catch(ExceptionName e2)</br>
+                {</br>
+                //Catch block 2</br>
+                }</br>
+                </br>
+                Key points to keep in mind:</br>
+                • A catch clause cannot exist without a try statement.</br>
+                • It is not compulsory to have finally clause for every try/catch.</br>
+                • The try block cannot be present without either catch clause or finally clause.</br>
+                • Any code cannot be present in between the try, catch, finally block.</br>
+                </br>
+
+                <strong>4) throw :</strong></br>
+                • The throw keyword is used to explicitly throw an exception.</br>
+                • We can throw either checked or uncheked exception using throw keyword.</br>
+                • Only object of Throwable class or its sub classes can be thrown.</br>
+                • Program execution stops on encountering throw statement, and the closest catch statement is
+                checked for matching type of exception.</br>
+                </br>
+                Syntax:</br>
+                throw Throwablelnstance;</br>
+                </br>
+
+                <strong>5) throws:</strong></br>
+                • The throws keyword is used to declare an exception.</br>
+                • if a method does not handle a checked exception, the method must declare it using the
+                throws keyword. The throws keyword appears at the end of a method's signature.</br>
+                • You can declare multiple exceptions.</br>
+                </br>
+                Syntax:</br>
+                return_type method_name(} throws exception_class_name_list</br>
+                {</br>
+                //method code</br>
+                }</br>
+            </h5>
+
+            <h3><strong>User Defined Exception</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • In java, we can create our own exception that is known as custom exception or user-defined exception.</br>
+                • We can have our own exception and message.</br>
+                Key points to keep in mind:</br>
+                • All exceptions must be a child of Throwable.</br>
+                • If you want to write a checked exception that is automatically enforced by the Declare Rule, you need to extend the Exception class.</br>
+                • If you want to write a runtime exception, you need to extend the RuntimeException class.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class demoUserException extends Exception</br>
+                        {</br>
+                        private int ex;</br>
+                        demoUserException(int a )</br>
+                        {</br>
+                        ex=a;</br>
+                        }</br>
+                        public String toString()</br>
+                        {</br>
+                        return irMyException[" + ex +"] is less than zero";</br>
+                        }</br>
+                        }</br>
+                        class demoException</br>
+                        {</br>
+                        static void sumfint a,int b) throws demoUserException</br>
+                        {</br>
+                        if (a<=0)</br>
+                        {</br>
+                        throw new demoUserException (a);</br>
+                        }</br>
+                        else</br>
+                        {</br>
+                        System.out.println(a+b);</br>
+                        }</br>
+                        }</br>
+                        public static void main(String[] args)</br>
+                        {</br>
+                        try</br>
+                        {</br>
+                        sum(-10,10);
+                        }</br>
+                        catch(demollserException e)</br>
+                        {</br>
+                        System.out.println(e);</br>
+                        }</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Multithreading</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Java is a multithreaded programming language which means we can develop multi threaded program using Java.</br>
+                • Multithreaded programs contain two or more threads that can run concurrently. This means that a single program can perform two or more tasks simultaneously.</br>
+                • Thread is basically a lightweight sub-process, a smallest unit of processing.</br>
+                • Multiprocessing and multithreading, both are used to achieve multitasking.</br>
+                • But we use multithreading than multiprocessing because threads share a common memory area.
+                • They don't allocate separate memory area which saves memory, and context-switching between the threads takes less time than process.</br>
+                • Threads are independent. So, it doesn't affect other threads if exception occurs in a single thread.</br>
+                • Java Multithreading is mostly used in games, animation etc.</br>
+                • For example, one thread is writing content on a file at the same time another thread is performing spelling check.</br>
+                • In Multiprocessing, Each process has its own address in memory. So, each process allocates separate memory area.</br>
+                • Switching from one process to another require some time for saving and loading registers, memory maps,updating lists etc. So that cost of communication between the processes is high.</br>
+                • Disadvantage: If you create too many threads, you can actually degrade the performance of your program rather than enhance it.</br>
+                • Remember, some overhead is associated with context switching. If you create too many threads, more CPU time will be spent changing contexts than executing your program.</br>
+            </h5>
+
+            <h3><strong>Life Cycle of Thread</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • A thread goes through various stages in its life cycle. For example, a thread is born, started, runs,
+                and then dies.</br>
+                </br>
+                • New:</br>
+                A new thread begins its life cycle in the New state. It remains in this state until the program
+                starts the thread by invoking Start() method.It is also referred to as a born thread.</br>
+                </br>
+                • Runnable:</br>
+                The thread is in runnable state after invocation of start() method,but the thread scheduler has
+                not selected it to be the running thread.</br>
+                The thread is in running state if the thread scheduler has selected it.</br>
+                </br>
+                • Waiting:</br>
+                Sometimes a thread transitions to the waiting state while the thread waits for another thread
+                to perform a task. A thread transitions back to the runnable state only when another thread
+                signals the waiting thread to continue executing.</br>
+                </br>
+                • Timed waiting:</br>
+                A runnable thread can enter the timed waiting state for a specified interval of time. A thread
+                in this state transition back to the runnable state when that time interval expires or when the
+                event It is waiting for occurs.</br>
+                </br>
+                • Terminated:</br>
+                A runnable thread enters the terminated state when it (run() method exits) completes its task.</br>
+            </h5>
+
+            <h3><strong>Thread Priorities</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                Every Java thread has a priority that helps the operating system determine the order in which
+                threads are scheduled.</br>
+                • Java priorities are in the range between MIN_PRIORITY (a constant of 1) and MAX_PRIORITY (a
+                constant of 10).</br>
+                By default, every thread is given priority NORM_PRIORITY (a constant of 5).</br>
+                • Threads with higher priority are more important to a program and should be allocated processor
+                time before lower-priority threads.</br>
+                • The thread scheduler mainly uses preemptive or time slicing scheduling to schedule the threads.</br>
+                </br>
+                <strong>Creating a Thread</strong></br>
+                • Thread class provide constructors and methods to create and perform operations on a thread.</br>
+                </br>
+                1) Constructor of Thread class:</br>
+                Thread ()</br>
+                Thread (String name)</br>
+                Thread (Runnable r)</br>
+                Thread (Runnable r, String name)</br>
+                </br>
+                2) Methods of Thread Class:</br>
+
+                public void run() -- Entry point for a thread</br>
+                public void start() -- Start a thread by calling run() method.</br>
+                public String getName() -- Return thread's name.</br>
+                public void setName(String name) -- To give thread a name</br>
+                public int getPriority() -- Return thread's priority.</br>
+                public int setPriority(int priority) -- Sets the priority of this Thread object. The possible values are between1and 10.</br>
+                public final boolean isAlive() -- Checks whether thread is still running or not.</br>
+                public static void sleep(long millisec) -- Suspend thread for a specified time.</br>
+                public final void join(long millisec) -- Wait for a thread to end.</br>
+                </br>
+                • Java defines two ways by which a thread can be created.</br>
+                </br>
+                1) By implementingthe Runnable interface:</br>
+                • The easiest way to create a thread is to create a class that implements the runnable
+                interface.</br>
+                • After implementing runnable interface, the class needs to implement the run(} method,
+                which has following form:</br>
+                public void run( )</br>
+                • This method provides entry point for the thread and you will put you complete business
+                logic inside this method.</br>
+                • After that, you will instantiate a Thread object using the following constructor:</br></br>
+                • Thread (Runnable threadObj,String threadName);</br>
+                • Where, threadObj is an instance of a class that implements the Runnable interface and
+                threadName is the name given to the new thread.</br>
+                • Once Thread object is created, you can start it by calling start( ) method, which executes a
+                call to run( ) method.</br>
+                void start ( );</br>
+                </br>
+                2) By extending the Thread class.</br>
+                • Second way to create a thread is to create a new class that extends Thread class and then
+                create an instance of that class.</br>
+                • The extending class must override the run( ) method, which is the entry point for the new
+                thread.</br>
+                • Once Thread object is created, you can start it by calling startf ) method, which executes a
+                call to run( ) method.</br>
+            </h5>
+
+            <h3><strong>Thread Synchronization</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • When two or more threads need access to a shared resource, they need some way to ensure that the resource will be used by only one thread at a time.</br>
+                • The process by which this synchronization achieved is called thread synchronization.</br>
+                • The synchronized keyword in Java creates a block of code referred to as a critical section.</br>
+                • Every Java object with a critical section of code gets a lock associated with the object.</br>
+                • To enter a critical section, a thread needs to obtain the corresponding object's lock.</br>
+                </br>
+                Syntax:</br>
+                synchronized(object)</br>
+                {</br>
+                // statements to be synchronized</br>
+                }</br>
+                Here, object is a reference to the object being synchronized.</br>
+                A synchronized block ensures that a call to a method that is a member of object occurs only after the current thread has successfully entered object's critical section.</br>
+            </h5>
+
+            <h3><strong>Inter-thread Communication</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Inter-thread communication or Co-operation is all about allowing synchronized threads to
+                communicate with each other.</br>
+                • Inter-thread communication is a mechanism in which a thread is paused running in its critical
+                section and another thread is allowed to enter (or lock) in the same critical section to be executed.</br>
+                • To avoid polling(It is usually implemented by loop), Inter-thread communication is implemented
+                by following methods of Object class:</br>
+                • wait( ): This method tells the calling thread to give up the critical section and go to sleep until
+                some other thread enters the same critical section and calls notify( ).</br>
+                • notify( ): This method wakes up the first thread that called wait( ) on the same object.</br>
+                • notifyAll( ): This method wakes up all the threads that called wait( ) on the same object. The highest priority thread will run first.</br>
+                • Above all methods are implemented as final in Object class.</br>
+                • All three methods can be called only from within a synchronized context.</br>
+            </h5>
+        </div>
+        </div>
+        <!-- Second Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-third w3-center">
+                    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                </div>
+
+                <!--<div class="w3-twothird">
+                      <h1>Lorem Ipsum</h1>
+                      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                </div>-->
+                <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+                </div>-->
+
+                <script>
+                    // Used to toggle the menu on small screens when clicking on the menu button
+                    function myFunction() {
+                        var x = document.getElementById("navDemo");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

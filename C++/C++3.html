@@ -1,0 +1,1103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+ <!-- Navbar -->
+    <div class="w3-top">
+       <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+            <a href="C++1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basics of C++ (Part 1)</a>
+            <a href="C++2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basics of C++ (Part 2)</a>
+            <a href="C++3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"></a>
+        </div>
+
+
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">C++</h1>
+        <p class="w3-xlarge">
+            Basics of C++ (Part 2)
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>C++ Modifier types</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                C++ allows the char, int, and double data types to have modifiers preceding them. A modifier is used to alter the meaning of the base type so that it more precisely fits the needs of various situations.</br>
+                The data type modifiers are listed here −</br>
+                •	signed</br>
+                •	unsigned</br>
+                •	long</br>
+                •	short</br>
+                The modifiers signed, unsigned, long, and short can be applied to integer base types. In addition, signed and unsigned can be applied to char, and long can be applied to double.</br>
+                The modifiers signed and unsigned can also be used as prefix to long or short modifiers. For example, unsigned long int.</br>
+                C++ allows a shorthand notation for declaring unsigned, short, or long integers. You can simply use the word unsigned, short, or long, without int. It automatically implies int. For example, the following two statements both declare unsigned integer variables.</br>
+                unsigned x;</br>
+                unsigned int y;
+                </br>
+                </br>
+
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+
+                        int main() {</br>
+                        short int i;           // a signed short integer</br>
+                        short unsigned int j;  // an unsigned short integer</br>
+
+                        j = 50000;</br>
+
+                        i = j;</br>
+                        cout << i << " " << j;
+                        </br>
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                When this program is run, following is the output −</br>
+                -15536 50000</br>
+                The above result is because the bit pattern that represents 50,000 as a short unsigned integer is interpreted as -15,536 by a short.
+            </h5>
+
+            <h3><strong>Type Qualifiers in C++</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                The type qualifiers provide additional information about the variables they precede.</br>
+                1	const</br>
+                Objects of type const cannot be changed by your program during execution.</br>
+                2	volatile</br>
+                The modifier volatile tells the compiler that a variable's value may be changed in ways not explicitly specified by the program.</br>
+                3	restrict</br>
+                A pointer qualified by restrict is initially the only means by which the object it points to can be accessed. Only C99 adds a new type qualifier called restrict.
+                
+            </h5>
+
+            <h3><strong>Storage classes in C++</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                A storage class defines the scope (visibility) and life-time of variables and/or functions within a C++ Program. These specifiers precede the type that they modify.</br> There are following storage classes, which can be used in a C++ Program
+                •	auto</br>
+                •	register</br>
+                •	static</br>
+                •	extern</br>
+                •	mutable
+
+                </br>
+                </br>
+
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        void func(void);</br>
+
+                        static int count = 10; /* Global variable */</br>
+
+                        main() {</br>
+                        while(count--) {</br>
+                        func();</br>
+                        }</br>
+
+                        return 0;</br>
+                        }</br>
+
+                        // Function definition</br>
+                        void func( void ) {</br>
+                        static int i = 5; // local static variable</br>
+                        i++;</br>
+                        std::cout << "i is " << i ;</br>
+                        std::cout << " and count is " << count << std::endl;
+
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Operators in C++</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C++ is rich in built-in operators and provide the following types
+                </br></br>
+                Arithmetic Operators
+                </br></br>
+                There are following arithmetic operators supported by C++ language −</br>
+                Assume variable A holds 10 and variable B holds 20, then −</br>
+                </br></br>
+                +	Adds two operands</br>
+                -	Subtracts second operand from the first</br>
+                *	Multiplies both operands</br>
+                /	Divides numerator by de-numerator</br>
+                %	Modulus Operator and remainder of after an integer division</br>
+                ++	Increment operator, increases integer value by one</br>
+                --	Decrement operator, decreases integer value by one</br>
+                </br>
+
+                Relational Operators
+                </br></br>
+                There are following relational operators supported by C++ language</br>
+                Assume variable A holds 10 and variable B holds 20, then −</br>
+
+                ==	Checks if the values of two operands are equal or not, if yes then condition becomes true.</br>
+                !=	Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</br>
+                >	Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.</br>
+                <	Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</br>
+                >=	Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.</br>
+                <=	Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.</br>
+                </br>
+                Logical Operators
+                </br></br>
+                There are following logical operators supported by C++ language.</br>
+                Assume variable A holds 1 and variable B holds 0, then −</br>
+
+                &&	Called Logical AND operator. If both the operands are non-zero, then condition becomes true.</br>
+                ||	Called Logical OR Operator. If any of the two operands is non-zero, then condition becomes true.</br>
+                !	Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false.</br>
+                </br>
+                Bitwise Operators
+                </br></br>
+                Bitwise operator works on bits and perform bit-by-bit operation.</br>
+                Assume if A = 60; and B = 13; now in binary format they will be as follows −</br>
+                A = 0011 1100</br>
+                B = 0000 1101</br>
+                --------------</br>
+                A&B = 0000 1100</br>
+                A|B = 0011 1101</br>
+                A^B = 0011 0001</br>
+                ~A  = 1100 0011</br></br>
+                The Bitwise operators supported by C++ language are listed in the following table. Assume variable A holds 60 and variable B holds 13, then −
+                </br></br>
+                &	Binary AND Operator copies a bit to the result if it exists in both operands.</br>
+                |	Binary OR Operator copies a bit if it exists in either operand.</br>
+                ^	Binary XOR Operator copies the bit if it is set in one operand but not both.</br>
+                ~	Binary Ones Complement Operator is unary and has the effect of 'flipping' bits.</br>
+                <<	Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand.</br>
+                >>	Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.
+                </br></br>
+                Assignment Operators
+                </br></br>
+                There are following assignment operators supported by C++ language −
+                </br>
+                =	Simple assignment operator, Assigns values from right side operands to left side operand.</br>
+                +=	Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand.</br>
+                -=	Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand.</br>
+                *=	Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand.</br>
+                /=	Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand.</br>
+                %=	Modulus AND assignment operator, It takes modulus using two operands and assign the result to left operand.</br>
+                <<=	Left shift AND assignment operator.</br>
+                >>=	Right shift AND assignment operator.</br>
+                &=	Bitwise AND assignment operator.</br>
+                ^=	Bitwise exclusive OR and assignment operator.</br>
+                |=	Bitwise inclusive OR and assignment operator.</br>
+                </br>
+                Misc Operators
+                </br></br>
+                The following table lists some other operators that C++ supports.
+                </br></br>
+                1	sizeof</br>
+                sizeof operator returns the size of a variable. For example, sizeof(a), where ‘a’ is integer, and will return 4.</br>
+                2	Condition ? X : Y</br>
+                Conditional operator (?). If Condition is true then it returns value of X otherwise returns value of Y.</br>
+                3	,</br>
+                Comma operator causes a sequence of operations to be performed. The value of the entire comma expression is the value of the last expression of the comma-separated list.</br>
+                4	. (dot) and -> (arrow)</br>
+                Member operators are used to reference individual members of classes, structures, and unions.</br>
+                5	Cast</br>
+                Casting operators convert one data type to another. For example, int(2.2000) would return 2.</br>
+                6	&</br>
+                Pointer operator & returns the address of a variable. For example &a; will give actual address of the variable.</br>
+                7	*</br>
+                Pointer operator * is pointer to a variable. For example *var; will pointer to a variable var.</br>
+                </br></br>
+                Operators Precedence in C++
+                </br></br>
+                Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than the addition operator −</br>
+                For example x = 7 + 3 * 2; here, x is assigned 13, not 20 because operator * has higher precedence than +, so it first gets multiplied with 3*2 and then adds into 7.</br>
+                </br>
+                Postfix 	() [] -> . ++ - -  	Left to right</br>
+                Unary 	+ - ! ~ ++ - - (type)* & sizeof 	Right to left</br>
+                Multiplicative  	* / % 	Left to right</br>
+                Additive  	+ - 	Left to right</br>
+                Shift  	<< >> 	Left to right</br>
+                Relational  	< <= > >= 	Left to right</br>
+                Equality  	== != 	Left to right</br>
+                Bitwise AND 	& 	Left to right</br>
+                Bitwise XOR 	^ 	Left to right</br>
+                Bitwise OR 	| 	Left to right</br>
+                Logical AND 	&& 	Left to right</br>
+                Logical OR 	|| 	Left to right</br>
+                Conditional 	?: 	Right to left</br>
+                Assignment 	= += -= *= /= %=>>= <<= &= ^= |= 	Right to left</br>
+                Comma 	, 	Left to right</br>
+                Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.
+
+            </h5>
+
+            <h3><strong>C++ Loops</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                There may be a situation, when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</br>
+                Programming languages provide various control structures that allow for more complicated execution paths.</br>
+                A loop statement allows us to execute a statement or group of statements multiple times and following is the general from of a loop statement in most of the programming languages</br>
+                </br>
+                1	while loop</br>
+                Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</br>
+                2	for loop</br>
+                Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.</br>
+                3	do...while loop</br>
+                Like a ‘while’ statement, except that it tests the condition at the end of the loop body.</br>
+                4	nested loops</br>
+                You can use one or more loop inside any another ‘while’, ‘for’ or ‘do..while’ loop.</br>
+                C++ programming language provides the following type of loops to handle looping requirements.</br>
+                </br>
+                Loop Control Statements
+                </br></br>
+                Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.</br>
+                C++ supports the following control statements.</br>
+                1	break statement</br>
+                Terminates the loop or switch statement and transfers execution to the statement immediately following the loop or switch.</br>
+                2	continue statement</br>
+                Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</br>
+                3	goto statement</br>
+                Transfers control to the labeled statement. Though it is not advised to use goto statement in your program.</br>
+                </br>
+                The Infinite Loop
+                </br></br>
+                A loop becomes infinite loop if a condition never becomes false. The for loop is traditionally used for this purpose. Since none of the three expressions that form the ‘for’ loop are required, you can make an endless loop by leaving the conditional expression empty.</br>
+
+                When the conditional expression is absent, it is assumed to be true. You may have an initialization and increment expression, but C++ programmers more commonly use the ‘for (;;)’ construct to signify an infinite loop.</br>
+                NOTE − You can terminate an infinite loop by pressing Ctrl + C keys.
+
+            </h5>
+
+            <h3><strong>C++ Function</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                A function is a group of statements that together perform a task. Every C++ program has at least one function, which is main(), and all the most trivial programs can define additional functions.</br>
+                You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually is such that each function performs a specific task.</br>
+                A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.</br>
+                The C++ standard library provides numerous built-in functions that your program can call. For example, function strcat() to concatenate two strings, function memcpy() to copy one memory location to another location and many more functions.</br>
+                A function is known with various names like a method or a sub-routine or a procedure etc.</br>
+                </br>
+                Defining a Function
+                </br></br>
+                The general form of a C++ function definition is as follows −</br>
+                return_type function_name( parameter list ) </br>
+                {</br>
+                body of the function</br>
+                }</br>
+                A C++ function definition consists of a function header and a function body. Here are all the parts of a function −</br>
+                •	Return Type − A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.</br>
+                •	Function Name − This is the actual name of the function. The function name and the parameter list together constitute the function signature.</br>
+                •	Parameters − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.</br>
+                •	Function Body − The function body contains a collection of statements that define what the function does.</br>
+                </br>
+                Example:</br>
+                Following is the source code for a function called max(). This function takes two parameters num1 and num2 and return the biggest of both −</br>
+                // function returning the max between two numbers</br>
+
+                int max(int num1, int num2) {</br>
+                // local variable declaration</br>
+                int result;</br>
+
+                if (num1 > num2)</br>
+                result = num1;</br>
+                else</br>
+                result = num2;</br>
+
+                return result;</br>
+                }</br>
+                </br>
+                Function Declarations
+                </br></br>
+                A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.</br>
+                A function declaration has the following parts −</br>
+                return_type function_name( parameter list );</br>
+                For the above defined function max(), following is the function declaration −</br>
+                int max(int num1, int num2);</br>
+                Parameter names are not important in function declaration only their type is required, so following is also valid declaration −</br>
+                int max(int, int);</br>
+                Function declaration is required when you define a function in one source file and you call that function in another file. In such case, you should declare the function at the top of the file calling the function.</br></br>
+
+                Calling a Function
+                </br></br>
+                While creating a C++ function, you give a definition of what the function has to do. To use a function, you will have to call or invoke that function.</br>
+                When a program calls a function, program control is transferred to the called function. A called function performs defined task and when it’s return statement is executed or when its function-ending closing brace is reached, it returns program control back to the main program.</br>
+                To call a function, you simply need to pass the required parameters along with function name, and if function returns a value, then you can store returned value.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+                        // function declaration</br>
+                        int max(int num1, int num2);</br>
+
+                        int main () {</br>
+                        // local variable declaration:</br>
+                        int a = 100;</br>
+                        int b = 200;</br>
+                        int ret;</br>
+
+                        // calling a function to get max value.</br>
+                        ret = max(a, b);</br>
+                        cout << "Max value is : " << ret << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                I kept max() function along with main() function and compiled the source code. While running final executable, it would produce the following result −</br>
+                Max value is : 200
+                </br></br>
+                Function Arguments
+                </br></br>
+                If a function is to use arguments, it must declare variables that accept the values of the arguments. These variables are called the formal parameters of the function.</br>
+                The formal parameters behave like other local variables inside the function and are created upon entry into the function and destroyed upon exit.</br>
+                While calling a function, there are two ways that arguments can be passed to a function −</br>
+                </br>
+                1	Call by Value</br>
+                This method copies the actual value of an argument into the formal parameter of the function. In this case, changes made to the parameter inside the function have no effect on the argument.</br>
+                2	Call by Pointer</br>
+                This method copies the address of an argument into the formal parameter. Inside the function, the address is used to access the actual argument used in the call. This means that changes made to the parameter affect the argument.</br>
+                3	Call by Reference</br>
+                This method copies the reference of an argument into the formal parameter. Inside the function, the reference is used to access the actual argument used in the call. This means that changes made to the parameter affect the argument.</br>
+                By default, C++ uses call by value to pass arguments. In general, this means that code within a function cannot alter the arguments used to call the function and above mentioned example while calling max() function used the same method.</br>
+                </br>
+                Default Values for Parameters
+                </br></br>
+                When you define a function, you can specify a default value for each of the last parameters. This value will be used if the corresponding argument is left blank when calling to the function.</br>
+                This is done by using the assignment operator and assigning values for the arguments in the function definition. </br>
+                If a value for that parameter is not passed when the function is called, the default given value is used, but if a value is specified, this default value is ignored and the passed value is used instead. Consider the following example –
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+                        int sum(int a, int b = 20) {</br>
+                        int result;</br>
+                        result = a + b;</br>
+
+                        return (result);</br>
+                        }</br>
+                        int main () {</br>
+                        // local variable declaration:</br>
+                        int a = 100;</br>
+                        int b = 200;</br>
+                        int result;</br>
+
+                        // calling a function to add the values.</br>
+                        result = sum(a, b);</br>
+                        cout << "Total value is :" << result << endl;</br>
+
+                        // calling a function again as follows.</br>
+                        result = sum(a);</br>
+                        cout << "Total value is :" << result << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                When the above code is compiled and executed, it produces the following result −</br>
+                Total value is: 300</br>
+                Total value is: 120</br>
+            </h5>
+
+            <h3><strong>C++ Array</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                C++ provides a data structure, the array, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</br>
+                Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</br>
+                All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.</br>
+                </br></br>
+                Declaring Arrays
+                </br></br>
+                To declare an array in C++, the programmer specifies the type of the elements and the number of elements required by an array as follows −</br>
+                type arrayName [ arraySize ];</br>
+                This is called a single-dimension array. The arraySize must be an integer constant greater than zero and type can be any valid C++ data type. For example, to declare a 10-element array called balance of type double, use this statement −</br>
+                double balance[10];</br>
+                </br>
+                Initializing Arrays
+                </br></br>
+                You can initialize C++ array elements either one by one or using a single statement as follows −</br>
+                double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};</br>
+                The number of values between braces { } can not be larger than the number of elements that we declare for the array between square brackets [ ]. Following is an example to assign a single element of the array −</br>
+                If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write −</br>
+                double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};</br>
+                You will create exactly the same array as you did in the previous example.</br>
+                balance[4] = 50.0;</br>
+                The above statement assigns element number 5th in the array a value of 50.0. Array with 4th index will be 5th, i.e., last element because all arrays have 0 as the index of their first element which is also called base index.</br>
+                </br>
+                Accessing Array Elements
+                </br></br>
+                An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array. For example −</br>
+                double salary = balance[9];</br>
+                The above statement will take 10th element from the array and assign the value to salary variable. Following is an example, which will use all the above-mentioned three concepts viz. declaration, assignment and accessing arrays −</br>
+
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+                        int main () {</br>
+
+                        int n[ 10 ]; // n is an array of 10 integers</br>
+
+                        // initialize elements of array n to 0</br>
+                        for ( int i = 0; i < 10; i++ ) {</br>
+                        n[ i ] = i + 100; // set element at location i to i + 100</br>
+                        }</br>
+                        cout << "Element" << setw( 13 ) << "Value" << endl;</br>
+
+                        // output each array element's value</br>
+                        for ( int j = 0; j < 10; j++ ) {</br>
+                        cout << setw( 7 )<< j << setw( 13 ) << n[ j ] << endl;</br>
+                        }</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                This program makes use of setw() function to format the output. When the above code is compiled and executed, it produces the following result −</br>
+                Element        Value</br>
+                0          100</br>
+                1          101</br>
+                2          102</br>
+                3          103</br>
+                4          104</br>
+                5          105</br>
+                6          106</br>
+                7          107</br>
+                8          108</br>
+                9          109</br>
+                </br>
+                Arrays in C++
+                </br></br>
+                Arrays are important to C++ and should need lots of more detail. There are following few important concepts, which should be clear to a C++ programmer −
+                </br>
+                1	Multi-dimensional arrays</br>
+                C++ supports multidimensional arrays. The simplest form of the multidimensional array is the two-dimensional array.</br>
+                2	Pointer to an array</br>
+                You can generate a pointer to the first element of an array by simply specifying the array name, without any index.</br>
+                3	Passing arrays to functions</br>
+                You can pass to the function a pointer to an array by specifying the array's name without an index.</br>
+                4	Return array from functions</br>
+                C++ allows a function to return an array.
+            </h5>
+
+
+            <h3><strong>C++ Strings</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                C++ provides following two types of string representations −</br>
+                •	The C-style character string.</br>
+                •	The string class type introduced with Standard C++.</br>
+                </br>
+                The C-Style Character String
+                </br></br>
+                The C-style character string originated within the C language and continues to be supported within C++. This string is actually a one-dimensional array of characters which is terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.</br>
+                The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."</br>
+                char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};</br>
+                If you follow the rule of array initialization, then you can write the above statement as follows −</br>
+                char greeting[] = "Hello";</br>
+                Following is the memory presentation of above defined string in C/C++ −</br>
+
+                Actually, you do not place the null character at the end of a string constant. The C++ compiler automatically places the '\0' at the end of the string when it initializes the array. Let us try to print above-mentioned string −</br>
+                </br>
+                #include < iostream >
+                </br>
+                using namespace std;
+                </br>
+                int main () {
+                </br>
+                char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+                </br>
+                cout << "Greeting message: ";</br>
+                cout << greeting << endl;
+                </br>
+                return 0;</br>
+                }</br></br>
+                When the above code is compiled and executed, it produces the following result −</br>
+                Greeting message: Hello</br>
+                C++ supports a wide range of functions that manipulate null-terminated strings −</br>
+
+                1	strcpy(s1, s2);</br>
+                Copies string s2 into string s1.</br>
+                2	strcat(s1, s2);</br>
+                Concatenates string s2 onto the end of string s1.</br>
+                3	strlen(s1);</br>
+                Returns the length of string s1.</br>
+                4	strcmp(s1, s2);</br>
+                Returns 0 if s1 and s2 are the same; less than 0 if s1< s2; greater than 0 if s1>s2.</br>
+                5	strchr(s1, ch);</br>
+                Returns a pointer to the first occurrence of character ch in string s1.</br>
+                6	strstr(s1, s2);</br>
+                Returns a pointer to the first occurrence of string s2 in string s1.</br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        #include < cstring >
+                        using namespace std;</br>
+                        int main () {</br>
+
+                        char str1[10] = "Hello";</br>
+                        char str2[10] = "World";</br>
+                        char str3[10];</br>
+                        int  len ;</br>
+
+                        // copy str1 into str3</br>
+                        strcpy( str3, str1);</br>
+                        cout << "strcpy( str3, str1) : " << str3 << endl;
+                        </br>
+                        // concatenates str1 and str2</br>
+                        strcat( str1, str2);</br>
+                        cout << "strcat( str1, str2): " << str1 << endl;</br>
+
+                        // total lenghth of str1 after concatenation</br>
+                        len = strlen(str1);</br>
+                        cout << "strlen(str1) : " << len << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                When the above code is compiled and executed, it produces result something as follows −</br>
+                strcpy( str3, str1) : Hello</br>
+                strcat( str1, str2): HelloWorld</br>
+                strlen(str1) : 10</br>
+                </br>
+                The String Class in C++
+                </br></br>
+                The standard C++ library provides a string class type that supports all the operations mentioned above, additionally much more functionality.
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        #include < cstring >
+                        using namespace std;</br>
+                        int main () {</br>
+
+                        string str1 = "Hello";</br>
+                        string str2 = "World";</br>
+                        string str3;</br>
+                        int  len ;</br>
+
+                        // copy str1 into str3</br>
+                        str3 = str1;</br>
+                        cout << "str3 : " << str3 << endl;</br>
+
+                        // concatenates str1 and str2</br>
+                        str3 = str1 + str2;</br>
+                        cout << "str1 + str2 : " << str3 << endl;</br>
+
+                        // total length of str3 after concatenation</br>
+                        len = str3.size();</br>
+                        cout << "str3.size() :  " << len << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>C++ Pointers</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                C++ pointers are easy and fun to learn. Some C++ tasks are performed more easily with pointers, and other C++ tasks, such as dynamic memory allocation, cannot be performed without them.</br>
+                As you know every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&) operator which denotes an address in memory. </br>
+                Consider the following which will print the address of the variables defined −</br>
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+                        int main () {</br>
+                        int  var1;</br>
+                        char var2[10];</br>
+
+                        cout << "Address of var1 variable: ";</br>
+                        cout << &var1 << endl;</br>
+
+                        cout << "Address of var2 variable: ";</br>
+                        cout << &var2 << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br
+                When the above code is compiled and executed, it produces the following result −</br>
+                Address of var1 variable: 0xbfebd5c0</br>
+                Address of var2 variable: 0xbfebd5b6</br>
+                </br>
+                What are Pointers?
+                </br></br>
+                A pointer is a variable whose value is the address of another variable. Like any variable or constant, you must declare a pointer before you can work with it. The general form of a pointer variable declaration is −</br>
+                type *var-name;</br>
+                Here, type is the pointer's base type; it must be a valid C++ type and var-name is the name of the pointer variable. The asterisk you used to declare a pointer is the same asterisk that you use for multiplication. </br>
+                However, in this statement the asterisk is being used to designate a variable as a pointer. Following are the valid pointer declaration −</br>
+                int    *ip;    // pointer to an integer</br>
+                double *dp;    // pointer to a double</br>
+                float  *fp;    // pointer to a float</br>
+                char   *ch     // pointer to character</br>
+                The actual data type of the value of all pointers, whether integer, float, character, or otherwise, is the same, a long hexadecimal number that represents a memory address.</br>
+                The only difference between pointers of different data types is the data type of the variable or constant that the pointer points to.</br>
+                </br>
+                Using Pointers in C++
+                </br></br>
+                There are few important operations, which we will do with the pointers very frequently. (a) We define a pointer variable. (b) Assign the address of a variable to a pointer. (c) Finally access the value at the address available in the pointer variable. This is done by using unary operator * that returns the value of the variable located at the address specified by its operand. Following example makes use of these operations −
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+                        int main () {</br>
+                        int  var = 20;   // actual variable declaration.</br>
+                        int  *ip;        // pointer variable</br>
+
+                        ip = &var;       // store address of var in pointer variable</br>
+
+                        cout << "Value of var variable: ";</br>
+                        cout << var << endl;</br>
+
+                        // print the address stored in ip pointer variable</br>
+                        cout << "Address stored in ip variable: ";</br>
+                        cout << ip << endl;</br>
+
+                        // access the value at the address available in pointer</br>
+                        cout << "Value of *ip variable: ";</br>
+                        cout << *ip << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                When the above code is compiled and executed, it produces result something as follows −</br>
+                Value of var variable: 20</br>
+                Address stored in ip variable: 0xbfc601ac</br>
+                Value of *ip variable: 20
+
+                </br></br>
+                Pointers in C++
+                </br></br>
+                Pointers have many but easy concepts and they are very important to C++ programming. There are following few important pointer concepts which should be clear to a C++ programmer −</br>
+                Sr.No	Concept & Description</br>
+                1	Null Pointers</br>
+                C++ supports null pointer, which is a constant with a value of zero defined in several standard libraries.</br>
+                2	Pointer Arithmetic</br>
+                There are four arithmetic operators that can be used on pointers: ++, --, +, -</br>
+                3	Pointers vs Arrays</br>
+                There is a close relationship between pointers and arrays.</br>
+                4	Array of Pointers</br>
+                You can define arrays to hold a number of pointers.</br>
+                5	Pointer to Pointer</br>
+                C++ allows you to have pointer on a pointer and so on.</br>
+                6	Passing Pointers to Functions</br>
+                Passing an argument by reference or by address both enable the passed argument to be changed in the calling function by the called function.</br>
+                7	Return Pointer from Functions</br>
+                C++ allows a function to return a pointer to local variable, static variable and dynamically allocated memory as well.
+                </br>
+                </br>
+
+            </h5>
+            <h3><strong>C++ Basic Input/Output</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                The C++ standard libraries provide an extensive set of input/output capabilities which we will see in subsequent chapters. </br>
+                C++ I/O occurs in streams, which are sequences of bytes.</br>
+                If bytes flow from a device like a keyboard, a disk drive, or a network connection etc. to main memory, this is called input operation and if bytes flow from main memory to a device like a display screen, a printer, a disk drive, or a network connection, etc., this is called output operation.</br>
+                </br>
+                I/O Library Header Files
+                </br></br>
+                There are following header files important to C++ programs −</br>
+                1	< iostream ></br>
+                This file defines the cin, cout, cerr and clog objects, which correspond to the standard input stream, the standard output stream, the un-buffered standard error stream and the buffered standard error stream, respectively.</br>
+                2	< iomanip ></br>
+                This file declares services useful for performing formatted I/O with so-called parameterized stream manipulators, such as setw and setprecision.</br>
+                3	< fstream ></br>
+                This file declares services for user-controlled file processing. We will discuss about it in detail in File and Stream related chapter.
+                </br></br>
+                The Standard Output Stream (cout)
+                </br></br>
+                The predefined object cout is an instance of ostream class. The cout object is said to be "connected to" the standard output device, which usually is the display screen. The cout is used in conjunction with the stream insertion operator, which is written as << which are two less than signs as shown in the following example.</br>
+                The C++ compiler also determines the data type of variable to be output and selects the appropriate stream insertion operator to display the value. The << operator is overloaded to output data items of built-in types integer, float, double, strings and pointer values.</br>
+                The insertion operator << may be used more than once in a single statement as shown above and endl is used to add a new-line at the end of the line.</br>
+                </br>
+                The Standard Input Stream (cin)
+                </br></br>
+                The predefined object cin is an instance of istream class. The cin object is said to be attached to the standard input device, which usually is the keyboard. The cin is used in conjunction with the stream extraction operator, which is written as >> which are two greater than signs as shown in the following example.</br>
+                The C++ compiler also determines the data type of the entered value and selects the appropriate stream extraction operator to extract the value and store it in the given variables.</br>
+                The stream extraction operator >> may be used more than once in a single statement. To request more than one datum you can use the following −</br>
+                cin >> name >> age;</br>
+                This will be equivalent to the following two statements −</br>
+                cin >> name;</br>
+                cin >> age;
+                </br></br>
+                The Standard Error Stream (cerr)
+                </br></br>
+                The predefined object cerr is an instance of ostream class. The cerr object is said to be attached to the standard error device, which is also a display screen but the object cerr is un-buffered and each stream insertion to cerr causes its output to appear immediately.</br>
+                The cerr is also used in conjunction with the stream insertion operator.
+            </h5>
+
+            <h3><strong>C++ Data Structure</strong> </h3>
+            <h5 class="w3-padding-32">
+                C/C++ arrays allow you to define variables that combine several data items of the same kind, but structure is another user defined data type which allows you to combine data items of different kinds.</br>
+                Structures are used to represent a record, suppose you want to keep track of your books in a library. You might want to track the following attributes about each book −</br>
+                •	Title</br>
+                •	Author</br>
+                •	Subject</br>
+                •	Book ID</br>
+                </br>
+                Defining a Structure
+                </br></br>
+                To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member, for your program. The format of the struct statement is this −</br>
+                struct [structure tag] {</br>
+                member definition;</br>
+                member definition;</br>
+                ...</br>
+                member definition;</br>
+                } [one or more structure variables];</br></br>
+                The structure tag is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition.</br>
+                At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure −</br>
+                struct Books {</br>
+                char  title[50];</br>
+                char  author[50];</br>
+                char  subject[100];</br>
+                int   book_id;</br>
+                } book;</br></br>
+                Accessing Structure Members</br></br>
+                To access any member of a structure, we use the member access operator (.).</br>
+                The member access operator is coded as a period between the structure variable name and the structure member that we wish to access.</br>
+                You would use struct keyword to define variables of structure type. Following is the example to explain usage of structure –</br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        #include < cstring ></br>
+
+                        using namespace std;</br>
+
+                        struct Books {</br>
+                        char  title[50];</br>
+                        char  author[50];</br>
+                        char  subject[100];</br>
+                        int   book_id;</br>
+                        };</br>
+
+                        int main() {</br>
+                        struct Books Book1;        // Declare Book1 of type Book</br>
+                        struct Books Book2;        // Declare Book2 of type Book</br>
+
+                        // book 1 specification</br>
+                        strcpy( Book1.title, "Learn C++ Programming");</br>
+                        strcpy( Book1.author, "Chand Miyan");</br>
+                        strcpy( Book1.subject, "C++ Programming");</br>
+                        Book1.book_id = 6495407;</br>
+
+                        // book 2 specification</br>
+                        strcpy( Book2.title, "Telecom Billing");</br>
+                        strcpy( Book2.author, "Yakit Singha");</br>
+                        strcpy( Book2.subject, "Telecom");</br>
+                        Book2.book_id = 6495700;</br>
+
+                        // Print Book1 info</br>
+                        cout << "Book 1 title : " << Book1.title << endl;</br>
+                        cout << "Book 1 author : " << Book1.author << endl;</br>
+                        cout << "Book 1 subject : " << Book1.subject << endl;</br>
+                        cout << "Book 1 id : " << Book1.book_id << endl;
+
+                        // Print Book2 info</br>
+                        cout << "Book 2 title : " << Book2.title << endl;</br>
+                        cout << "Book 2 author : " << Book2.author << endl;</br>
+                        cout << "Book 2 subject : " << Book2.subject << endl;</br>
+                        cout << "Book 2 id : " << Book2.book_id << endl;</br>
+
+                        return 0;
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                When the above code is compiled and executed, it produces the following result −</br>
+                Book 1 title : Learn C++ Programming</br>
+                Book 1 author : Chand Miyan</br>
+                Book 1 subject : C++ Programming</br>
+                Book 1 id : 6495407</br>
+                Book 2 title : Telecom Billing</br>
+                Book 2 author : Yakit Singha</br>
+                Book 2 subject : Telecom</br>
+                Book 2 id : 6495700</br>
+                </br>
+                Structures as Function Arguments
+                </br></br>
+                You can pass a structure as a function argument in very similar way as you pass any other variable or pointer. You would access structure variables in the similar way as you have accessed in the above example –
+                </br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        #include < cstring ></br>
+
+                        using namespace std;</br>
+                        void printBook( struct Books book );</br>
+
+                        struct Books {</br>
+                        char  title[50];</br>
+                        char  author[50];</br>
+                        char  subject[100];</br>
+                        int   book_id;</br>
+                        };</br>
+
+                        int main() {</br>
+                        struct Books Book1;        // Declare Book1 of type Book</br>
+                        struct Books Book2;        // Declare Book2 of type Book</br>
+
+                        // book 1 specification</br>
+                        strcpy( Book1.title, "Learn C++ Programming");</br>
+                        strcpy( Book1.author, "Chand Miyan");</br>
+                        strcpy( Book1.subject, "C++ Programming");</br>
+                        Book1.book_id = 6495407;</br>
+
+                        // book 2 specification</br>
+                        strcpy( Book2.title, "Telecom Billing");</br>
+                        strcpy( Book2.author, "Yakit Singha");</br>
+                        strcpy( Book2.subject, "Telecom");</br>
+                        Book2.book_id = 6495700;</br>
+
+                        // Print Book1 info</br>
+                        printBook( Book1 );</br>
+
+                        // Print Book2 info</br>
+                        printBook( Book2 );</br>
+
+                        return 0;</br>
+                        }</br>
+                        void printBook( struct Books book ) {</br>
+                        cout << "Book title : " << book.title << endl;</br>
+                        cout << "Book author : " << book.author << endl;</br>
+                        cout << "Book subject : " << book.subject << endl;</br>
+                        cout << "Book id : " << book.book_id << endl;
+
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                When the above code is compiled and executed, it produces the following result −</br>
+                Book title : Learn C++ Programming</br>
+                Book author : Chand Miyan</br>
+                Book subject : C++ Programming</br>
+                Book id : 6495407</br>
+                Book title : Telecom Billing</br>
+                Book author : Yakit Singha</br>
+                Book subject : Telecom</br>
+                Book id : 6495700</br>
+                </br>
+                Pointers to Structures
+                </br></br>
+                You can define pointers to structures in very similar way as you define pointer to any other variable as follows −</br>
+                struct Books *struct_pointer;</br>
+                Now, you can store the address of a structure variable in the above defined pointer variable. To find the address of a structure variable, place the & operator before the structure's name as follows −</br>
+                struct_pointer = &Book1;</br>
+                To access the members of a structure using a pointer to that structure, you must use the -> operator as follows −</br>
+                struct_pointer->title;
+                </br>
+                Let us re-write above example using structure pointer, hope this will be easy for you to understand the concept −</br>
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        #include < iostream ></br>
+                        using namespace std;</br>
+                        #include < cstring ></br>
+
+                        using namespace std;</br>
+                        void printBook( struct Books *book );</br>
+
+                        struct Books {</br>
+                        char  title[50];</br>
+                        char  author[50];</br>
+                        char  subject[100];</br>
+                        int   book_id;</br>
+                        };</br>
+                        int main() {</br>
+                        struct Books Book1;        // Declare Book1 of type Book</br>
+                        struct Books Book2;        // Declare Book2 of type Book</br>
+
+                        // Book 1 specification</br>
+                        strcpy( Book1.title, "Learn C++ Programming");</br>
+                        strcpy( Book1.author, "Chand Miyan");</br>
+                        strcpy( Book1.subject, "C++ Programming");</br>
+                        Book1.book_id = 6495407;</br>
+
+                        // Book 2 specification</br>
+                        strcpy( Book2.title, "Telecom Billing");</br>
+                        strcpy( Book2.author, "Yakit Singha");</br>
+                        strcpy( Book2.subject, "Telecom");</br>
+                        Book2.book_id = 6495700;</br>
+
+                        // Print Book1 info, passing address of structure</br>
+                        printBook( &Book1 );</br>
+
+                        // Print Book1 info, passing address of structure</br>
+                        printBook( &Book2 );</br>
+
+                        return 0;</br>
+                        }</br>
+
+                        // This function accept pointer to structure as parameter.</br>
+                        void printBook( struct Books *book ) {</br>
+                        cout << "Book title : " << book->title << endl;</br>
+                        cout << "Book author : " << book->author << endl;</br>
+                        cout << "Book subject : " << book->subject << endl;</br>
+                        cout << "Book id : " << book->book_id << endl;
+
+                        </br>
+                        }</br>
+                    </div>
+                </div>
+                </br></br>
+                When the above code is compiled and executed, it produces the following result −</br>
+                Book title : Learn C++ Programming</br>
+                Book author : Chand Miyan</br>
+                Book subject : C++ Programming</br>
+                Book id : 6495407</br>
+                Book title : Telecom Billing</br>
+                Book author : Yakit Singha</br>
+                Book subject : Telecom</br>
+                Book id : 6495700
+                </br></br>
+                The typedef Keyword
+                </br></br>
+                There is an easier way to define structs or you could "alias" types you create. For example −</br>
+                typedef struct {</br>
+                char  title[50];</br>
+                char  author[50];</br>
+                char  subject[100];</br>
+                int   book_id;</br>
+                } Books;</br>
+                Now, you can use Books directly to define variables of Books type without using struct keyword. Following is the example −</br>
+                Books Book1, Book2;</br>
+                You can use typedef keyword for non-structs as well as follows −</br>
+                typedef long int *pint32;</br>
+
+                pint32 x, y, z;</br>
+                x, y and z are all pointers to long ints.
+            </h5>
+
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+            </div>
+
+            <!--<div class="w3-twothird">
+                  <h1>Lorem Ipsum</h1>
+                  <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                  <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>-->
+            <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+            </div>-->
+            
+
+            <script>
+                // Used to toggle the menu on small screens when clicking on the menu button
+                function myFunction() {
+                    var x = document.getElementById("navDemo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

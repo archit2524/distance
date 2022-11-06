@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a href="DL/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="applet.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">APPLET</a>
+    <a href="awt.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">AWT</a>
+    <a href="jdbc.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JDBC</a>
+    <a href="Servlets.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">SERVLETS</a>
+    <a href="JSP.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">JSP</a>
+ 
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">ADVANCE JAVA</h1>
+  <p class="w3-xlarge">Abstract Window Toolkit(AWT)</p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong>Abstract Window Toolkit(AWT)</strong> </h1>
+      <h5 class="w3-padding-32">Java AWT is an API that contains large number of classes and methods to create and manage graphical user interface ( GUI ) applications. The AWT was designed to provide a common set of tools for GUI design that could work on a variety of platforms. The tools provided by the AWT are implemented using each platform's native GUI toolkit, hence preserving the look and feel of each platform. This is an advantage of using AWT. But the disadvantage of such an approach is that GUI designed on one platform may look different when displayed on another platform that means AWT component are platform dependent.</br></br>
+AWT is the foundation upon which Swing is made i.e Swing is a improved GUI API that extends the AWT. But now a days AWT is merely used because most GUI Java programs are implemented using Swing because of its rich implementation of GUI controls and light-weighted nature.</br></br>
+<strong><font size=+2>Java AWT Hierarchy</font></strong></br></br>
+The hierarchy of Java AWT classes are given below, all the classes are available in java.awt package.</br></br>
+<center><img src="https://static.studytonight.com/java/images/heirarchy-of-component-class.jpg" width="500" height="250"></center></br></br>
+<strong><font size=+2>Component class</font></strong></br></br>
+Component class is at the top of AWT hierarchy. It is an abstract class that encapsulates all the attributes of visual component. A component object is responsible for remembering the current foreground and background colors and the currently selected text font.</br></br>
+<strong><font size=+2>Container</font></strong></br></br>
+Container is a component in AWT that contains another component like button, text field, tables etc. Container is a subclass of component class. Container class keeps track of components that are added to another component.</br></br>
+<strong><font size=+2>Panel</font></strong></br></br>
+Panel class is a concrete subclass of Container. Panel does not contain title bar, menu bar or border. It is container that is used for holding components.</br></br>
+<strong><font size=+2>Window class</font></strong></br></br>
+Window class creates a top level window. Window does not have borders and menubar.</br></br>
+<strong><font size=+2>Frame</font></strong></br></br>
+Frame is a subclass of Window and have resizing canvas. It is a container that contain several different components like button, title bar, textfield, label etc. In Java, most of the AWT applications are created using Frame window. Frame class has two different constructors.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Frame() throws HeadlessException</br>
+Frame(String title) throws HeadlessException</br>
+  </div>
+</h5>
+     <h5 class="w3-padding-32"><strong><font size=+2>Creating a Frame</font></strong></br></br>
+There are two ways to create a Frame. They are,</br></br>
+1).By Instantiating Frame class</br>
+2).By extending Frame class</br></br>
+<strong><font size=+2>Creating Frame Window by Instantiating Frame class</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+import java.awt.*;</br>
+public class Testawt</br>
+{</br>
+  Testawt()</br>
+  {</br>
+    Frame fm=new Frame();    //Creating a frame</br>
+    Label lb = new Label("welcome to java graphics");   //Creating a label</br>
+    fm.add(lb);                  //adding label to the frame</br>
+    fm.setSize(300, 300);   //setting frame size.</br>
+    fm.setVisible(true);     //set frame visibilty true</br>
+  }</br>
+  public static void main(String args[])</br>
+  {</br>
+    Testawt ta = new Testawt();</br>
+  }</br>
+}</br>
+</div>
+</h5>
+  <h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/creating-awt-frame.jpg" width="500" height="250"></center></br></br>
+<strong><font size=+2>Creating Frame window by extending Frame class</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+package testawt;</br>
+
+import java.awt.*;</br>
+import java.awt.event.*;</br>
+
+public class Testawt extends Frame</br>
+{</br>
+    public Testawt()</br>
+    {</br>
+        Button btn=new Button("Hello World");</br>
+        add(btn); 		//adding a new Button.</br>
+        setSize(400, 500);        //setting size.</br>
+        setTitle("StudyTonight");  //setting title.</br>
+        setLayout(new FlowLayout());	 //set default layout for frame.</br>
+        setVisible(true);           //set frame visibilty true.</br>
+    }</br>
+
+    public static void main (String[] args)</br>
+    {</br>
+        Testawt ta = new Testawt();   //creating a frame.</br>
+    }</br>
+}</br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-example.jpg" width="500" height="250"></center></br></br>
+<strong><font size=+2>Points to Remember:</font></strong></br></br>
+1).While creating a frame (either by instantiating or extending Frame class), Following two attributes are must for visibility of the frame:
+<ul>
+<li>setSize(int width, int height);</li>
+<li>setVisible(true);</li>
+</ul>
+2).When you create other components like Buttons, TextFields, etc. Then you need to add it to the frame by using the method - add(Component's Object);</br></br>
+3).You can add the following method also for resizing the frame - setResizable(true);</br></br>
+<strong><font size=+3>AWT Button</font></strong></br></br>
+In Java, AWT contains a Button Class. It is used for creating a labelled button which can perform an action.</br></br>
+<strong><font size=+2>AWT Button Class Declaration</font></strong></br></br>
+public class Button extends Component implements Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+Lets take an example to create a button and it to the frame by providing coordinates.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+public class ButtonDemo1 </br>
+{   </br>
+public static void main(String[] args) </br> 
+{   </br>
+    Frame f1=new Frame("studytonight ==> Button Demo");   </br>
+    Button b1=new Button("Press Here");   </br>
+    b1.setBounds(80,200,80,50);   </br>
+    f1.add(b1);   </br>
+    f1.setSize(500,500);   </br>
+    f1.setLayout(null); </br>  
+    f1.setVisible(true);  </br>  
+}   </br>
+} </br>
+  
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-button.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-button-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Label</font></strong></br></br>
+In Java, AWT contains a Label Class. It is used for placing text in a container. Only Single line text is allowed and the text can not be changed directly.</br></br>
+<strong><font size=+2>Label Declaration:</font></strong></br></br>
+public class Label extends Component implements Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are creating two labels to display text to the frame.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+class LabelDemo1</br>
+{  </br>
+  public static void main(String args[])</br>
+  {     </br>
+    Frame l_Frame= new Frame("studytonight ==> Label Demo");  </br>
+    Label lab1,lab2;  </br>
+    lab1=new Label("Welcome to studytonight.com");  </br>
+    lab1.setBounds(50,50,200,30);  </br>
+    lab2=new Label("This Tutorial is of Java");  </br>
+    lab2.setBounds(50,100,200,30);  </br>
+l_Frame.add(lab1); </br>
+l_Frame.add(lab2);  </br>
+l_Frame.setSize(500,500); </br> 
+l_Frame.setLayout(null); </br> 
+l_Frame.setVisible(true);  </br>
+} </br> 
+}</br>  
+</div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-label.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-label-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Textfield</font></strong></br></br>
+In Java, AWT contains aTextField Class. It is used for displaying single line text.</br></br>
+<strong><font size=+2>TextField Declaration:</font></strong></br></br>
+public class TextField extends TextComponent</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+We are creating two textfields to display single line text string. This text is editable in nature, see the below example.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*; </br> 
+class TextFieldDemo1{ </br> 
+public static void main(String args[]){</br>  
+    Frame TextF_f= new Frame("studytonight ==>TextField");  </br>
+TextField text1,text2;  </br>
+    text1=new TextField("Welcome to studytonight");  </br>
+    text1.setBounds(60,100, 230,40);  </br>
+    text2=new TextField("This tutorial is of Java");  </br>
+    text2.setBounds(60,150, 230,40);  </br>
+TextF_f.add(text1); </br>
+TextF_f.add(text2);</br>  
+TextF_f.setSize(500,500);  </br>
+TextF_f.setLayout(null);  </br>
+TextF_f.setVisible(true); </br> 
+}  </br>
+} </br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-textbox.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-textbox-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT TextArea</font></strong></br></br>
+In Java, AWT contains aTextArea Class. It is used for displaying multiple-line text.</br></br>
+<strong><font size=+2>TextArea Declaration:</font></strong></br></br>
+public class TextArea extends TextComponent</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are creating a TextArea that is used to display multiple-line text string and allows text editing as well.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+public class TextAreaDemo1 </br>
+{  </br>
+  TextAreaDemo1()</br>
+  {  </br>
+    Frame textArea_f= new Frame();  </br>
+    TextArea area=new TextArea("Welcome to studytonight.com");  </br>
+    area.setBounds(30,40, 200,200);  </br>
+    textArea_f.add(area); </br> 
+    textArea_f.setSize(300,300);  </br>
+    textArea_f.setLayout(null);  </br>
+    textArea_f.setVisible(true);  </br>
+  }  </br>
+  public static void main(String args[]) </br> 
+  {  </br>
+    new TextAreaDemo1();</br>  
+  }  </br>
+}  </br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-textarea.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-textarea-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Checkbox</font></strong></br></br>
+In Java, AWT contains a Checkbox Class. It is used when we want to select only one option i.e true or false. When the checkbox is checked then its state is "on" (true) else it is "off"(false).</br></br>
+<strong><font size=+2>Checkbox Syntax</font></strong></br></br>
+public class Checkbox extends Component implements ItemSelectable, Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are creating checkbox that are used to get user input. If checkbox is checked it returns true else returns false.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+public class CheckboxDemo1  </br>
+{  </br>
+  CheckboxDemo1(){</br>
+    Frame checkB_f= new Frame("studytonight ==>Checkbox Example");  </br>
+    Checkbox ckbox1 = new Checkbox("Yes", true);  </br>
+    ckbox1.setBounds(100,100, 60,60); </br> 
+    Checkbox ckbox2 = new Checkbox("No");  </br>
+    ckbox2.setBounds(100,150, 60,60);</br>  
+    checkB_f.add(ckbox1); </br> 
+    checkB_f.add(ckbox2);  </br>
+    checkB_f.setSize(400,400);</br>  
+    checkB_f.setLayout(null);  </br>
+    checkB_f.setVisible(true);</br>  
+  }  </br>
+  public static void main(String args[])  </br>
+  {  </br>
+    new CheckboxDemo1();  </br>
+  }  </br>
+}   </br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-checkbox.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-checkbox-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT CheckboxGroup</font></strong></br></br>
+In Java, AWT contains aCheckboxGroup Class. It is used to group a set of Checkbox. When Checkboxes are grouped then only one box can be checked at a time.</br></br>
+<strong><font size=+2>CheckboxGroup Declaration:</font></strong></br></br>
+public class CheckboxGroup extends Object implements Serializable</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+This example creates a checkboxgroup that is used to group multiple checkbox in a single unit. It is helpful when we have to select single choice among the multiples.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;    </br>
+public class CheckboxGroupDemo</br>
+{    </br>
+  CheckboxGroupDemo(){    </br>
+    Frame ck_groupf= new Frame("studytonight ==>CheckboxGroup"); </br>   
+    CheckboxGroupobj = new CheckboxGroup();  </br>
+    Checkbox ckBox1 = new Checkbox("Yes", obj, true);    </br>
+    ckBox1.setBounds(100,100, 50,50);    </br>
+    Checkbox ckBox2 = new Checkbox("No", obj, false);</br>    
+    ckBox2.setBounds(100,150, 50,50);   </br> 
+    ck_groupf.add(ckBox1);    </br>
+    ck_groupf.add(ckBox2);   </br> 
+    ck_groupf.setSize(400,400);  </br>  
+    ck_groupf.setLayout(null); </br>   
+    ck_groupf.setVisible(true);</br>    
+  }    </br>
+  public static void main(String args[])    </br>
+  {    </br>
+    new CheckboxGroupDemo();   </br> 
+  }    </br>
+}</br>
+  
+    </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-checkbox-group.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-checkbox-group-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Choice</font></strong></br></br>
+In Java, AWT contains a Choice Class. It is used for creating a drop-down menu of choices. When a user selects a particular item from the drop-down then it is shown on the top of the menu.</br></br>
+<strong><font size=+2>Choice Declaration:</font></strong></br></br>
+public class Choice extends Component implements ItemSelectable, Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are creating drop-down menu that is used to get user choice from multiple choices.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+public class ChoiceDemo</br>
+{  </br>
+  ChoiceDemo()</br>
+  {  </br>
+    Frame choice_f= new Frame();  </br>
+    Choice obj=new Choice();  </br>
+    obj.setBounds(80,80, 100,100);  </br>
+    obj.add("Red");  </br>
+    obj.add("Blue");  </br>
+    obj.add("Black"); </br> 
+    obj.add("Pink");  </br>
+    obj.add("White");  </br>
+    obj.add("Green");</br>
+    choice_f.add(obj);  </br>
+    choice_f.setSize(400,400);  </br>
+    choice_f.setLayout(null);  </br>
+    choice_f.setVisible(true);  </br>
+  }  </br>
+  public static void main(String args[])  </br>
+  {  </br>
+    new ChoiceDemo();  </br>
+  }  </br>
+}</br>
+  
+    </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-choice.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-choice-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT List</font></strong></br></br>
+In Java, AWT contains a List Class. It is used to represent a list of items together. One or more than one item can be selected from the list.</br></br>
+<strong><font size=+2>List Declaration:</font></strong></br></br>
+public class List extends Component implements ItemSelectable, Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are creating a list that is used to list out the items.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+public class ListDemo</br>
+{  </br>
+  ListDemo()</br>
+  {  </br>
+    Frame list_f= new Frame();  </br>
+    List obj=new List(6);  </br>
+    obj.setBounds(80,80, 100,100);  
+    obj.add("Red"); </br> 
+    obj.add("Blue"); </br> 
+    obj.add("Black"); </br> 
+    obj.add("Pink");  </br>
+    obj.add("White"); </br> 
+    obj.add("Green");</br>
+    list_f.add(obj); </br> 
+    list_f.setSize(400,400); </br> 
+    list_f.setLayout(null);  </br>
+    list_f.setVisible(true);  </br>
+  }  </br>
+  public static void main(String args[])  </br>
+  {  </br>
+    new ListDemo();  </br>
+  }  </br>
+} </br>
+ </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-list.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-list-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Canvas</font></strong></br></br>
+In Java, AWT contains a Canvas Class. A blank rectangular area is provided. It is used when a user wants to draw on the screen.</br></br>
+<strong><font size=+2> Declaration:</font></strong></br></br>
+public class Canvas extends Component implements Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br>
+The canvas is used to provide a place to draw using mouse pointer. We can used it to get user architectural user input.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+public class CanvasDemo1  </br>
+{  </br>
+  public CanvasDemo1()  </br>
+  {  </br>
+    Frame canvas_f= new Frame("studytonight ==> Canvas");  </br>
+    canvas_f.add(new CanvasDemo());  </br>
+    canvas_f.setLayout(null);  </br>
+    canvas_f.setSize(500, 500);  </br>
+    canvas_f.setVisible(true);  </br>
+  }  </br>
+  public static void main(String args[]) </br> 
+  {  </br>
+    new CanvasDemo1();  </br>
+  }  </br>
+}  
+class CanvasDemo extends Canvas </br> 
+{  </br>
+  public CanvasDemo() {  </br>
+    setBackground (Color.WHITE);  </br>
+    setSize(300, 200);  </br>
+  }  </br>
+  public void paint(Graphics g)  </br>
+  {  </br>
+    g.setColor(Color.green);</br>  
+    g.fillOval(80, 80, 150, 75); </br> 
+  }  </br>
+}</br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-canvas.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-canvas-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Canvas</font></strong></br></br>
+In Java, AWT contains a MenuItem and Menu Class.MenuItem is used for adding Lable in Menu. The menu is used to create a drop-down of menu components</br></br>
+<strong><font size=+2>MenuItem declaration</font></strong></br></br>
+public class MenuItem extends MenuComponent implements Accessible</br></br>
+<strong><font size=+2>Menu declaration</font></strong></br></br>
+public class Menu extends MenuItem implements MenuContainer, Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are creating a menu item that contains sub menu as well. We use MenuItem and Menu class for creating menu.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+class MenuDemo1 </br> 
+{  </br>
+  MenuDemo1()</br>
+  {  </br>
+    Frame menu_f= new Frame("studytonight ==> Menu and MenuItem Demo");  </br>
+    MenuBarmenu_bar=new MenuBar();  </br>
+    Menu menu11=new Menu("Menu");  </br>
+    Menu sub_menu1=new Menu("Sub Menu =>");  </br>
+    MenuItem a1=new MenuItem("Red");  </br>
+    MenuItem a2=new MenuItem("Light Red");  </br>
+    MenuItem a3=new MenuItem("Drak Red");  </br>
+    MenuItem b1=new MenuItem("Green");  </br>
+    MenuItem b2=new MenuItem("Light Green");  </br>
+    MenuItem b3=new MenuItem("Dark Green");</br>
+    menu11.add(a1); </br>
+    sub_menu1.add(a2);</br>
+    sub_menu1.add(a3); </br>
+    menu11.add(b1); </br>   
+    sub_menu1.add(b2);  </br>
+    sub_menu1.add(b3);  </br>
+    menu11.add(sub_menu1);  </br>
+    menu_bar.add(menu11);  </br>
+    menu_f.setMenuBar(menu_bar);  </br>
+    menu_f.setSize(400,400);  </br>
+    menu_f.setLayout(null);  </br>
+    menu_f.setVisible(true);  </br>
+  }  </br>
+  public static void main(String args[])  </br>
+  {  </br>
+    new MenuDemo1(); </br> 
+  }  </br>
+}</br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-menu.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-menu-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT PopupMenu</font></strong></br></br>
+In Java, AWT contains a Popup Menu. It is a popup which is dynamic in nature.</br></br>
+<strong><font size=+2>PopupMenu declaration</font></strong></br></br>
+public class PopupMenu extends Menu implements MenuContainer, Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+import java.awt.event.*;  </br>
+class PopupMenuDemo1  </br>
+{  </br>
+  PopupMenuDemo1()</br>
+  {  </br>
+    final Frame pop_menuf= new Frame("studytonight ==>PopupMenu Demo");  </br>
+    final PopupMenupop_menu = new PopupMenu("*Edit*");   </br>
+    MenuItempop_cut = new MenuItem("Cut");  </br>
+    pop_cut.setActionCommand("Cut");  </br>
+    MenuItempop_copy = new MenuItem("Copy");  </br>
+    pop_copy.setActionCommand("Copy");  </br>
+    MenuItempop_paste = new MenuItem("Paste");  </br>
+    pop_paste.setActionCommand("Paste");    </br>  
+    pop_menu.add(pop_cut);  </br>
+    pop_menu.add(pop_copy);  </br>
+    pop_menu.add(pop_paste);      </br>  
+    pop_menuf.addMouseListener(new MouseAdapter() </br>
+    {  </br>
+      public void mouseClicked(MouseEvent a) </br>
+      {              </br>
+        pop_menu.show(pop_menuf , a.getX(), a.getY());  </br>
+      }                 </br>
+    });  </br>
+    pop_menuf.add(pop_menu); </br>  
+    pop_menuf.setSize(400,400);  </br>
+    pop_menuf.setLayout(null);  </br>
+    pop_menuf.setVisible(true);  </br>
+  }  </br>
+  public static void main(String args[])  </br>
+  {  </br>
+    new PopupMenuDemo1();  </br>
+  }  </br>
+} </br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-popup.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-popup-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Panel</font></strong></br></br>
+In Java, AWT contains a Panel. The panel provides a free space where components can be placed.</br></br>
+<strong><font size=+2>Panel  declaration</font></strong></br></br>
+public class Panel extends Container implements Accessible</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+Lets create a panel to add components like: button, textbox etc. the panel provides a place to add awt components.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+public class PanelDemo1{  </br>
+  PanelDemo1()  </br>
+  {  </br>
+    Frame panel_f= new Frame("studytonight ==> Panel Demo");    </br>
+    Panel panel11=new Panel();  </br>
+    panel11.setBounds(40,80,200,200);   </br> 
+    panel11.setBackground(Color.red);  </br>
+    Button box1=new Button("On");   </br>  
+    box1.setBounds(50,100,80,30);   </br> 
+    box1.setBackground(Color.gray);  </br> 
+    Button box2=new Button("Off");  </br> 
+    box2.setBounds(100,100,80,30); </br>   
+    box2.setBackground(Color.gray);  </br> 
+    panel11.add(box1); </br>
+    panel11.add(box2);  </br>
+    panel_f.add(panel11); </br> 
+    panel_f.setSize(400,400);  </br>  
+    panel_f.setLayout(null);  </br>  
+    panel_f.setVisible(true); </br>   
+  }  </br>
+  public static void main(String args[]) </br> 
+  {  </br>
+    new PanelDemo1();  </br>
+  }  </br>
+} </br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-panel.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-panel-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Dialog</font></strong></br></br>
+In Java, AWT contains a Dialog. It is a type of window which is having a border and a title. But it does not have any maximize and minimize button.</br></br>
+<strong><font size=+2>Declaration</font></strong></br></br>
+public class Dialog extends Window</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are creating a dialogue box. The dialogue box is used to provide information to the user.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+import java.awt.event.*;  </br>
+public class DialogDemo1</br>
+{  </br>
+  private static Dialog dialog_d; </br> 
+  DialogDemo1() </br>
+  {  </br>
+    Frame dialog_f= new Frame();  </br>
+    dialog_d = new Dialog(dialog_f , "studytonight ==> Dialog Demo", true);  </br>
+    dialog_d.setLayout( new FlowLayout() );  </br>
+    Button dialog_b = new Button ("OK");  </br>
+    dialog_b.addActionListener ( new ActionListener()  </br>
+    {  </br>
+      public void actionPerformed( ActionEvent e )  </br>
+      {  </br>
+        DialogDemo1.dialog_d.setVisible(false);  </br>
+      }  </br>
+    });  </br>
+    dialog_d.add( new Label ("Welcome to studytonight. Click on button to continue.")); </br> 
+    dialog_d.add(dialog_b);   </br>
+    dialog_d.setSize(300,300);   </br> 
+    dialog_d.setVisible(true);  </br>
+  }  </br>
+  public static void main(String args[])  </br>
+  {  </br>
+    new DialogDemo1();  </br>
+  }  </br>
+}</br>
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-dialog.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-dialog-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>AWT Toolkit</font></strong></br></br>
+In Java, AWT contains a Toolkit. It is a superclass of Abstract Window Toolkit and can be implemented anywhere.</br></br>
+<strong><font size=+2>Declaration</font></strong></br></br>
+public abstract class Toolkit extends Object</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+import java.awt.event.*;  </br>
+public class ToolkitDemo1 </br>
+{  </br>
+  public static void main(String[] args) </br>
+  {  </br>
+    Frame toolkit_f=new Frame("studytonight ==> Toolkit Demo");  </br>
+    Button toolkit_b=new Button("beep");  </br>
+    toolkit_b.setBounds(50,100,60,30);  </br>
+    toolkit_f.add(toolkit_b);  </br>   
+    toolkit_f.setSize(300,300);  </br>
+    toolkit_f.setLayout(null); </br> 
+    toolkit_f.setVisible(true);  </br>
+    toolkit_b.addActionListener(new ActionListener()</br>
+    {  </br>
+      public void actionPerformed(ActionEvent a)</br>
+      {  </br>
+        Toolkit.getDefaultToolkit().beep();  </br>
+      }  </br>
+    });       </br>
+  }  </br>
+}  </br>
+ 
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-toolkit.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-toolkit-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>ActionListener Interface</font></strong></br></br>
+In java, ActionListener Interface is present under java.awt.event package. This interface is used when you want to notify click action on button or menu item. It has actionPeformed() method.</br></br>
+<strong><font size=+2>Syntax</font></strong></br></br>
+public abstract void actionPerformed(ActionEvent e)</br></br>
+<strong><font size=+2>Following are the three steps to add ActionListener Interface</font></strong></br></br>
+<strong>Step 1:</strong> Implement the ActionListener Interface in the class.</br></br>
+<strong><font size=+2>Syntax</font></strong></br></br>
+public class ActionListenerDemo Implements ActionListener</br></br>
+<strong>Step 2:</strong> Now Register all the components with the Listener.</br></br>
+<strong><font size=+2>Syntax</font></strong></br></br>
+component.addActionListener(instanceOfListenerclass);</br></br>
+<strong>Step 3:Aylast override the actionPerformed() method.</strong> </br></br>
+<strong><font size=+2>Syntax</font></strong></br></br>
+public void actionPerformed(ActionEvent e)</br>
+{  </br>
+           //statements</br>
+}  </br></br>
+<strong><font size=+2>Example:</font></strong></br></br>
+We can use action listener to implement event in awt component. Event can be anything like: mouse clock, mouse dragged etc. in this example, we are implementing actionlistener.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.BorderLayout;</br>
+import java.awt.event.ActionEvent;</br>
+import java.awt.event.ActionListener;</br>
+import javax.swing.JButton;</br>
+import javax.swing.JFrame;</br>
+import javax.swing.JTextArea;</br>
+
+public class ActionListenerDemo1 implements ActionListener {</br>
+
+  JButton aL_button;</br>
+  JFrame aL_frame;</br>
+  JTextArea aL_textArea;</br>
+
+  public ActionListenerDemo1() {</br>
+    aL_button = new JButton("Click Me");</br>
+    aL_frame = new JFrame("studytonight ==>ActionListener Demo");</br>
+    aL_textArea = new JTextArea(50, 50);</br>
+
+    aL_button.addActionListener(this);</br>
+    aL_textArea.setLineWrap(true);</br>
+    aL_frame.setLayout(new BorderLayout());</br>
+    aL_frame.add(aL_textArea, BorderLayout.NORTH);</br>
+    aL_frame.add(aL_button, BorderLayout.SOUTH);</br>
+    aL_frame.pack();</br>
+
+    aL_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</br>
+    aL_frame.setVisible(true);</br>
+  }</br>
+
+  @Override</br>
+  public void actionPerformed(ActionEvent e) {</br>
+    aL_textArea.setText(aL_textArea.getText().concat("Welocme to studytonight.com\n"));</br>
+  }</br>
+
+  public static void main(String args[]) {</br>
+    ActionListenerDemo1 obj= new ActionListenerDemo1();</br>
+  }</br>
+}</br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-actionlistener.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-actionlistener-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>MouseListener Interface</font></strong></br></br>
+In Java, MouseListener Interface is under java.awt.event package.This interface is used when the state of the mouse is changed. It has 5 methods which are as following:</br></br>
+1. public abstract void mouseClicked(MouseEvent e);</br>
+
+2. public abstract void mouseEntered(MouseEvent e);</br>
+
+3. public abstract void mouseExited(MouseEvent e);</br>
+
+4. public abstract void mousePressed(MouseEvent e);</br>
+
+5. public abstract void mouseReleased(MouseEvent e);</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+import java.awt.event.*;  </br>
+public class MouseListenerDemo1 extends Frame implements MouseListener{</br>
+  Label mL_l;  </br>
+  MouseListenerDemo1(){</br>
+    addMouseListener(this);  </br>
+    mL_l=new Label();  </br>
+    mL_l.setBounds(10,20,500,100);  </br>
+    add(mL_l);  </br>
+    setSize(300,300);  </br>
+    setLayout(null);  </br>
+    setVisible(true);  </br>
+  }  </br>
+  public void mouseClicked(MouseEvent e) {  </br>
+    mL_l.setText("studytonight ==> Mouse Clicked");  </br>
+  }  </br>
+  public void mouseEntered(MouseEvent e) {  </br>
+    mL_l.setText("studytonight ==> Mouse Entered");  </br>
+  }  </br>
+  public void mouseExited(MouseEvent e) {  </br>
+    mL_l.setText("studytonight ==> Mouse Exited");  </br>
+  }  </br>
+  public void mousePressed(MouseEvent e) {  </br>
+    mL_l.setText("studytonight ==> Mouse Pressed");  
+  }  </br>
+  public void mouseReleased(MouseEvent e) {  </br>
+    mL_l.setText("studytonight ==> Mouse Released");  </br>
+  }  </br>
+  public static void main(String[] args) {  </br>
+    new MouseListenerDemo1();  </br>
+  }  </br>
+} </br>
+ 
+  </div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-mouselistner.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-mouselistner-1.JPG" width="500" height="250"></center></br></br>
+<strong><font size=+3>MouseMotionListener Interface</font></strong></br></br>
+In Java, MouseMotionListener Interface is under java.awt.event package.This interface is used whenever the mouse is moved or dragged. It has 2 methods which are as following:</br></br>
+
+1. public abstract void mouseDragged(MouseEvent e);</br>
+
+2. public abstract void mouseMoved(MouseEvent e);</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+import java.awt.event.*;  </br>
+public class MouseMotionListenerDemo1 extends Frame implements MouseMotionListener{</br>
+  MouseMotionListenerDemo1(){</br>
+    addMouseMotionListener(this);  </br>
+
+    setSize(500,500);  </br>
+    setLayout(null);  </br>
+    setVisible(true);  </br>
+  }  </br>
+  public void mouseDragged(MouseEvent a) {  </br>
+    Graphics mM_g=getGraphics();  </br>
+    mM_g.setColor(Color.ORANGE);  </br>
+    mM_g.fillOval(a.getX(),a.getY(),10,10);  </br>
+  }  </br>
+  public void mouseMoved(MouseEvent e) {}  </br>
+
+  public static void main(String[] args) {  </br>
+    new MouseMotionListenerDemo1();  </br>
+  }  </br>
+}</br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size=+3>ItemListener Interface</font></strong></br></br>
+In Java, ItemListener Interface is under java.awt.event package. This interface is used whenever the checkbox is clicked. It has itemStateChanged() method</br></br>
+<strong><font size=+2>Syntax</font></strong></br></br>
+public abstract void itemStateChanged(ItemEvent e)</br></br>
+<strong><font size=+2>Example</font></strong></br></br>
+This interface is used to handle item listener events like: item selected or checkbox checked. In this example, we are handling checkbox checked event.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;    </br>
+import java.awt.event.*;    </br>
+public class ItemListenerDemo1 implements ItemListener{</br>
+  Checkbox iT_checkBox1,iT_checkBox2;  </br>
+  Label iT_label;  </br>
+  ItemListenerDemo1(){</br>
+    Frame iT_f= new Frame("studytonight ==>CheckBox Demo");  </br>  
+    iT_label = new Label();            </br>
+    iT_label.setAlignment(Label.CENTER);    </br>
+    iT_label.setSize(400,100);    </br>
+    iT_checkBox1 = new Checkbox("Core Java");    </br>
+    iT_checkBox1.setBounds(100,100, 100,40);    </br>
+    iT_checkBox2 = new Checkbox("jsp");    </br>
+    iT_checkBox2.setBounds(100,150, 100,40);    </br>
+    iT_f.add(iT_checkBox1); </br>
+    iT_f.add(iT_checkBox2); </br>
+    iT_f.add(iT_label);    </br>
+    iT_checkBox1.addItemListener(this);    </br>
+    iT_checkBox2.addItemListener(this); </br>   
+    iT_f.setSize(400,400);    </br>
+    iT_f.setLayout(null);    </br>
+    iT_f.setVisible(true);    </br>
+  }    </br>
+  public void itemStateChanged(ItemEventiT) {  </br>    
+    if(iT.getSource()==iT_checkBox1)  </br>
+      iT_label.setText("Core Java Checkbox: "+ (iT.getStateChange()==1?"checked":"unchecked"));   </br>
+    if(iT.getSource()==iT_checkBox2)  </br>
+      iT_label.setText("jsp Checkbox: "+ (iT.getStateChange()==1?"checked":"unchecked"));    </br>
+  }  </br>
+  public static void main(String args[])  </br>  
+  {    </br>
+    new ItemListenerDemo1();   </br> 
+  }    </br>
+}</br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><center><img src="https://static.studytonight.com/java/images/awt-itemlistener.JPG" width="600" height="200"></center></br></br>
+<center><img src="https://static.studytonight.com/java/images/awt-itemlistener-1.JPG" width="500" height="250"></center></br></br>
+
+<strong><font size=+3>KeyListener Interface</font></strong></br></br>
+In Java, KeyListener Interface is under java.awt.event package. This interface is used when the state of the key is changed. It has 3 methods which are as following:</br></br>
+
+1. public abstract void keyPressed(KeyEvent e);</br>
+
+2. public abstract void keyReleased(KeyEvent e);</br>
+
+3. public abstract void keyTyped(KeyEvent e);</br></br>
+
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are using keylistener interface to handle key events that can be key release, typed etc. see the below example.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+import java.awt.event.*;  </br>
+public class KeyListenerDemo1 extends Frame implements KeyListener{</br>
+  Label kL_l;  </br>
+  TextArea kL_area;  </br>
+  KeyListenerDemo1(){</br>
+    kL_l=new Label();  </br>
+    kL_l.setBounds(20,50,500,20);  </br>
+    kL_area=new TextArea(); </br> 
+    kL_area.setBounds(20,80,300, 300);  </br>
+    kL_area.addKeyListener(this);  </br>
+
+    add(kL_l);</br>
+    add(kL_area);  </br>
+    setSize(400,400);  </br>
+    setLayout(null);  </br>
+    setVisible(true); </br> 
+  }  </br>
+  public void keyPressed(KeyEvent e) {  </br>
+    kL_l.setText("studytonight ==> Key Pressed"); </br> 
+  }  </br>
+  public void keyReleased(KeyEvent e) {  </br>
+    kL_l.setText("studytonight ==> Key Released");  </br>
+  }  </br>
+  public void keyTyped(KeyEvent e) {  </br>
+    kL_l.setText("studytonight ==> Key Typed");  </br>
+  }  </br>
+
+  public static void main(String[] args) {  </br>
+    new KeyListenerDemo1();  </br>
+  }  </br>
+}</br>
+  
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size=+3>WindowListener Interface</font></strong></br></br>
+In Java, WindowListener Interface is under java.awt.event package. This interface is used when the state of the window is changed. It has 7 methods which are as following:</br></br>
+1. public abstract void windowActivated(WindowEvent e);</br>
+
+2. public abstract void windowClosed(WindowEvent e);</br>
+
+3. public abstract void windowClosing(WindowEvent e);</br>
+
+4. public abstract void windowDeactivated(WindowEvent e);</br>
+
+5. public abstract void windowDeiconified(WindowEvent e);</br>
+
+6. public abstract void windowIconified(WindowEvent e);</br>
+
+7. public abstract void windowOpened(WindowEvent e);</br></br>
+
+<strong><font size=+2>Example</font></strong></br></br>
+In this example, we are handling windows events like: window open, close etc.</br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+
+import java.awt.*;  </br>
+import java.awt.event.WindowEvent;  </br>
+import java.awt.event.WindowListener;  </br>
+public class WindowDemo1 extends Frame implements WindowListener</br>
+{  </br>
+  WindowDemo1()</br>
+  {  </br>
+    addWindowListener(this);  </br>
+    setSize(500,500);  </br>
+    setLayout(null);  </br>
+    setVisible(true);  </br>
+  }  </br>
+
+  public static void main(String[] args) </br>
+  {  </br>
+    new WindowDemo1();  </br>
+  }  </br>
+  public void windowActivated(WindowEvent arg0) </br>
+  {  </br>
+    System.out.println("studytonight ==> activated");  </br>
+  }  </br>
+  public void windowClosed(WindowEvent arg0) </br>
+  {  </br>
+    System.out.println("studytonight ==> closed");  </br>
+  }  </br>
+  public void windowClosing(WindowEvent arg0) </br>
+  {  </br>
+    System.out.println("studytonight ==> closing"); </br> 
+    dispose();  </br>
+  }  </br>
+  public void windowDeactivated(WindowEvent arg0) </br>
+  {  </br>
+    System.out.println("studytonight ==> deactivated");  </br>
+  }  </br>
+  public void windowDeiconified(WindowEvent arg0) </br>
+  {  </br>
+    System.out.println("studytonight ==>deiconified");  </br>
+  }  </br>
+  public void windowIconified(WindowEvent arg0) </br>
+  {  </br>
+    System.out.println("studytonight ==>iconified"); </br> 
+  }  </br>
+  public void windowOpened(WindowEvent arg0) </br>
+  {  </br>
+    System.out.println("studytonight ==> opened");  </br>
+  }  </br>
+}</br>
+  </div>
+</h5>
+</div>
+
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

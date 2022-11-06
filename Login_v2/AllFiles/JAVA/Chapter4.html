@@ -1,0 +1,724 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+
+    <!-- Navbar -->
+   <div class="w3-top">
+        <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+               href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="http://localhost/DL/Login_v2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+            <a href="Chapter1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Introduction</a>
+            <a href="Chapter2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> Blocks of Language</a>
+            <a href="Chapter3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="Chapter4.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inheritance, Packages,Interfaces</a>
+            <a href="Chapter5.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Exception & Multithreaded</a>
+            <a href="Chapter6.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">File Handling</a>
+             <a href="Download.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Download</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">JAVA</h1>
+        <p class="w3-xlarge">
+            Inheritance, Packages & Interfaces
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>Inheritance</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Inheritance is the process, by which class can acquire the properties and methods of its parent class.</br>
+                • The mechanism of deriving a new child class from an old parent class is called inheritance.</br>
+                • The new class is called derived class and old class is called base class.</br>
+                • When you inherit from an existing class, you can reuse methods and fields of parent class, and you can add new methods and fields also.</br>
+                • All the properties of superclass except private properties can be inherit in its subclass using extends keyword.</br>
+            </h5>
+
+            <h3><strong>Byte Streams</strong> </h3>
+            <h5 class="w3-padding-32">
+                <strong>Types of Inheritance</strong></br></br>
+
+                <strong>Single Inheritance</strong></br>
+                • If a class is derived from a single class then it is called single inheritance.</br>
+                • Class B is derived from class A.</br>
+                </br>
+                <strong>Multilevel Inheritance</strong></br>
+                • A class is derived from a class which is derived from another class then it is called multilevel inheritance</br>
+                • Here, class C is derived from class B and class B is derived from class A, so it is called multilevel Inheritance.</br>
+                </br>
+                <strong>Multiple Inheritance</strong></br>
+                • If one class is derived from more than one class then it is called multiple inheritance.</br>
+                • It is not supported in java through class.</br>
+                </br>
+                <strong>Hierarchical Inheritance</strong></br>
+                • If one or more classes are derived from one class then it is called hierarchical inheritance.</br>
+                • Here, class B, class C and class D are derived from class A.</br>
+                </br>
+                <strong>Hybrid Inheritance</strong></br>
+                • Hybrid inheritance is combination of single and multiple inheritance.</br>
+                • But java doesn't support multiple inheritance, so the hybrid inheritance is also not possible.</br>
+                </br>
+                </br>
+                <STRONG>  <font size="+2">Example of Hybrid Inheritance:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class A</br>
+                        {</br>
+                        public void displayA()</br>
+                        {</br>
+                        System.out.println("class A method");</br>
+                        }</br>
+                        }</br>
+                        class B extends A //Single Inheritance - class B is derived from class A</br>
+                        {</br>
+                        public void displayB( )</br>
+                        {</br>
+                        System.out.println("class B method");</br>
+                        }</br>
+                        }</br>
+                        class C extends B // Multilevel Inheritance - class C is derived from class B</br>
+                        {</br>
+                        public void display()</br>
+                        {</br>
+                        System.out.println("rclass C method");</br>
+                        }</br>
+                        }</br>
+                        class D extends A //Hierarchical Inheritance - Class B and Class D are derived from Class A</br>
+                        {</br>
+                        public void displayD()</br>
+                        {</br>
+                        System.out.println("class D method");</br>
+                        }</br>
+                        }</br>
+                        class Trial</br>
+                        {</br>
+                        public static void main(String []args)</br>
+                        {</br>
+                        B b=new B();</br>
+                        C c=new C();</br>
+                        D d=new D();</br>
+                        b.displayB();</br>
+                        c.displayC();</br>
+                        d.dispiayD();</br>
+                        }
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Method Overriding</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • When a method in a subclass has the same name and type signature as method in its superclass, then the method in the subclass is said to override the method of the super class.</br>
+                • The benefit of overriding is: Ability to define a behavior that's specific to the subclass type. Which means a subclass can implement a superclass method based on its requirement.</br>
+                • Method overriding is used for runtime polymorphism.</br>
+                • In object oriented terms, overriding means to override the functionality of any existing method.</br>
+                • Because, at compile time reference type of object is checked. However, at the runtime JVM determine the object type and execute the method that belongs to that particular object.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class A</br>
+                        {</br>
+                        public void display()</br>
+                        {</br>
+                        System.out.println("Class A");</br>
+                        }</br>
+                        }</br>
+                        class B extends A</br>
+                        {</br>
+                        public void display()</br>
+                        {</br>
+                        System.out.println("Class B");</br>
+                        }</br>
+                        }</br>
+                        class Trial</br>
+                        {</br>
+                        public static void main(String args[])</br>
+                        {</br>
+                        A a = new A();// A reference and object</br>
+                        A b = new B();// A reference but B object</br>
+                        a.displayO;// Runs the method in A class</br>
+                        b.displayO;// Runs the method in B class</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                <strong>Rules for method overriding</strong></br>
+                • The argument list should be exactly the same as that of the overridden method.</br>
+                • The return type should be the same as the return type declared in the original overridden method in the superclass.</br>
+                • Instance methods can be overridden only if they are inherited by the subclass.</br>
+                • A method declared final cannot be overridden.</br>
+                • A method declared static cannot be overridden but can be re-declared.</br>
+                • If a method cannot be inherited then it cannot be overridden.</br>
+                • A subclass within the same package as the instance's superclass can override any superclass method that is not declared private or final.</br>
+                • A subclass in a different package can only override the non-final methods declared public or protected.</br>
+                • Constructors cannot be overridden.</br>
+            </h5>
+
+            <h3><strong>super keyword</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • The super keyword in java is a reference variable that is used to refer immediate parent class object.</br>
+
+                </br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class A</br>
+                        {</br>
+                        A()</br>
+                        {</br>
+                        System.out.println("Super class default constructor called.,");</br>
+                        }</br>
+                        A(String si)</br>
+                        {</br>
+                        System.out.println("Super class parameterized constructor called: "+sl);</br>
+                        }</br>
+                        }</br>
+                        class B extends A</br>
+                        {</br>
+                        /* Implicitly default constructor of superclass(A) will be called. Whether you define</br>
+                        super or not in subclass(B) constructor * /</br>
+                        B()</br>
+                        {</br>
+                        System.out.println("Sub class default constructor called..1");</br>
+                        }</br>
+                        /* To call a parameterized constructor of superclass(A) you must write super() with</br>
+                        same number of arguments*/</br>
+                        B(String si)</br>
+                        {</br>
+                        super("Class A 1");</br>
+                        System.out.println("Sub class parameterized constructor called: " + si);</br>
+                        }</br>
+                        }</br>
+                        class SuperConDemo</br>
+                        {</br>
+                        public static void main{String args[])</br>
+                        {</br>
+                        B bl = new B();</br>
+                        B b2 = new B("Class B");</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+                <strong>super To Call super-class Constructor</strong></br></br>
+                • Every time a parameterized or non-parameterized constructor of a subclass is created, by default a default constructor of superclass is called implicitly.</br>
+                • The syntax for calling a superclass constructor is:</br>
+                super();</br>
+                OR</br>
+                super(parameter list);</br>
+                • The following example shows how to use the super keyword to invoke a superclass's constructor.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class A</br>
+                        {</br>
+                        A()</br>
+                        {</br>
+                        System.out.println("Super class default constructor called.,");</br>
+                        }</br>
+                        A(String si)</br>
+                        {</br>
+                        System.out.println("Super class parameterized constructor called: "+sl);</br>
+                        }</br>
+                        }</br>
+                        class B extends A</br>
+                        {</br>
+                        /* Implicitly default constructor of superclass(A) will be called. Whether you define</br>
+                        super or not in subclass(B) constructor * /</br>
+                        B()</br>
+                        {</br>
+                        System.out.println("Sub class default constructor called..1");</br>
+                        }</br>
+                        /* To call a parameterized constructor of superclass(A) you must write super() with</br>
+                        same number of arguments*/</br>
+                        B String si()</br>
+                        {</br>
+                        super("Class A 1");</br>
+                        System.out.println("Sub class parameterized constructor called: " + si);</br>
+                        }</br>
+                        }</br>
+                        class SuperConDemo</br>
+                        {</br>
+                        public static void main(String args[])</br>
+                        {</br>
+                        B bl = new B();</br>
+                        B b2 = new B("Class B");</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Dynamic Method Dispatch</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • Dynamic method dispatch is the mechanism by which a call to an overridden method is resolved at run time, rather than compile time.</br>
+                • It is also known as run-time polymorphism.</br>
+                • A superclass reference variable can refer to a subclass object. It is known as Upcasting.</br>
+                • When an overridden method is called through a superclass reference, the determination of the method to be called is based on the object being referred to by the reference variable</br>
+                • This determination is made at run time.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class A</br>
+                        {</br>
+                        void callme()</br>
+                        {</br>
+                        System.out.println("Inside A's callme method");</br>
+                        }</br>
+                        }</br>
+                        class B extends A</br>
+                        {</br>
+                        void callme()</br>
+                        {</br>
+                        System.out.println("Inside B's callme method");</br>
+                        }</br>
+                        }</br>
+                        class C extends A</br>
+                        {</br>
+                        void callme()</br>
+                        {</br>
+                        System.out.println("Inside C's callme method");</br>
+                        }</br>
+                        }</br>
+                        class DispatchDemo</br>
+                        {</br>
+                        public static void main(String args[])</br>
+                        {</br>
+                        A a = new A();// object of type A</br>
+                        B b = new B();// object of type B</br>
+                        C c = new C();// object of type C</br>
+                        </br>
+                        A r;// obtain r a reference of type A</br>
+                        r = a;// r refers to an A object</br>
+                        r.callme();// calls A’s version of callme()</br>
+                        r = b;// r refers to a B object</br>
+                        r.callme();// calls B's version of callme()</br>
+                        r = c;// r refers to a C object</br>
+                        r.callme();// calls C's version of callme()</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Object Class</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • The Object class is the parent class (java.lang.Object) of all the classes in java by default.</br>
+                • The Object class provides some common behaviors to all the objects must have, such as object can be compared, object can be converted to a string, object can be notified etc..</br>
+                • Some Java object class methods are given below:</br>
+                </br>
+                <strong>Method Description</strong></br>
+                equals() -- To compare two objects for equality.</br>
+                getClass() -- Returns a runtime representation of the class of this object. By using this class object we can get information about class such as its name, its superclass etc.</br>
+                toString() -- Returns a string representation of the object.</br>
+                notify() -- Wakes up single thread, waiting on this object's monitor.</br>
+                notifyAll() -- Wakes up all the threads, waiting on this object's monitor.</br>
+                wait() -- Causes the current thread to wait, until another thread notifies.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class parent</br>
+                        {</br>
+                        int i = 10;</br>
+                        Integer il= new Integer(i);</br>
+                        void PrintClassName(Object obj) // Pass object of class as an argument</br>
+                        {</br>
+                        System.out.println("The Object’s class name is + obj.getClass().getName());</br>
+                        }</br>
+                        }</br>
+                        class ObjectCiassDemo</br>
+                        {</br>
+                        public static void main(String args[])</br>
+                        {</br>
+                        parent al = new parent();</br>
+                        al.PrintClassName(al);</br>
+                        System.out.println("String representation of object il is:: ”+al.il.toString());</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+
+            <h3><strong>Packages</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                • A java package is a group of similar types of classes, interfaces and sub-packages.</br>
+                • Packages are used to prevent naming conflicts and provides access protection.</br>
+                • It is also used to categorize the classes and interfaces, so that, they can be easily maintained.</br>
+                • We can also categorize the package further by using concept of subpackage. Package inside the package is called the subpackage.</br>
+                </br>
+                Package can be categorized in two form:</br>
+                • built-in packages:</br>
+                Existing Java package such as java.lang, java.util, java.io, java.net, java.awt.</br>
+                • User-defined-package:</br>
+                Java package created by user to categorized classes and interface.</br>
+                • Programmers can define their own packages to bundle group of classes, interfaces etc.</br>
+                </br>
+                <strong>Creating a package</strong></br></br>
+                • To create a package, package statement followed by the name of the package.</br>
+                • The package statement should be the first line in the source file. There can be only one package statement in each source file.</br>
+                • If a package statement is not used then the class, interfaces etc. will be put into an unnamed.</br>
+                package.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        package mypack;</br>
+                        class Book</br>
+                        {</br>
+                        String bookname;</br>
+                        String author;</br>
+                        Book()</br>
+                        {</br>
+                        bookname = "Complete Reference";</br>
+                        author = "Herbert";</br>
+                        }</br>
+                        void show()</br>
+                        {</br>
+                        System.out.println("Book name is: "+bookname+,"nand author name is: "+author);</br>
+                        }</br>
+                        }</br>
+                        class DemoPackage</br>
+                        {</br>
+                        public static void main(String[] args)</br>
+                        {</br>
+                        Book bl = new Book();</br>
+                        bl.show();</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+            </h5>
+        
+
+        <h3><strong>Import Package</strong> </h3>
+        <h5 class="w3-padding-32">
+
+            • Import keyword is used to import built-in and user-defined packages into your java source file.</br>
+            • If a class wants to use another class in the same package, no need to import the package.</br>
+            • But, if a class wants to use another class that is not exist in same package then import keyword is used to import that package into your java source file.</br>
+            • A class file can contain any number of import statements.</br>
+            • There are three ways to access the package from outside the package:</br></br>
+            1) Using packagename.* :</br>
+            • If you use packagename.* then all the classes and interfaces of this package will be accessible but not subpackages.</br>
+            Syntax: import packagename.*;</br>
+            </br>
+            2) Using packagename.classname:</br>
+            • If you use packagename.classname then only declared class of this package will be accessible.</br>
+            Syntax:</br>
+            import packagename.classname;</br>
+            </br>
+            3) Using fully qualified name:</br>
+            • If you use fully qualified name then only declared class of this package will be accessible.</br>
+            • So, no need to import the package.</br>
+            • But, you need to use fully qualified name every time when you are accessing the class or interface.</br>
+            • It is generally used when two packages have same class name e.g. java.util and java.sql packages contain Date class.</br>
+        </h5>
+
+        <h3><strong>Interfaces</strong> </h3>
+        <h5 class="w3-padding-32">
+
+            • An interface is a collection of abstract methods. An interface is not a class.</br>
+            • When you create an interface it defines what a class can do without saying anything about how the class will do it.</br>
+            • Interface contains only static constants and abstract methods only.</br>
+            • The interface in java is a mechanism to achieve fully abstraction. There can be only abstract methods in the java interface not method body.</br>
+            • By default (Implicitly), an interface is abstract, interface fields(data members) are public, static and final and methods are public and abstract.</br>
+            • It is used to achieve fully abstraction and multiple inheritance in Java.</br>
+            • Similarity between class and interface are given below:</br>
+            • An interface can contain any number of methods.</br>
+            • An interface is written in a file with a .java extension, with the name of the interface matching the name of the file.</br>
+            • The bytecode of an interface appears in a .class file</br>
+            </br>
+            <strong>Declaring Interfaces</strong></br>
+            • The interface keyword is used to declare an interface.</br>
+            </br>
+            Syntax:</br>
+            NameOflnterface.java</br>
+            import java.lang.*;</br>
+            public interface NameOfInterface</br>
+            {</br>
+            //Any number of final, static fields</br>
+            //Any number of abstract method declarations</br>
+            }</br></br>
+
+
+            Example:</br>
+            Demolnterface.java</br>
+            interface Demolnterface</br>
+            {</br>
+            inti = 10;</br>
+            void demo();</br>
+            }</br></br>
+            • In above example, name of interface is Demolnterface and it contains a variable i of integer type and an abstract method named demo().</br>
+
+            Implementing Interfaces
+            • A class uses the implements keyword to implement an interface.</br>
+            • A class implements an interface means, you can think of the class as signing a contract, agreeing to perform the specific behaviors of the interface.</br>
+            • If a class does not perform all the behaviors of the interface, the class must declare itself as abstract.</br>
+        </h5>
+
+        <h3><strong>Inheritance on Interfaces</strong> </h3>
+        <h5 class="w3-padding-32">
+
+            • We all knows a class can extend another class. Same way an interface can extend another interface.</br>
+            • The extends keyword is used to extend an interface, and the child interface inherits the methods of the parent interface.</br>
+            </br>
+            <STRONG>  <font size="+2">Example:</font></STRONG>
+            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                <div class="w3-content">
+                    <!--<div class="w3-third w3-center">-->
+                    public interface A</br>
+                    {</br>
+                    void getdata(String name);</br>
+                    }</br>
+                    public interface B extends A</br>
+                    {</br>
+                    void setdata();</br>
+                    }</br>
+                    class Inheritlnterface implements B</br>
+                    {</br>
+                    String display;</br>
+                    public void getdata{String name)</br>
+                    {</br>
+                    display = name;</br>
+                    }</br>
+                    public void setdata()</br>
+                    {</br>
+                    System,out.println(display);</br>
+                    }</br>
+                    public static void main(String args[])</br>
+                    {</br>
+                    InheritInterface obj = new InheritInterface();</br>
+                    obj.getdata("Welcome TO Heaven");</br>
+                    obj.setdata();</br>
+                    }</br>
+                    }</br>
+                </div>
+            </div>
+        </h5>
+
+        <h3><strong>Multiple Inheritance using Interface</strong> </h3>
+        <h5 class="w3-padding-32">
+
+            • If a class implements multiple interfaces, or an interface extends multiple interfaces known as multiple inheritance.</br>
+            • A java class can only extend one parent class. Multiple inheritances are not allowed. However, an interface can extend more than one parent interface.</br>
+            • The extends keyword is used once, and the parent interfaces are declared in a comma-separated list.</br>
+            </br>
+            <STRONG>  <font size="+2">Example:</font></STRONG>
+            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                <div class="w3-content">
+                    <!--<div class="w3-third w3-center">-->
+                    public interface A</br>
+                    {</br>
+                    void getdata(String name);</br>
+                    }</br>
+                    public interface B </br>
+                    /* Here we can also extends multiple interface like interface B extends A,C */</br>
+                    {</br>
+                    void setdata();</br>
+                    }</br>
+                    class Inheritlnterface implements A, B</br>
+                    {</br>
+                    String display;</br>
+                    public void getdata(String name)</br>
+                    {</br>
+                    display = name;</br>
+                    }</br>
+                    public void setdata()</br>
+                    {</br>
+                    System.out.println(display);</br>
+                    }</br>
+                    public static void main(String args[])</br>
+                    {</br>
+                    Inheritlnterface obj = new Inheritlnterface();</br>
+                    obj.getdata("Welcome TO Heaven");</br>
+                    obj.setdata();</br>
+                    }</br>
+                    }</br>
+                </div>
+            </div>
+        </h5>
+
+        <h3><strong>Abstract Class</strong> </h3>
+        <h5 class="w3-padding-32">
+
+            • A class that is declared with abstract keyword, is known as an abstract class in java.It can have abstract and non-abstract methods (method with body).</br>
+            • It needs to be extended and its method implemented. It cannot be instantiated means we can't create object of it.</br>
+            • Any class that extends an abstract class must implement all the abstract methods declared by the super class.</br>
+            </br>
+            Syntax:</br>
+            abstract classdass name</br>
+            {</br>
+            //Number of abstract as well as non-abstract methods.</br>
+            }</br>
+            </br>
+            • A method that is declared as abstract and does not have implementation is known as abstract method.</br>
+            • The method body will be defined by its subclass. Abstract method can never be final and static.</br>
+            
+            Syntax:</br>
+            abstract return_typefunction_name (); // No definition</br>
+            </br>
+            </br>
+            <STRONG>  <font size="+2">Example:</font></STRONG>
+            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                <div class="w3-content">
+                    <!--<div class="w3-third w3-center">-->
+                    abstract class A</br>
+                    {</br>
+                    abstract void abs_method();</br>
+                    public void display()</br>
+                    {</br>
+                    System.out.println("This is concrete method..");</br>
+                    }</br>
+                    }</br>
+                    class DemoAbstract extends A</br>
+                    {</br>
+                    void abs_method()</br>
+                    {</br>
+                    System.out.println("This is an abstract method..");</br>
+                    }</br>
+                    public static void main(String[j] args)</br>
+                    {</br>
+                    DemoAbstract abs = new DemoAbstract();</br>
+                    abs.abs_method();</br>
+                    abs.display();</br>
+                    }</br>
+                    }</br>
+                </div>
+            </div>
+        </h5>
+
+        <h3><strong>Final Keyword</strong> </h3>
+        <h5 class="w3-padding-32">
+
+            • The final keyword in java is used to restrict the user. The java final keyword can be used with:</br>
+            1) variable</br>
+            2) method</br>
+            3) class</br>
+            </br>
+            • Final Variable: </br>
+            If you make any variable as final, you cannot change the value of that final variable (It will be constant).</br>
+            A variable that is declared as final and not initialized is called a blank final variable. A blank final variable forces the constructors to initialize it.</br>
+            </br>
+            • Final Method:</br>
+            Methods declared as final cannot be overridden.</br>
+            </br>
+            • Final Class:</br>
+            Java classes declared as final cannot be extended means cannot inherit.</br>
+            If you declare any parameter as final, you cannot change the value of it.</br>
+            </br>
+            </br>
+            <STRONG>  <font size="+2">Example:</font></STRONG>
+            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                <div class="w3-content">
+                    <!--<div class="w3-third w3-center">-->
+                    class DemoBase</br>
+                    {</br>
+                    final int i =1; //final variable must be initialize.</br>
+                    final void display()</br>
+                    {</br>
+                    System.out.println("Value of i is "+i);</br>
+                    }</br>
+                    }</br>
+                    class DemoFinal extends DemoBase</br>
+                    {</br>
+                    /’“void display() // Compilation error final method cannot override.</br>
+                    {</br>
+                    System.out.println("Value of i is v- > mm "+i);</br>
+                    }</br>
+                    public static void main(String args[])</br>
+                    {</br>
+                    DemoFinal obj = new DemoFinal();</br>
+                    obj.display();</br>
+                    }</br>
+                    }</br>
+                </div>
+            </div>
+        </h5>
+        </div>
+    </div>
+
+        <!-- Second Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-third w3-center">
+                    <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                </div>
+
+                <!--<div class="w3-twothird">
+                  <h1>Lorem Ipsum</h1>
+                  <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+                  <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>-->
+                <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+            </div>-->
+             
+                <script>
+                    // Used to toggle the menu on small screens when clicking on the menu button
+                    function myFunction() {
+                        var x = document.getElementById("navDemo");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

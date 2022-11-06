@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="file:///C:/Users/HP/Desktop/GG/project/New%20folder/website/Distance%20learning%20part%20-1/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">HOME</a>
+    <a href="Overview.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Overview</a>
+    <a href="Array.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Array</a>
+    <a href="Operators.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Operators</a>
+    <a href="Datatypes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Datatypes</a>
+    <a href="Decision%20Making.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Decision Making</a>
+    <a href="loops.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Loops</a>
+    <a href="Pointer.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pointer</a>
+    <a href="Variable%20&%20Constant.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Variable & Constant</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">C Programming</h1>
+  <p class="w3-xlarge">Decision Making </p>
+  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-twothird">-->
+      <h1><strong></strong> </h1>
+      <h5 class="w3-padding-32">There come situations in real life when we need to make some decisions and based on these decisions, we decide what should we do next. Similar situations arise in programming also where we need to make some decisions and based on these decisions we will execute the next block of code. For example, in C if x occurs then execute y else execute z. There can also be multiple conditions like in C if x occurs then execute p, else if condition y occurs execute q, else execute r. This condition of C else-if is one of the many ways of importing multiple conditions</br></br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191202113149/CPP-Decision-Making.png" width="700" height="550"></center></br>
+Decision-making statements in programming languages decide the direction of the flow of program execution. Decision-making statements available in C  are: </br></br>
+ 
+
+1).if statement</br>
+2).if..else statements</br>
+3).nested if statements</br>
+4).if-else-if ladder</br>
+5).switch statements</br>
+6).Jump Statements: </br>
+<ul>
+<li>break</li>
+<li>continue</li>
+<li>goto</li>
+<li>return</li>
+</ul>
+<strong><font size="+2">1).if statement</font></Strong></br></br>
+if statement is the most simple decision-making statement. It is used to decide whether a certain statement or block of statements will be executed or not i.e if a certain condition is true then a block of statement is executed otherwise not. </br>
+<strong>Syntax:-</strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+if(condition) </br>
+{</br>
+   // Statements to execute if</br>
+   // condition is true</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32">Here, the condition after evaluation will be either true or false. C if statement accepts boolean values - if the value is true then it will execute the block of statements below it otherwise not. If we do not provide the curly braces '{' and '}' after if(condition) then by default if statement will consider the first immediately below statement to be inside its block. </br></br>
+<strong><font size="+1">Flowchart:-</font></Strong></br></br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/decision-making-c-1.png" width="500" height="550"></center></br>
+<strong><font size="+1">Example:-</font></Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+int main() {</br>
+    int i = 10;</br>
+ 
+    if (i > 15)</br>
+    {</br>
+       printf("10 is less than 15");</br>
+    }   </br>
+    
+    printf("I am Not in if");</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output:-</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+I am Not in if
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">2).if..else statement</font></Strong></br></br>
+The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won't. But what if we want to do something else if the condition is false. Here comes the C else statement. We can use the else statement with if statement to execute a block of code when the condition is false. </br></br>
+<strong>Syntax:-</strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+if (condition)</br>
+{</br>
+    // Executes this block if</br>
+    // condition is true</br>
+}</br>
+else</br>
+{</br>
+    // Executes this block if</br>
+    // condition is false</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Flowchart:-</font></Strong></br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/decision-making-c-2.png" height="550"></center></br>
+<strong><font size="+1">Example:-</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+int main() {</br>
+    int i = 20;</br>
+ 
+    if (i < 15){</br>
+       
+        printf("i is smaller than 15");</br>
+    }</br>
+    else{</br>
+       
+        printf("i is greater than 15");</br>
+    }</br>       
+    return 0;   </br>
+} 
+
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output:-</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+i is greater than 15
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">3).nested if statements:-</font></Strong></br></br>
+A nested if in C is an if statement that is the target of another if statement. Nested if statements mean an if statement inside another if statement. Yes, both C and C++ allow us to nested if statements within if statements, i.e, we can place an if statement inside another if statement. </br></br>
+<strong><font size="+1">Syntax:-</font></Strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+if (condition1) </br>
+{</br>
+   // Executes when condition1 is true</br>
+   if (condition2) </br>
+   {</br>
+      // Executes when condition2 is true</br>
+   }</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Flowchart:-</font></Strong></br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/decision-making-c-3.png" height="550"></center></br>
+<strong><font size="+1">Example</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+int main() {</br>
+    int i = 10;</br>
+ 
+    if (i == 10)</br>
+    {</br>
+        // First if statement</br>
+        if (i < 15)</br>
+           printf("i is smaller than 15\n");</br>
+ 
+        // Nested - if statement</br>
+        // Will only be executed if statement above</br>
+        // is true</br>
+        if (i < 12)</br>
+            printf("i is smaller than 12 too\n");</br>
+        else</br>
+            printf("i is greater than 15");</br>
+    }</br>
+ 
+    return 0;</br>
+}
+
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Example</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+i is smaller than 15</br>
+i is smaller than 12 too
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">4).if-else-if ladder Statement</font></strong></br></br>
+Here, a user can decide among multiple options. The C if statements are executed from the top down. As soon as one of the conditions controlling the if is true, the statement associated with that if is executed, and the rest of the C else-if ladder is bypassed. If none of the conditions are true, then the final else statement will be executed. </br></br>
+<strong><font size="+1">Syntax:-</font></strong></br></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+if (condition)</br>
+    statement;</br>
+else if (condition)</br>
+    statement;</br>
+.</br>
+.</br>
+else</br>
+    statement; 
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Flowchart:-</font></Strong></br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/decision-making-c-4.png" height="550"></center></br>
+<strong><font size="+1">Example</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+int main() {</br>
+    int i = 20;</br>
+  
+    if (i == 10)</br>
+        printf("i is 10");</br>
+    else if (i == 15)</br>
+        printf("i is 15");</br>
+    else if (i == 20)</br>
+        printf("i is 20");</br>
+    else</br>
+        printf("i is not present");</br>
+}    
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output:-</font></Strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+i is 20
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+2">6).Jump Statements:-</font></strong></br></br>
+These statements are used in C orC++ for the unconditional flow of control throughout the functions in a program. They support four types of jump statements:
+<ul>
+<li><strong>Break:-</strong>This loop control statement is used to terminate the loop. As soon as the break statement is encountered from within a loop, the loop iterations stop there, and control returns from the loop immediately to the first statement after the loop.</li>
+</ul>
+<strong><font size="+1">Syntax</strong>:-break;</font></br></br>
+Basically, break statements are used in situations when we are not sure about the actual number of iterations for the loop or we want to terminate the loop based on some condition. </br></br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/break.png" height="550"></center></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+void findElement(int arr[], int size, int key)</br>
+{</br>
+    // loop to traverse array and search for key</br>
+    for (int i = 0; i < size; i++) {</br>
+        if (arr[i] == key) {</br>
+            printf("Element found at position: %d", (i + 1));</br>
+            break;</br>
+        }</br>
+    }</br>
+}</br></br>
+ 
+int main() {</br>
+    int arr[] = { 1, 2, 3, 4, 5, 6 };</br>
+     
+    // no of elements</br>
+    int n = 6; </br>
+     
+    // key to be searched</br>
+    int key = 3;</br>
+ 
+    // Calling function to find the key</br>
+    findElement(arr, n, key);</br>
+ 
+    return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output:-</font></strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+Element found at position: 3
+</div>
+</h5>
+<h5 class="w3-padding-32"><ul>
+<li><strong>Continues:-</strong>This loop control statement is just like the break statement. The continue statement is opposite to that of the break statement, instead of terminating the loop, it forces to execute the next iteration of the loop. </br>
+As the name suggests the continue statement forces the loop to continue or execute the next iteration. When the continue statement is executed in the loop, the code inside the loop following the continue statement will be skipped and the next iteration of the loop will begin.</li>
+</ul>
+<strong><font size="+1">Syntax</strong>:-continue;</font></br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/continue.png" height="550"></center></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+int main() {</br>
+    // loop from 1 to 10</br>
+    for (int i = 1; i <= 10; i++) {</br>
+ 
+        // If i is equals to 6,</br>
+        // continue to next iteration</br>
+        // without printing</br>
+        if (i == 6)</br>
+            continue;</br>
+ 
+        else</br>
+            // otherwise print the value of i</br>
+            printf("%d ", i);</br>
+    }</br>
+ 
+    return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><ul>
+<li><strong>goto:-</strong>The goto statement in C/C++ also referred to as unconditional jump statement can be used to jump from one point to another within a function. 
+</ul>
+<strong><font size="+1">Syntax</strong>:-goto label;</font></br></br>
+In the above syntax, the first line tells the compiler to go to or jump to the statement marked as a label. Here label is a user-defined identifier that indicates the target statement. The statement immediately followed after 'label:' is the destination statement. The 'label:' can also appear before the 'goto label;' statement in the above syntax. </br>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/goto.png" height="550"></center></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+// function to print numbers from 1 to 10</br>
+void printNumbers()</br>
+{</br>
+    int n = 1;</br>
+label:</br>
+    printf("%d ",n);</br>
+    n++;</br>
+    if (n <= 10)</br>
+        goto label;</br>
+}</br>
+ 
+// Driver program to test above function</br>
+int main() {</br>
+    printNumbers();</br>
+    return 0;</br>
+}</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output</font></strong>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+1 2 3 4 5 6 7 8 9 10
+</div>
+</h5>
+<h5 class="w3-padding-32"><ul>
+<li><strong>return:-</strong>The return in C or C++ returns the flow of the execution to the function from where it is called. This statement does not mandatorily need any conditional statements. As soon as the statement is executed, the flow of the program stops immediately and return the control from where it was called. The return statement may or may not return anything for a void function, but for a non-void function, a return value is must be returned. </br> 
+</ul>
+<strong><font size="+1">Syntax</strong>:-return[expression];</font></br></br>
+<strong><font size="+1">Example:-</strong></br>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+#include <stdio.h></br></br>
+ 
+// non-void return type</br>
+// function to calculate sum</br>
+int SUM(int a, int b)</br>
+{</br>
+    int s1 = a + b;</br>
+    return s1;</br>
+}</br>
+ 
+// returns void</br>
+// function to print</br>
+void Print(int s2)</br>
+{</br>
+    printf("The sum is %d", s2);</br>
+    return;</br>
+}</br>
+ 
+int main()</br>
+{</br>
+    int num1 = 10</br>;
+    int num2 = 10;</br>
+    int sum_of = SUM(num1, num2);</br>
+    Print(sum_of);</br>
+    return 0;</br>
+}
+</div>
+</h5>
+<h5 class="w3-padding-32"><strong><font size="+1">Output</font></strong>
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <div class="w3-content">
+    <!--<div class="w3-third w3-center">-->
+The sum is 20
+</div>
+</h5>
+</div>
+    <!--<div class="w3-third w3-center">-->
+      <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+    </div>
+
+    <!--<div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>-->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

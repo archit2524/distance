@@ -1,0 +1,959 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>Distance Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content1.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content2.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content3.css">
+<link rel="stylesheet" href="file:///C:/wamp64/www/DL/content4.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body bgcolor="">
+
+    <!-- Navbar -->
+     <div class="w3-top">
+        <div class="w3-bar w3-4F009A w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+               href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+         <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+            <a href="Chapter1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Introduction</a>
+            <a href="Chapter2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> Blocks of Language</a>
+            <a href="Chapter3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">OOP Concepts</a>
+            <a href="Chapter4.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inheritance, Packages,Interfaces</a>
+            <a href="Chapter5.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Exception & Multithreaded</a>
+            <a href="Chapter6.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">File Handling</a>
+            
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">JAVA</h1>
+        <p class="w3-xlarge">
+            Building Blocks of the Language
+        </p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <!--<div class="w3-twothird">-->
+            <h3><strong>Primitive Data Types</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Primitive data types can be classified in four groups:</br>
+                </br>
+                1) Integers:</br>
+                • This group includes byte, short, int, and long.</br>
+                • All of these are signed, positive and negative values.</br>
+                byte S-bit</br>
+                short 16-bi</br>
+                int 32-bit</br>
+                long 64-bit</br>
+                </br>
+                2) Floating-point:</br>
+                • This group includes float and double, which represent numbers with fractional precision.</br>
+                float 32 bits</br>
+                double 64 bits</br>
+                </br>
+                3) Characters:</br>
+                • This group includes char, which represents symbols in a character set, like letters and numbers.</br>
+                • Java char is a 16-bit type. The range of a char is 0 to 65,536. There are no negative chars.</br>
+                For example : char name = 'x';</br>
+                </br>
+                4) Boolean:</br>
+                • This group includes boolean, which is a special type for representing true/false values.</br>
+                • It can have only one of two possible values, true or false.</br>
+                For example : boolean b = true;</br>
+            </h5>
+
+            <STRONG>  <font size="+2">An example for Primitive Data Types:</font></STRONG>
+            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                <div class="w3-content">
+                    <!--<div class="w3-third w3-center">-->
+                    import java.util.*;</br>
+                    class Pdatatype</br>
+                    {</br>
+                    public static void main(String args[])</br>
+                    {</br>
+                    int r=10;</br>
+                    float pi=3.14f,a;</br>
+                    char ch=97,c2='A';</br>
+                    boolean x=true;</br>
+                    a = pi*r*r;</br>
+                    System.out.println("Area of circle is: "+a);</br>
+                    System.out.println("C1 and C2 are: "+cl+" ”+c2);</br>
+                    System.out.println("Value of X is: "+x);</br>
+                    }</br>
+                    }</br>
+                </div>
+            </div>
+            <h5 class="w3-padding-32">
+                <strong>OUTPUT:</strong>
+                <center><img src="" width="500" height="250"></center></br>
+            </h5>
+
+            <h3><strong>User Defined Data Types</strong> </h3>
+            <h5 class="w3-padding-32">
+                • User Defined data types can be classified into the following types:</br>
+                </br>
+                1) Class:</br>
+                • A class is a template that specifies the attributes and behavior of things or objects.</br>
+                • A class is a blueprint or prototype from which creates as many desired objects as required.</br>
+                </br>
+                2) Interface:</br>
+                • An interface is a collection of abstract methods.</br>
+                • A class implements an interface,thereby inheriting the abstract methods of the interface.</br>
+                • An interface is not a class. A class describes the attributes and behaviors of an object. An interface contains behaviors that a class implements.</br>
+                • Unless the class that implements the interface is abstract, all the methods of the interface need to be defined in the class.</br>
+                Example:</br>
+                interface Animal</br>
+                {</br>
+                public void eat();</br>
+                public void travel();</br>
+                }
+                </br>
+                </br>
+                <STRONG>  <font size="+2">An example for User Defined Data Types:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        import java.util.*;</br>
+                        class Box</br>
+                        {</br>
+                        double width=l,height=2,depth=3;</br>
+                        void volume()</br>
+                        {</br>
+                        System.out.print("Volume is ");</br>
+                        System.out.println(width * height * depth};</br>
+                        }</br>
+                        }</br>
+                        class demo</br>
+                        {</br>
+                        public static void main(String args[])</br>
+                        {</br>
+                        Box bl = new Box();</br>
+                        bl.volume();</br>
+                        }</br>
+                        }
+                    </div>
+                </div>
+
+                <h5 class="w3-padding-32">
+                    <strong>OUTPUT:</strong>
+                    <center><img src="" width="500" height="250"></center></br>
+                </h5>
+            </h5>
+            <h3><strong>Identifiers and Literals</strong> </h3>
+            <h5 class="w3-padding-32">
+                1) Identifiers:</br>
+                • Identifiers are used for class names, method names, and variable names.</br>
+                • An identifier may be any descriptive sequence of uppercase and lowercase letters, numbers, or the underscore characters and dollar-sign characters.</br>
+                • There are some rules to define identifiers as given below:</br>
+                1) Identifiers must start with a letter or underscore { _ ).</br>
+                2) Identifiers cannot start with a number.</br>
+                3) White spacefblank, tab, newline) are not allowed.</br>
+                4) You can't use a Java keyword as an identifier.</br>
+                5) Identifiers in Java are case-sensitive; foo and Foo are two different identifiers.</br>
+                </br>
+
+                2) Literals (Constants):</br>
+                • A constant value in a program is denoted by a literal. Literals represent numerical (integer or floating-point), character, boolean or string values.</br>
+                Integer - 33, 0,-19</br>
+                Floating-point - 0.3, 3.14</br>
+                Character - 'R'</br>
+                Boolean - true, false</br>
+                String - "language","0.2","r"</br>
+            </h5>
+
+            <h3><strong>Variables</strong> </h3>
+            <h5 class="w3-padding-32">
+                • A variable is defined by the combination of an identifier, a type, and an optional initializer.</br>
+                • All variables have a scope, which is defines their visibility and lifetime.</br>
+                </br>
+
+                <strong>Declaring of variable</strong></br>
+                • All variables must be declared before they can be used.</br>
+                Syntax:</br>
+                type identifier [ = value][,identifier [= value] ...];</br>
+                • The type is one of Java's atomic types, or the name of a class or interface.</br>
+                • The identifier is the name of the variable.</br>
+                • You can initialize the variable by specifying an equal sign and a value.</br>
+                • To declare more than one variable of the specified type, use a comma separated list.</br>
+                Example: int a, b, c = 10;</br>
+                </br>
+
+                <strong>Dynamic Initialization</strong></br>
+                • Java allows variables to be initialized dynamically by using any valid expression at the time the variable is declared.</br>
+                Example:</br>
+                int a=2, b=3;</br>
+                int c = a+b;    // Dynamic initialization</br>
+                </br>
+
+                <strong>Scope of Variables</strong></br>
+                • Java allows variables to be declared within any block.</br>
+                • A block is begun with an opening curly brace and ended by a closing curly brace.</br>
+                • A block defines a scope. Thus, each time you start a new block, you are creating a new scope.</br>
+                • A scope determines which objects are visible to other parts of your program.</br>
+                • Java defines two general categories of scopes: global and local.</br>
+                • Variables declared inside a scope is not visible to code that is defined outside that scope.</br>
+                • Thus, when you declare a variable within a scope, then you can access it within that scope only
+                and protecting it from unauthorized access.</br>
+                • Scopes can be nested. So, outer scope encloses the inner scope. This means that objects
+                declared in the outer scope will be visible to code within the inner scope.</br>
+                • However, the reverse is not true. Objects declared within inner scope will not be visible
+                outside it.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        class ScopeOfVari</br>
+                        {</br>
+                        public static void main(String argsf])</br>
+                        {</br>
+                        int x;  // visible to all code within the main</br>
+                        x = 10;</br>
+                        if(x == 10) // starting new scope</br>
+                        {</br>
+                        int y = 20; // Visible only to this block</br>
+                        System,out.println("x and y; " + x + " " + y);  // x and y both are visible here.</br>
+                        x — y * 2;</br>
+                        }</br>
+                        System.out.println("x is " + x);    // y is not visible here but x is.</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+                </br>
+
+                <strong>Default values of variables declared</strong></br>
+                • If you are not assigning value, then Java runtime assigns default value to variable and when you try to access the variable you get the default value of that variable.</br>
+                • Following shows variable types and their default values:</br>
+                boolean - FALSE</br>
+                char - \u0000</br>
+                int,short,byte/long - 0 / 0L</br>
+                float/double - O.Of / O.Od</br>
+                any reference type - null</br>
+                • Here, char primitive default value is \u0000, which means blank/space character.</br>
+                • When you declare any local/block variable,they didn't get the default values.
+                </br>
+            </h5>
+
+            <h3><strong>Type Conversion and Casting</strong> </h3>
+            <h5 class="w3-padding-32">
+                • It assigns a value of one type variable to a variable of another type. If the two types are compatible, then Java will perform the conversion automatically (Implicit conversion).</br>
+                • For example, it is always possible to assign an int value to a long variable. However, not all types are compatible,and thus, not all type conversions are implicitly allowed.</br>
+                • There is no automatic conversion defined from double to byte. Fortunately, it is possibleconversion between incompatible types. For that you must perform type casting operation,which performs an explicit conversion between incompatible types.</br>
+                </br>
+
+                <strong>1) Implicit Type Conversion (Widening Conversion)</strong></br>
+                • When one type of data is assigned to another type of variable, an automatic type conversion will take place if the following two conditions are met:</br>
+                1. Two types are compatible.</br>
+                2. Destination type is larger than the source type.</br>
+                • When these two conditions are met, a widening conversion takes place.</br>
+                • For example, the int type is always large enough to hold all valid byte values, so no explicit cast statement is required.</br>
+                • Following shows compatibility of numeric data type:</br>
+                Integer and Floating-Point - Compatible</br>
+                Char and Boolean - Incompatible</br>
+                Also, Boolean and char are not compatible with each other.</br>
+                </br>
+
+                <strong>1) Explicit Type Conversion (Narrowing Conversion)</strong></br>
+                • Although the automatic type conversions are helpful, they will not fulfill all needs. For example, if we want to assign an int value to a byte variable then conversion will not be performed automatically, because a byte is smaller than an int.</br>
+                • This kind of conversion is sometimes called a narrowing conversion.</br>
+                • For, this type of conversion we need to make the value narrower explicitly, so that, it will fit into the target data type.</br>
+                • To create a conversion between two incompatible types, you must use a cast.</br>
+                • A cast is simply an explicit type conversion.</br>
+                Synatax:</br>
+                (target-type) value</br>
+                • Here, target-type specifies the desired type to convert the specified value to.</br>
+                • For example, the following casts an int to a byte.</br>
+                int a;</br>
+                byte b;</br>
+                b = (byte) a;</br>
+                • A different type of conversion will occur when a floating-point value is assigned to an integer type: truncation.</br>
+                • As we know, integers do not have fractional components. Thus, when a floating-point value is assigned to an integer type,the fractional component is lost.</br>
+                • For example, if the value 1.23 is assigned to an integer, the resulting value will simply be 1. The 0.23 will have been truncated.</br>
+                • When the value 257 is cast into a byte variable, the result is the remainder of the division of 257 by 256 (the range of a byte), which is 1in this case.</br>
+                • When the d is converted to an int, its fractional component is lost.</br>
+                • When d is converted to a byte, its fractional component is lost, and the value is reduced modulo 256, which in this case is 67.</br>
+                </br>
+
+                <STRONG>  <font size="+2">An example for Type Conversions:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class conversionDemo</br>
+                        {</br>
+                        public static void main(String args[]}</br>
+                        {</br>
+                        byte b;</br>
+                        int i = 257;</br>
+                        double d = 323.142;</br>
+                        System.out.println("\nConversion of int to byte.");</br>
+                        b = (byte) i;</br>
+                        System.out.printlnfi and b 11 + i + n in + b);</br>
+                        System.out.println("\nConversion of double to int.");</br>
+                        i = (int) d;</br>
+                        System.out.printlnf 'd and i " + d + I I I I +i);</br>
+                        System.out.println(,[\nConversion of double to byte.");</br>
+                        b = (byte) d;</br>
+                        System.out.println("d and b " + d + u H + b;</br>
+                        }</br>
+                        }
+                    </div>
+                </div>
+            </h5>
+            </h5>
+
+            <h3><strong>Wrapper Class</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Wrapper class wraps (encloses) around a data type and gives it an object appearance.</br>
+                • Wrapper classes are used to convert any data type into an object.</br>
+                • The primitive data types are not objects and they do not belong to any class.</br>
+                • So, sometimes it is required to convert data types into objects in java.</br>
+                • Wrapper classes include methods to unwrap the object and give back the data type.</br>
+                </br>
+                Example:</br>
+                int k = 100;</br>
+                Integer itl= new Integer(k);</br>
+                • The int data type k is converted into an object,itl using Integer class.</br>
+                • The itl object can be used wherever k is required an object,</br>
+                • To unwrap (getting back int from Integer object) the object itl.</br>
+                Example:</br>
+                int m =itl.intValue();</br>
+                System,out.println(m*m); // prints 10000</br>
+                • intValue() is a method of Integer class that returns an int data type.</br>
+                </br>
+                • Eight wrapper classes exist in java.lang package that represent 8 data types:</br>
+                Wrapper class - Unwrap methods</br>
+                Byte - byteValue()</br>
+                Short - shortVaiue()</br>
+                Integer - intValue()</br>
+                Long - longValue()</br>
+                Float - floatValue()</br>
+                Double - doubleValue()</br>
+                Character - charValue()</br>
+                Boolean - booleanValue()</br>
+                </br>
+                • There are mainly two uses with wrapper classes.</br>
+                1) To convert simple data types into objects.</br>
+                2) To convert strings into data types {known as parsing operations), here methods of type parseXf) are used. (Ex. parselnt())</br>
+                • The wrapper classes also provide methods which can be used to convert a String to any of the primitive data types, except character.</br>
+                • These methods have the format parsex() where x refers to any of the primitive data types except char.</br>
+                • To convert any of the primitive data type value to a String, we use the valueOf() methods of the String class.</br>
+                </br>
+                Example:</br>
+                int x = Integer.parselnt("34");</br>
+                double y = Double.parseDouble{"34.7"};</br>
+                String sl= String.valueOf('a'); // sl="a"</br>
+                String s2=String.valueOf(true); // s2="true"</br>
+            </h5>
+
+            <h3><strong>Comment Syntax</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Comments are the statements which are never execute, (i.e. non-executable statements).</br>
+                • Comments are often used to add notes between source code. So that it becomes easy to understand & explain the function or operation of the corresponding part of source code.</br>
+                • Java Compiler doesn't read comments. Comments are simply ignored during compilation.</br>
+                • There are three types of comments available in Java as follows:</br>
+                </br>
+
+                <strong>1. Single Line Comment</strong></br>
+                • This comment is used whenever we need to write anything in single line.</br>
+                Syntax: </br>
+                //'write comment here'</br>
+                </br>
+
+                <strong>2. Multi Line Comment</strong></br>
+                • These types of comments are used whenever we want to write detailed notes (i.e. more than one line or in multiple lines) related to source code.</br>
+                Syntax :</br>
+                /*</br>
+                .......</br>
+                'write comment here'</br>
+                .......</br>
+                */</br>
+                </br>
+
+                <strong>3. Documentation Comment</strong></br>
+                • The documentation comment is used commonly to produce an HTML file that documents our program.</br>
+                • This comment begins with /** and end with a */.</br>
+                • Documentation comments allow us to embed information about our program into the program itself.</br>
+                • Then, by using the javadoc utility program to extract the information and put it into an HTML file.</br>
+                • In the documentation comment, we can add different notations such as author of the project or program, version, parameters required, information on results in return if any, etc.</br>
+                • To add these notations, we have '@' operator. We just need to write the required notation along with the operator.</br>
+                • Some javadoc tags are given below:</br>
+                @author - To describe the author of the project.</br>
+                @version - To describe the version of the project.</br>
+                @param - To explain the parameters required to perform respective operation.</br>
+                @return - To explain the return type of the project.</br>
+                Syntax:</br>
+                /**</br>
+                *'write comment/description here'</br>
+                *'©author write author name'</br>
+                *'©version write version here'</br>
+                */</br>
+            </h5>
+
+
+            <h3><strong>Garbage Collection</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Since objects are dynamically allocated by using the new operator, you might be wondering how such objects are destroyed and their memory released for later reallocation.
+                • In some languages, such as C++, dynamically allocated objects must be manually released by use of a delete operator.</br>
+                • Java takes a different approach; it handies deallocation for you automatically. The technique that accomplishes this is called garbage collection.</br>
+                • When no references to an object exist, that object is assumed to be no longer needed, and the memory occupied by the object can be recovered.</br>
+                • Garbage collection only occurs occasionally during the execution of your program.</br>
+                • Different Java run-time implementations will take varying approaches to garbage collection.</br>
+            </h5>
+
+            <h3><strong>Array</strong> </h3>
+            <h5 class="w3-padding-32">
+                • An array is a group of like-typed variables that are referred to by a common name.</br>
+                • A specific element in an array is accessed by its index.</br>
+                • Array index start at zero.</br>
+                • Arrays of any type can be created and may have one or more dimensions.</br>
+                </br>
+
+                <strong>1. One Dimensional Array</strong></br>
+                • Steps To create a one dimensional array:</br>
+                You must declare a variable of the desired array type.</br>
+                You must allocate the memory that will hold the array, using new operator and assign it to the array variable.</br>
+                • In java, all arrays are dynamically allocated.</br>
+                • Here, datatype specifies the type of data being allocated, size specifies the number of elements in the array, and array_var is the array variable that is linked to the array.</br>
+                • new is a special operator that allocates memory.</br>
+                • The elements in the array allocated by new will automatically be initialized to zero.</br>
+                Syntax: </br>
+                data_type array_var[];</br>
+                array_var = new data_type[size];</br>
+                OR</br>
+                data_type array_var [] = new data_type[sizej;</br>
+                </br>
+                <STRONG>  <font size="+2">An example for one dimentional array:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        import java.util.*;</br>
+                        class oneDarray</br>
+                        {</br>
+                        public static void main (String args[])</br>
+                        {</br>
+                        int a[] = new int[3];</br>
+                        a[0] = 1;</br>
+                        a[1] = 2;</br>
+                        a[2] = 3;</br>
+                        System.out.println("Your array elements are: "+ a[0]+" "+a[1]+" "+a[2]);</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+                <h5 class="w3-padding-32">
+                    <strong>OUTPUT:</strong>
+                    <center><img src="" width="500" height="250"></center></br>
+
+
+                    <strong>2. Multidimensional Array</strong></br>
+                    • Multidimensional arrays are actually arrays of arrays.</br>
+                    • To declare a multidimensional array variable, specify each additional index using another set of square brackets.</br>
+                    • This allocates a 3 by 5 array and assigns it to a. Internally, this matrix is implemented as an array of arrays of int</br>
+                    Syntax :</br>
+                    data_type array_var [][] = new data_type[size][size];</br>
+                    </br>
+                    <STRONG>  <font size="+2">An example for two dimentional array:</font></STRONG>
+                    <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                        <div class="w3-content">
+                            <!--<div class="w3-third w3-center">-->
+                            import java.util.*;</br>
+                            class twoDarray</br>
+                            {</br>
+                            public static void main (String args[])</br>
+                            {</br>
+                            int a[][] = new int[2][2];</br>
+                            a[0][0] = 1;</br>
+                            a[0][1] = 2;</br>
+                            a[1][0] = 3;</br>
+                            a[1][1] = 4;</br>
+                            System.out.println("Your array elements are :: "+ a[0][0]+" "+a[0][l]+" "+a[l][0]+" "+a[l][l]);</br>
+                            }
+                            }</br>
+                        </div>
+                    </div>
+                    <h5 class="w3-padding-32">
+                        <strong>OUTPUT:</strong>
+                        <center><img src="" width="500" height="250"></center></br>
+                    </h5>
+                </h5>
+            </h5>
+
+            <h3><strong>String</strong> </h3>
+            <h5 class="w3-padding-32">
+                • Strings are widely used in JAVA Programming, are not only a sequence of characters but it defines object.</br>
+                • String Class is defined in java.lang package.</br>
+                • The String type is used to declare string variables. Also we can declare array of strings.</br>
+                • A variable of type String can be assign to another variable of type String.</br>
+                Example:</br>
+                String si = "Welcome To Java String";</br>
+                System.out.println(sl);</br>
+                • Here, si is an object of type String.</br>
+                • String objects have many special features and attributes that makes them powerful.</br>
+                String class has following features:</br>
+                • It is Final class</br>
+                • Due to Final,String class cannot be inherited.</br>
+                • It is immutable.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        import java.io.*;</br>
+                        class stringDemo</br>
+                        {</br>
+                        public static void main(String args[])</br>
+                        {</br>
+                        String str = "Hello";</br>
+                        System.out.println(str.!ength(J);</br>
+                        if(str.equals("BYE")}</br>
+                        {</br>
+                        System,out.println("Same");</br>
+                        }</br>
+                        else</br>
+                        {</br>
+                        System.out.println("Not Same");</br>
+                        }</br>
+                        if ( str,compareTo("YES") > 0)</br>
+                        {</br>
+                        System,out.println("YES is greater than Hello");</br>
+                        }</br>
+                        else</br>
+                        {</br>
+                        System,out.printlnf("Hello is greater than YES");</br>
+                        }</br>
+                        System.out.println( str.substring{1,3});</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+                <h5 class="w3-padding-32">
+                    <strong>OUTPUT:</strong>
+                    <center><img src="" width="500" height="250"></center></br>
+
+
+                    <strong>StringBuffer Class:</strong>
+                    • Java StringBuffer class is a thread-safe, mutable sequence of characters.</br>
+                    • Every string buffer has a capacity.</br>
+                    • It contains some particular sequence of characters, but the length and content of the sequence can be changed through certain method calls.</br></br>
+                    <STRONG>  <font size="+2">Example:</font></STRONG>
+                    <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                        <div class="w3-content">
+                            <!--<div class="w3-third w3-center">-->
+                            import java.io.*;</br>
+                            class stringBufferDemo</br>
+                            {</br>
+                            public static void main(String args[])</br>
+                            {</br>
+                            StringBuffer sb1 = new StringBufferf("DIET");</br>
+                            StringBuffer sb2 = new StringBuffer(lOO);</br>
+                            System.out.println{sb1 : " + strBufl);</br>
+                            System.out.println{"sb1 capacity : " + sb1.capacityO);</br>
+                            System.out.println{"sb2 capacity : " + sb2.capacityO);</br>
+                            System.out.println{"sb1 reverse : " + sb1.reverse());</br>
+                            System.out.println{"sb1 charAt 2 : " +sb1.charAt{ 2});</br>
+                            System.out.println{"sb1 toString() i s : " + sb1.toStringO);</br>
+                            strBufl.append("String 2");</br>
+                            System.out.println{"sb3 when appended with a String: "+ sb1);</br>
+                            }</br>
+                            }</br>
+                        </div>
+                    </div>
+                    <h5 class="w3-padding-32">
+                        <strong>OUTPUT:</strong>
+                        <center><img src="" width="500" height="250"></center></br>
+                    </h5>
+                </h5>
+            </h5>
+            <h3><strong>Selection Statement</strong> </h3>
+            <h5 class="w3-padding-32">
+
+                <strong>1. If statement</strong></br></br>
+                • if statement consists of a condition followed by one or more statements.</br>
+                Syntax:</br>
+                if (condition)</br>
+                {</br>
+                //Statements will execute if the Boolean expression is true</br>
+                }</br>
+                • If the condition is true then the block of code inside if statement will be executed.</br></br>
+                <STRONG>  <font size="+2">Example:</font></STRONG>
+                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                    <div class="w3-content">
+                        <!--<div class="w3-third w3-center">-->
+                        class ifDemo</br>
+                        {</br>
+                        public static void main($tring[] args)</br>
+                        {</br>
+                        int marks = 76;</br>
+                        String grade = null;</br>
+                        if (marks >= 40)</br>
+                        {</br>
+                        grade = "Pass";</br>
+                        }</br>
+                        if (marks < 40)</br>
+                        {</br>
+                        grade = "Fail";</br>
+                        }</br>
+                        System.out.println("Grade = " + grade);</br>
+                        }</br>
+                        }</br>
+                    </div>
+                </div>
+                <h5 class="w3-padding-32">
+                    <strong>OUTPUT:</strong>
+                    <center><img src="" width="500" height="250"></center></br>
+
+
+                    <strong>2. If ... else Statement</strong></br></br>
+                    • The if ...else statement is Java's conditional branch statement.</br>
+                    • Here is the general form of the if..else statement:</br>
+                    Syntax:</br>
+                    if (condition)</br>
+                    statementl;</br>
+                    else</br>
+                    statement2;</br>
+                    • Here, each statement may be a single statement or a compound statement enclosed in curly braces (that is, a block).</br>
+                    • The condition is any expression that returns a boolean value. The else clause is optional.</br>
+                    • The if..else works as follow: If the condition is true, then statementl is executed. Otherwise, statement2 (if it exists) is executed.</br></br>
+                    <STRONG>  <font size="+2">Example:</font></STRONG>
+                    <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                        <div class="w3-content">
+                            <!--<div class="w3-third w3-center">-->
+                            class ifElseDemo</br>
+                            {</br>
+                            public static void main(String[] args)</br>
+                            {</br>
+                            int marks = 76;</br>
+                            String grade;</br>
+                            if (marks >= 40)</br>
+                            {</br>
+                            grade = "Pass";</br>
+                            }</br>
+                            else</br>
+                            {</br>
+                            grade = "Fail";</br>
+                            }</br>
+                            System.out.println("Grade = " + grade);</br>
+                            }</br>
+                            }</br>
+                        </div>
+                    </div>
+                    <h5 class="w3-padding-32">
+                        <strong>OUTPUT:</strong>
+                        <center><img src="" width="500" height="250"></center></br>
+
+
+                        <strong>3. Switch Statement</strong></br></br>
+                        • The switch statement is Java's multiway branch statement. It provides an easy way to execute different parts of your code based on the value of an expression.</br>
+                        • Here is the general form of a switch statement:</br>
+                        Syntax:</br>
+                        switch (expression)
+                        {</br>
+                        case valuel:
+                        // statement sequence</br>
+                        break;</br>
+                        case value2:</br>
+                        // statement sequence</br>
+                        break;</br>
+                        case valueN:</br>
+                        // statement sequence</br>
+                        break;</br>
+                        default:</br>
+                        // default statement sequence</br>
+                        }</br>
+                        • The expression must be of type byte, short, int or char.</br>
+                        • Each case value must be a unique literal (that is, it must be a constant, not a variable). Duplicate case values are not allowed.</br>
+                        • The switch statement works as follow: The value of the expression is compared with each of the literal values In the case statements. If a match is found, the code sequence following that case statement is executed.</br>
+                        • If none of the literal matches the value of the expression, then the default statement is executed. However,the default statement is optional.</br>
+                        • The break statement is used inside the switch to terminate a statement sequence.</br></br>
+                        <STRONG>  <font size="+2">Example:</font></STRONG>
+                        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                            <div class="w3-content">
+                                <!--<div class="w3-third w3-center">-->
+                                class switchDemo</br>
+                                {</br>
+                                public static void main(String[] args)</br>
+                                {</br>
+                                int day = 8;</br>
+                                switch (day)</br>
+                                {</br>
+                                case 1: System.out.printlnf("Monday"); break;</br>
+                                case 2: System.out.println("Tuesday"); break;</br>
+                                case 3: System.out.println("Wednesday"); break;</br>
+                                case 4: System.out.printlnf("Thursday"); break;</br>
+                                case 5: System.out.println("Friday"); break;</br>
+                                case 6: System.out.printlnf("Saturday"); break;</br>
+                                case 7: System.out.printlnf("Sunday"); break;</br>
+                                default: System.out.printlnpnvalid Day");break;</br>
+                                }</br>
+                                }</br>
+                                }</br>
+                            </div>
+                        </div>
+                        <h5 class="w3-padding-32">
+                            <strong>OUTPUT:</strong>
+                            <center><img src="" width="500" height="250"></center></br>
+                        </h5>
+                    </h5>
+                </h5>
+
+                <h3><strong>Iteration Statement</strong> </h3>
+                <h5 class="w3-padding-32">
+                    • Java's iteration statements are for, while, and do-while.</br>
+                    • These statements commonly call loops.</br>
+                    • Loop repeatedly executes the same set of instructions until a termination condition is met.</br>
+                    </br>
+                    <strong>1. While loop</strong></br></br>
+                    • It repeats a statement or block until its controlling expression is true.</br>
+                    Syntax:</br>
+                    while(condition)</br>
+                    {</br>
+                    // body of loop</br>
+                    }</br>
+                    • The condition can be any boolean expression. The body of the loop will be executed as long as the conditional expression is true.</br>
+                    • When condition becomes false, control passes to the next line of code immediately following the loop.</br></br>
+                    <STRONG>  <font size="+2">Example:</font></STRONG>
+                    <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                        <div class="w3-content">
+                            <!--<div class="w3-third w3-center">-->
+                            class whileDemo</br>
+                            {</br>
+                            public static void main($tring[] args)</br>
+                            {</br>
+                            int x =1;
+                            while( x < 5 )
+                            {
+                            System.out.print(x+" " );
+                            x++;</br>
+                            }</br>
+                            }</br>
+                            }</br>
+                        </div>
+                    </div>
+                    <h5 class="w3-padding-32">
+                        <strong>OUTPUT:</strong>
+                        <center><img src="" width="500" height="250"></center></br>
+
+
+                        <strong>2. Do-while loop</strong></br></br>
+                        • Sometimes it is desirable to execute the body of a loop at least once, even if the conditional expression is false.</br>
+                        • The do-while loop always executes its body at least once, because its conditional expression is at the bottom of the loop.</br>
+                        Syntax:</br>
+                        do</br>
+                        {</br>
+                        // body of loop</br>
+                        }</br>
+                        while (condition);</br>
+                        • Each iteration of the do-while loop first executes the body of the loop and then evaluates the conditional expression. If this expression is true, the loop will repeat. Otherwise, the loop terminates. Condition must be a boolean expression.</br></br>
+                        <STRONG>  <font size="+2">Example:</font></STRONG>
+                        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                            <div class="w3-content">
+                                <!--<div class="w3-third w3-center">-->
+                                class dowhileDemo</br>
+                                {</br>
+                                public static void main($tring[] args)</br>
+                                {</br>
+                                int x = 1;</br>
+                                do</br>
+                                {</br>
+                                System.out.print(x+" ");</br>
+                                x++;</br>
+                                }</br>
+                                while( x < 5);</br>
+                                }</br>
+                                }</br>
+                            </div>
+                        </div>
+                        <h5 class="w3-padding-32">
+                            <strong>OUTPUT:</strong>
+                            <center><img src="" width="500" height="250"></center></br>
+
+
+                            <strong>3. For loop</strong></br></br>
+                            Syntax:</br>
+                            for(initialization; condition; iteration)</br>
+                            {</br>
+                            // body</br>
+                            }</br>
+                            • When the loop first starts, the initialization portion of the loop is executed. Generally, this is an expression that sets the value of the loop control variable, which acts as a counter that controls the loop. The initialization expression is only executed once.</br>
+                            • Next, condition is evaluated. This must be a boolean expression. It usually tests the loop control variable against a target value. If this expression is true, then the body of the loop is executed. If it is false, the loop terminates.</br>
+                            • Next, the iteration portion of the loop is executed. This is usually an expression that increments or decrements the loop control variable.</br>
+                            • The loop then iterates, first evaluating the conditional expression, then executing the body of the loop, and then executing the iteration expression with each pass. This process repeats until the controlling expression is false.</br></br>
+                            <STRONG>  <font size="+2">Example:</font></STRONG>
+                            <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                                <div class="w3-content">
+                                    <!--<div class="w3-third w3-center">-->
+                                    class forDemo</br>
+                                    {</br>
+                                    public static void main($tring[] args)</br>
+                                    {</br>
+                                    for{int x = 1; x < 5; x++ )</br>
+                                    {</br>
+                                    System.out.print(x+" ");</br>
+                                    }</br>
+                                    }</br>
+                                    }</br>
+                                </div>
+                            </div>
+                            <h5 class="w3-padding-32">
+                                <strong>OUTPUT:</strong>
+                                <center><img src="" width="500" height="250"></center></br>
+
+
+                                <strong>4. Jump Statement</strong></br></br>
+                                • These statements transfer control to another part of your program.</br>
+                                break</br>
+                                • The break keyword is used to stop the entire loop. The break keyword must be used inside any loop or a switch statement.</br>
+                                • The break keyword will stop the execution of the innermost loop and start executing the next line of code after the block.</br></br>
+                                <STRONG>  <font size="+2">Example:</font></STRONG>
+                                <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                                    <div class="w3-content">
+                                        <!--<div class="w3-third w3-center">-->
+                                        class breakDemo</br>
+                                        {</br>
+                                        public static void main($tring[] args)</br>
+                                        {</br>
+                                        int [] numbers = {10, 20, 30, 40,50};</br>
+                                        for(int x=0;x<=5;x++)</br>
+                                        if( numbers[x] == 30 )</br>
+                                        {</br>
+                                        break;</br>
+                                        }</br>
+                                        System.out.print( numbers[x] +" ");</br>
+                                        }</br>
+                                        }</br>
+                                        }</br>
+                                    </div>
+                                </div>
+                                <h5 class="w3-padding-32">
+                                    <strong>OUTPUT:</strong>
+                                    <center><img src="" width="500" height="250"></center></br>
+
+                                    <strong>5. Continue statement</strong></br></br>
+                                    • Continue statement is used when we want to skip the rest of the statement in the body of the loop and continue with the next iteration of the loop.</br></br>
+                                    <STRONG>  <font size="+2">Example:</font></STRONG>
+                                    <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                                        <div class="w3-content">
+                                            <!--<div class="w3-third w3-center">-->
+                                            class conDemo</br>
+                                            {</br>
+                                            public static void main($tring[] args)</br>
+                                            {</br>
+                                            int [] numbers = {10, 20, 30, 40, 50};</br>
+                                            for(int x=0;x<=5;x++)</br>
+                                            {</br>
+                                            if( numbers[x] == 30 )</br>
+                                            {</br>
+                                            continue;</br>
+                                            }</br>
+                                            System.out.printf numbersfx] + ");</br>
+                                            }</br>
+                                            }</br>
+                                            }</br>
+                                        </div>
+                                    </div>
+
+                                    <h5 class="w3-padding-32">
+                                        <strong>OUTPUT:</strong>
+                                        <center><img src="" width="500" height="250"></center></br>
+
+
+                                        <strong>6. Return statement</strong></br></br>
+                                        • The return statement is used to explicitly return from a method. It transfers control of program back to the caller of the method.</br>
+                                        • The return statement immediately terminates the method in which it is executed.</br></br>
+                                        <STRONG>  <font size="+2">Example:</font></STRONG>
+                                        <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+                                            <div class="w3-content">
+                                                <!--<div class="w3-third w3-center">-->
+                                                class test</br>
+                                                {</br>
+                                                public static void main($tring[] args)</br>
+                                                {</br>
+                                                int day = 8;</br>
+                                                switch (day)</br>
+                                                {</br>
+                                                int a=10, b=20, c;</br>
+                                                c=add(a,b);</br>
+                                                System.out.println("Addition="+c);</br>
+                                                }</br>
+                                                public static int add(int x, int y)</br>
+                                                {</br>
+                                                return x+y;</br>
+                                                }</br>
+                                                }</br>
+                                            </div>
+                                        </div>
+                                        <h5 class="w3-padding-32">
+                                            <strong>OUTPUT:</strong>
+                                            <center><img src="" width="500" height="250"></center></br>
+                                        </h5>
+                                    </h5>
+                                </h5>
+                            </h5>
+                        </h5>
+                    </h5>
+                </h5>
+            </h5>
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+            </div>
+
+            <!--<div class="w3-twothird">
+            <h1>Lorem Ipsum</h1>
+            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+               laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            </div>
+                                          </div>
+                                        </div>-->
+            <!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+            </div>-->
+           
+
+            <script>
+                // Used to toggle the menu on small screens when clicking on the menu button
+                function myFunction() {
+                    var x = document.getElementById("navDemo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
